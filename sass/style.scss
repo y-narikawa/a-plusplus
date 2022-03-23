@@ -1,0 +1,20 @@
+@charset 'utf-8';
+
+/* ============================================
+// Foundation
+// ==========================================*/
+@import 'foundation/mixin';
+@import 'foundation/normalize';
+@import 'foundation/base';
+
+/* ============================================
+// Common Parts
+// ==========================================*/
+@import 'object/module';
+
+/* ============================================
+// Layout
+// ==========================================*/
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/index';
