@@ -17,13 +17,19 @@ $border-color: #BDC0BA;
 $border-color-300: #CECDCD;
 $bg-color: #EFEFEF;
 $bg-color-red: #FCF3F3;
+$white-color: #fff;
+$black-color: #000;
 
 /* ============================================
 // FONT Setting
 // ==========================================*/
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Shippori+Antique+B1&display=swap');
+
 $default-family: OSAKA, 蘭亭黑-繁, Meiryo, sans-serif;
 $default-family-ie: "メイリオ", Meiryo, sans-serif;
+$secondary-family: 'Noto Sans TC', sans-serif;
+$secondary-family-ie: 'Shippori Antique B1', sans-serif;
 
 /* ============================================
 // Animation Setting

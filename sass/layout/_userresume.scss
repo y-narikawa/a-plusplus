@@ -1,0 +1,197 @@
+@charset 'utf-8';
+
+.user-resume-body{
+    width: 100%;
+    font-family: $secondary-family-ie;
+}
+
+.steps-top-right{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+    .steps-contents{
+        text-align: center;
+        font-size: 25px
+    }
+    ul{
+        display: flex;
+        margin-top: 60px;
+        column-gap: 25px;
+        color: $black-color;
+        span{
+            color: $primary-color;
+        }
+    }
+    p{
+        background-color: $border-color;
+        color: $white-color;
+        border-radius: 30px;
+        padding: 5px 15px;
+        letter-spacing: 0.2em;
+    }
+    .current-step{
+        background-color: $primary-color;
+    }
+}
+.user-resume-title{
+    margin-left: 15%;
+    color: $black-color;
+    font-size: 35px;
+}
+.user-resume-whitebox{
+    background-color: $white-color;
+    border-radius: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 20px; 
+    margin-bottom: 100px;
+    padding: 50px;
+    .user-resume-contents{
+        margin-left: 5%;
+        margin-right: 5%;
+        color: $black-color;
+        font-size: 25px;
+        .personal-info-top{
+            border-bottom: solid $border-color;
+        }
+        .profile-top{
+            border-bottom: solid $border-color;
+        }
+        .profile-bottom{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            height: 100px;
+            textarea{
+                padding-left: 10px;
+                padding-right: 10px;
+                border: 2px solid $border-color;
+                border-radius: 5px;
+                font-size: 0.6em;
+                width: 100%;
+            }
+        }
+        .experience-top{
+            border-bottom: solid $border-color;
+        }
+        table{
+            padding-left: 20px;
+        }
+        .experience-table{
+            font-size: 0.6em;
+            margin-top: 20px;
+        }
+        .experience-banner{
+            td{
+                padding-left: 10px;
+            }
+        }
+        .experience-input{
+            .experience-job{
+                width: 90%;
+            }
+            input{
+                border: 2px solid $border-color;
+                border-radius: 5px;
+                justify-content: center;
+                padding: 10px 5px;
+                width: 95%;
+            }
+        }
+        .experience-note{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            input{
+                border: 2px solid $border-color;
+                border-radius: 5px;
+                width: 65%;
+                padding: 10px 5px;
+            }
+        }
+        .education-top{
+            border-bottom: solid $border-color;
+        }
+        .education-table{
+            font-size: 0.6em;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        .education-banner{
+            tr{
+                padding-left: 10px;
+            } 
+        }
+        .education-input{
+            width: 100%;
+            input{
+                border: 2px solid $border-color;
+                border-radius: 5px;
+                justify-content: center;
+                padding: 10px 2px;
+                width: 95%;
+            }
+        }
+        .education-checkbox{
+            padding: 5px;
+            margin-right: 30px;
+        }
+        .lisence-top{
+            border-bottom: solid $border-color;
+        }
+        .lisence-bottom{
+            margin-top: 20px;
+            margin-bottom: 40px;
+            input{
+                margin-bottom: 20px;
+                border: 2px solid $border-color;
+                border-radius: 5px;
+                padding: 10px 5px;
+                font-size: 0.6em;
+                width: 100%;
+            }
+        }
+        .hobby-top{
+            border-bottom: solid $border-color;
+        }
+        .hobby-bottom{
+            margin-top: 20px;
+            margin-bottom: 50px;
+            textarea{
+                padding-left: 10px;
+                padding-right: 10px;
+                height: 100px;
+                border: 2px solid $border-color;
+                border-radius: 5px;
+                font-size: 0.6em;
+                width: 100%;
+            }
+        }
+        .info-submit{
+            margin-top: 100px;
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            button{
+                width: 50%;
+                border-radius: 20px;
+                background-color: $border-color;
+                height: 80px;
+            }
+            button:hover{
+                color: $white-color;
+                background-color: $fourth-color;
+            }
+        }
+    }
+}
+
+
+.backtoindex{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    a{
+        border-bottom: 2px solid $primary-color;
+    }
+}

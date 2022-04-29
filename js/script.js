@@ -224,3 +224,62 @@ const slideToggle = (el, duration = 300) => {
     return slideUp(el, duration);
   }
 };
+
+//userinfo
+document.getElementById("submit").onclick = function() {
+  const user_id = document.getElementById("user_id").value;
+  const password = document.getElementById("password").value;
+  const password2 = document.getElementById("password2").value;
+  const famliy_name = document.getElementById("famliy_name").value;
+  const givin_name = document.getElementById("givin_name").value;
+  const birthday = document.getElementById("birthday").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+
+  let flag = 0;
+    if(user_id.length == 0) flag = 1;
+    if(password.length == 0) flag = 1; 
+    if(password2.length == 0) flag = 1;
+    if(famliy_name.length == 0) flag = 1;
+    if(givin_name.length == 0) flag = 1; 
+    if(birthday.length == 0) flag = 1; 
+    if(email.length == 0) flag = 1; 
+    if(phone.length == 0) flag = 1; 
+    if(flag == 1){ alert('必須項目が未記入の箇所があります'); }
+};
+
+//checkbox
+// const consent_chk = document.querySelector(`#consent-chk`);
+// const submit_btn = document.querySelector(`input[type=submit]`);
+
+// consent_chk.addEventListener('change', () => { 
+//   if (consent_chk.checked === true) {
+//     submit_btn.disabled = false;
+//   } else {
+//     submit_btn.disabled = true;
+//   }
+// });
+
+//image preview
+
+function previewFile(file) {
+  const preview = document.getElementById('preview');
+  const reader = new FileReader();
+
+  reader.onload = function (e) {
+    const imageUrl = e.target.result; 
+    const img = document.createElement("img"); 
+    img.src = imageUrl; 
+    preview.appendChild(img); 
+  }
+
+  reader.readAsDataURL(file);
+}
+const fileInput = document.getElementById('example');
+const handleFileSelect = () => {
+  const files = fileInput.files;
+  for (let i = 0; i < files.length; i++) {
+    previewFile(files[i]);
+  }
+}
+fileInput.addEventListener('change', handleFileSelect);

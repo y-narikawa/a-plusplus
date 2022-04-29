@@ -1,0 +1,127 @@
+@charset 'utf-8';
+
+.account-info-body{
+    width: 100%;
+}
+
+.free-membership{
+    margin-left: 10%;
+    margin-top: 80px;
+    font-family: $secondary-family-ie;
+    font-size: 35px;
+    color: $black-color;
+}
+
+.account-info{
+    margin-top: 50px;
+    background-color: $white-color;
+    color: $black-color;
+    margin-left: 10%;
+    margin-right: 45%;
+    margin-bottom: 100px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-family: $secondary-family-ie;
+    .form-account-info{
+        margin-left: 10%;
+        margin-right: 10%;
+            label{
+                width: 100px;
+                margin-top: 50px
+            }
+    }
+    .submit-button{
+        color: $white-color;
+        text-align: center;
+        button{
+            font-size: 30px;
+            background-color: $txt-color;
+            margin-left: 0;
+            margin-bottom: 100px;
+            padding: 20px 20%;
+        }
+        button:hover{
+            background-color: $primary-color;
+        }
+    }
+}
+
+input.account-info-inputs{
+    border: solid 0.1px $border-color;
+    border-radius: 5px;
+    margin-left: 20%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.accountAgreement{
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    color: $border-color;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-size: 0.7em;
+}
+
+input.accountAgreement-checkbox{
+    border: solid $border-color;
+    border-radius: 2px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.attention{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -1300px;
+    margin-right: 10%;
+    .yellow-box{
+        background-color: rgba(244,173,37,0.2);
+        color: $black-color;
+        border-radius: 20px;
+        width: 400px;
+        height: 200px;
+        padding: 30px;
+        font-family: $secondary-family-ie;
+        img{
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.steps{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 10%;
+    .white-box{
+        width: 400px;
+        height: 800px;
+        background-color: $white-color;
+        border-radius: 20px;
+        text-align: center;
+        .white-box-contents{
+            margin: auto 50px;
+            p{
+                font-size: 25px;
+                color: $black-color;
+                line-height: 5;
+            }
+            span{
+                background-color: $primary-color;
+                color: $white-color;
+                border-radius: 30px;
+                padding: 10px;
+                margin-right: 10px;
+                letter-spacing: 0.2em;
+            }
+        }
+    }
+}

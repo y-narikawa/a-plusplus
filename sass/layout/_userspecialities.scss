@@ -1,0 +1,164 @@
+@charset 'utf-8';
+
+.user-specialities-body{
+    width: 100%;
+    font-family: $secondary-family-ie;
+}
+
+.user-specialities-title{
+    margin-left: 15%;
+    color: $black-color;
+    font-size: 35px;
+}
+
+.user-specialities-whitebox{
+    background-color: $white-color;
+    border-radius: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 20px; 
+    margin-bottom: 100px;
+    padding: 50px 5%;
+}
+
+.job-categories1-title{
+    color: $primary-color;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+}
+.job-categories1{
+    .work-skill__items{
+        border: solid;
+        border-radius: 2px;
+    }
+}
+.job-categories1-input{
+    margin-bottom: 50px;
+    input{
+        width: 20px;
+        height: 20px;
+        border: 3px solid $border-color;
+        border-radius: 2px;
+        margin-right: 2%;
+        cursor: pointer;
+        
+    }
+    label{
+        font-size: 20px;
+        margin-right: 3%;
+        color: $black-color;
+    }
+}
+
+.majorSkill{
+    color: $black-color;
+    margin-bottom: 50px;
+    &__title{
+        font-size: 20px;
+        margin-bottom: 50px;
+        img{
+            width: 20px;
+            height: 20px;
+            margin-right: 1%;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.rank-base{
+
+    .rank-base-title{
+        font-size: 20px;
+        color: $black-color;
+        img{
+            width: 20px;
+            height: 20px;
+            margin-right: 1%;
+            margin-bottom: 10px;
+        }
+    }
+    table{
+        .rankBase{
+            &__top{
+                border-top: none;
+                border-color: $border-color;
+                color: $black-color;
+                padding: 15px 130px;
+                &_left{
+                    border-color: $border-color;
+                    border-left: none;
+                    border-top: none;
+                }
+                &_right{
+                    color: $fourth-color;
+                    border-color: $border-color;
+                    border-right: none;
+                    border-top: none;
+                    
+                }
+            }
+
+            &__left{
+                border-left: none;
+                border-color: $border-color;
+                color: $black-color;
+                padding: 15px 20px;
+                &_A{
+                    color: $primary-color;
+                    border-color: $border-color;
+                    border-left: none;
+                    padding: 15px 20px;
+                }
+            }
+            &__middle{
+                color: $black-color;
+                border-color: $border-color;
+            }
+            &__right{
+                border-right: none;
+                border-color: $border-color;
+                padding: 15px 50px;
+                color: $fourth-color;
+            }
+            &__bottom{
+                border-bottom: none;
+                border-color: $border-color;
+                color: $black-color;
+                padding: 15px 130px;
+                &_left{
+                    border-left: none;
+                    border-bottom: none;
+                    border-color: $border-color;
+                    color: $black-color;
+                }
+                &_right{
+                    border-right: none;
+                    border-bottom: none;
+                    border-color: $border-color;
+                    color: $fourth-color;
+                }
+            }
+        }
+        td{
+            border-style: dashed;          
+            border-width: 2px;
+            text-align: center;
+        }
+    }
+}
+.info-submit{
+    margin-top: 100px;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    button{
+        width: 50%;
+        border-radius: 20px;
+        background-color: $border-color;
+        height: 80px;
+    }
+    button:hover{
+        color: $white-color;
+        background-color: $fourth-color;
+    }
+}
