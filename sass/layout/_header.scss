@@ -8,8 +8,7 @@
   &__inner {
     display: flex;
     align-items: center;
-    padding-left: 7vw;
-    padding-right: 7vw;
+    @include block;
   }
 
   &__top {
@@ -158,8 +157,8 @@
     line-height: 1;
 
     .-active & {
-      padding-left: 5.5rem;
-      padding-right: 6.5rem;
+      padding-left: 5rem;
+      padding-right: 6rem;
       position: relative;
       z-index: 1;
 
@@ -180,6 +179,8 @@
 }
 
 .h-top-btn {
+  margin-top: -12px;
+
   &__link {
     display: block;
     padding: 0.3rem 1.5rem 0.3rem 2rem;
@@ -226,6 +227,14 @@
 .h-middle-buttons {
   display: flex;
   gap: 1.5rem;
+
+  .c-button {
+    &__link {
+      letter-spacing: 0.28em;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+    }
+  }
 }
 
 // Bottom Components
@@ -247,6 +256,7 @@
     color: $third-color;
     letter-spacing: 0.2em;
     line-height: 1;
+    font-size: 14px;
   }
 }
 
