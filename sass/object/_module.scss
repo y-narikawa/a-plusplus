@@ -25,8 +25,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background: #fff;
     border-radius: 50%;
     box-shadow: 0 0 1rem rgba(#000, 0.2);
@@ -425,14 +425,14 @@
 
   &::before {
     content: "";
-    width: calc(100% - 104px);
+    width: calc(100% - 80px);
     height: 4px;
     display: block;
     background: $border-color;
     transform: translateX(-50%);
     position: absolute;
     top: 6px;
-    left: 50%;
+    left: calc(50% - 2px);
 
     @include mq {
       width: calc(100% - 3rem);
@@ -444,7 +444,7 @@
     display: flex;
     justify-content: center;
 
-    &:first-child {
+    &:last-child {
       color: $primary-color;
     }
 
@@ -479,8 +479,13 @@
 
 // Tags
 .c-tags {
+  $this: &;
   display: flex;
   gap: 0.5rem;
+
+  .-underline {
+    text-decoration: underline;
+  }
 
   &__link {
     display: block;
@@ -488,6 +493,16 @@
     background: $bg-color;
     border-radius: 99px;
     color: $txt-color;
+
+    &.-red {
+      background: #fcf3f3;
+      color: $primary-color;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    padding: 0.1em 0;
   }
 }
 

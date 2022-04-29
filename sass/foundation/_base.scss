@@ -5,67 +5,66 @@
 // ==========================================*/
 
 html {
-	font-size: 16px;
+  font-size: 16px;
 
-	@include mq {
-		font-size: 14px;
-	}
+  @include mq {
+    font-size: 14px;
+  }
 }
 
 body {
-	min-width: 1366px;
-	font-family: $default-family;
-	font-size: 16px;
-	font-weight: 400;
-	color: $txt-color;
-	line-height: 1.75;
-	letter-spacing: 0.1em;
-	background: $bg-color;
-	-webkit-text-size-adjust: 100%;
-	-webkit-overflow-scrolling: touch;
-	font-feature-settings: 'palt';
+  min-width: 1366px;
+  font-family: $default-family;
+  font-size: 16px;
+  color: $txt-color;
+  line-height: 1.75;
+  letter-spacing: 0.1em;
+  background: $bg-color;
+  -webkit-text-size-adjust: 100%;
+  -webkit-overflow-scrolling: touch;
+  font-feature-settings: "palt";
 
-	@include mq(tab) {
-		min-width: 375px;
-	}
+  @include mq(tab) {
+    min-width: 375px;
+  }
 
-	@supports (-webkit-touch-callout: none) {
-		body {
-			height: -webkit-fill-available;
-		}
-	}
+  @supports (-webkit-touch-callout: none) {
+    body {
+      height: -webkit-fill-available;
+    }
+  }
 }
 
 ::-moz-selection {
-	background: $primary-color;
-	color: #ffffff;
+  background: $primary-color;
+  color: #ffffff;
 }
 
 ::selection {
-	background: $primary-color;
-	color: #ffffff;
+  background: $primary-color;
+  color: #ffffff;
 }
 
 /* for IE11 + */
 _:-ms-lang(x)::-ms-backdrop,
 body {
-	font-family: $default-family-ie;
+  font-family: $default-family-ie;
 }
 
 a {
-	color: $link-color;
-	transition: .4s $ease;
+  color: $link-color;
+  transition: 0.4s $ease;
 
-	&:hover {
-		color: $primary-color;
-	}
+  &:hover {
+    color: $primary-color;
+  }
 
-	&[href*='tel:'] {
-		display: inline-block;
-		pointer-events: none;
+  &[href*="tel:"] {
+    display: inline-block;
+    pointer-events: none;
 
-		@include mq(tab) {
-			pointer-events: auto;
-		}
-	}
+    @include mq(tab) {
+      pointer-events: auto;
+    }
+  }
 }

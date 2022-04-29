@@ -77,35 +77,38 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const addTglEvent = (item) => {
-    const trigger = item.querySelector(".tgl-switch");
-    const contents = item.querySelectorAll(".tgl-content");
-    const active = "-active";
+  const targets = document
+    .querySelector(".occupation")
+    .querySelectorAll(".tgl-wrap");
 
-    trigger.addEventListener("click", () => {
-      contents.forEach((e) => {
-        if (e.classList.contains(active)) {
-          e.classList.remove(active);
-          trigger.classList.remove(active);
-          slideUp(e);
-        } else {
-          e.classList.add(active);
-          trigger.classList.add(active);
-          slideDown(e);
+  const spTgl = document.querySelectorAll(".sp-tgl-wrap");
+
+  const addTglEvent = (item) => {
+    const active = "-active";
+    const trigger = item.querySelector(".tgl-switch");
+    const thisItem = item.querySelector(".tgl-content");
+
+    trigger.addEventListener("click", (el) => {
+      targets.forEach((t) => {
+        if (t !== item) {
+          t.querySelector(".tgl-switch").classList.remove(active);
+          const content = t.querySelector(".tgl-content");
+          content.classList.remove(active);
+          slideUp(content);
         }
       });
+
+      trigger.classList.toggle(active);
+      thisItem.classList.toggle(active);
+      slideToggle(thisItem);
     });
   };
 
-  const tglItems = document.querySelectorAll(".tgl-wrap");
-
-  tglItems.forEach((item) => {
+  targets.forEach((item) => {
     addTglEvent(item);
   });
 
   if (matchMedia("(max-width: 768px)").matches) {
-    const spTgl = document.querySelectorAll(".sp-tgl-wrap");
-
     spTgl.forEach((item) => {
       addTglEvent(item);
     });
