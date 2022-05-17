@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf=8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>js test</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+      <div class="user-resume-body">
+        <div class="user-resume-whitebox">
+          <form class="user-resume-contents" action="">
+            <div class="lisence">
+                <div class="lisence-top">
+                  專業證照｜獲獎紀錄｜相關社團參與
+                  <button type="button" value="フォーム追加" onclick="addForm()">
+                    <img src="../img/icon/addformDark.png" alt="">+
+                  </button>
+                </div>           
+                <div class="lisence-contents" id="form_area">
+                  <input type="text" name="lisence[0]" placeholder="台灣台北註冊建築師" required>
+                  <button type="button" id="0" onclick="deleteBtn(this)"></button>
+                </div>
+              </div>
+          </form>
+        </div>
+      </div>
+        <script src="js/testscript.js"></script>
+    </body>
+</html>

@@ -1,5 +1,6 @@
 @charset 'utf-8';
 
+//TODO :入力し終わったらsubmitに色がつくように
 
 .m-logo{
     display: flex;
@@ -11,58 +12,139 @@
         width: 120px;
     }
 }
+
 .login-form{
     font-family: $secondary-family-ie;
     background-color: $white-color;
     border-bottom: 10px solid $primary-color;
-    text-align: center;
-    width: 550px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 100px;
-    padding-right: 90px;
-    padding-left: 90px;
-    .login-form-title{
-        padding-top: 40px;
+    width: 500px;
+    margin: 0 auto 180px auto;
+    &__title{
+        text-align: center;
+        padding-top: 35px;
+        padding-bottom: 15px;
         font-size: 30px;
         color: $black-color;
     }
-    .login-id{
-        margin: 20px auto;
-        border: 1px solid $border-color;
-        border-radius: 5px;
-        .login-id-input{
-            font-size: 25px;
+    &__form{
+        font-size: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+        tr{
+            td{
+                label{
+                    color: $black-color;
+                }
+                input{
+                    border: solid 1px $border-color;
+                    border-radius: 5px;
+                    color: $black-color;
+                    padding: 10px 0.5rem;
+                    margin: 10px 5px;
+                    width: 370px;
+                }
+            }
         }
     }
-    .login-password{
-        border: 1px solid $border-color;
-        border-radius: 5px;
-        .login-password-input{
-            font-size: 25px;
-        }
-    }
+
     .c-button-white{
-        margin-right: 50px;
-        margin-left: 50px;
+        margin: 30px 25%;
         .c-button__link{
             font-size: 25px;
             color: $white-color;
             margin-top: 50px;
-            background-color: $border-color;
+            background-color: $primary-color;
             justify-content: center;
+            letter-spacing: 1em;
+            margin: auto;
         }
         .c-button__icon{
             justify-content: center;
-            background-color: $border-color;
+        }
+        button:hover{
+            background-color: $primary-h-color;
         }
     }
-    .attention{
-        margin-top: 20px;
+    .attention1{
+        text-align: center;
         color: $black-color;
         margin-bottom: 40px;
-        span{
+        a{
             text-decoration: underline 1px ;
         }
     }
+}
+
+// tablet
+
+@include mq(tab){
+    .m-logo{
+        margin-top: 50px;
+        margin-bottom: 30px;
+        img{
+            width: 100px;
+        }
+    }
+    
+    .login-form{
+        width: 500px;
+        margin: 0 auto 100px auto;
+        &__title{
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+// smartphone
+
+@include mq(sp){
+    .m-logo{
+        margin-top: 40px;
+        margin-bottom: 30px;
+        img{
+            width: 90px;
+        }
+    }
+    
+    .login-form{
+        width: auto;
+        border-bottom: 5px solid $primary-color;
+        margin: 0 5% 80px 5%;
+        &__title{
+            padding-top: 20px;
+            padding-bottom: 10px;
+            font-size: 25px;
+            color: $black-color;
+        }
+        &__form{
+            font-size: 15px;
+            margin-left: 15%;
+            tr{
+                td{
+                    label{
+                        font-size: 0.9em;
+                        color: $black-color;
+                        margin-right: 1rem;
+                    }
+                    input{
+                        border: solid 1px $border-color;
+                        border-radius: 5px;
+                        padding: 5px 0.5rem;
+                        margin: 5px 10px;
+                        width: 75%;
+                    }
+                }
+            }
+        }
+        .c-button-white{
+            .c-button__link{
+                font-size: 15px;
+            }
+        }
+        .attention1{
+            font-size: 0.8em;
+            margin-bottom: 30px;
+        }
+    }   
 }

@@ -1,12 +1,12 @@
 @charset 'utf-8';
-
 .user-specialities-body{
     width: 100%;
     font-family: $secondary-family-ie;
 }
 
 .user-specialities-title{
-    margin-left: 15%;
+    margin: auto;
+    max-width: 1333px;
     color: $black-color;
     font-size: 35px;
 }
@@ -14,40 +14,78 @@
 .user-specialities-whitebox{
     background-color: $white-color;
     border-radius: 20px;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 20px; 
-    margin-bottom: 100px;
-    padding: 50px 5%;
+    margin: 20px auto 100px auto;
+    max-width: 1333px;
+    padding: 50px;
 }
-
+.user-specialities-contents{
+    margin: 0 5%;
+}
 .job-categories1-title{
     color: $primary-color;
     margin-bottom: 30px;
     font-size: 1.5em;
 }
 .job-categories1{
+    margin-bottom: 30px;
     .work-skill__items{
         border: solid;
         border-radius: 2px;
     }
 }
-.job-categories1-input{
-    margin-bottom: 50px;
-    input{
-        width: 20px;
-        height: 20px;
-        border: 3px solid $border-color;
-        border-radius: 2px;
-        margin-right: 2%;
-        cursor: pointer;
-        
-    }
-    label{
-        font-size: 20px;
-        margin-right: 3%;
-        color: $black-color;
-    }
+.job-categories1-checkbox{
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.job-checkbox {
+    display: none;
+}
+
+.job-checkbox + span {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 0.2em 0;
+    padding: 0 0 0 1.2em;
+    position: relative;
+    color: $black-color;
+}
+
+.job-checkbox + span::before {
+    -webkit-transform: translateY(-50%);
+    background: #fff;
+    border: 1px solid $border-color;
+    border-radius: 2px;
+    content: "";
+    display: block;
+    height: 1.5em;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5em;
+    font-size: 0.5em;
+}
+
+.job-checkbox + span::after {
+    -webkit-transform: translateY(-50%) rotate(-45deg);
+    border-bottom: 3px solid $primary-color;
+    border-left: 3px solid $primary-color;
+    content: "";
+    display: block;
+    height: 0.3em;
+    left: 0;
+    margin-top: -0.2em;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    transition: all 0.3s ease 0s;
+    width: 1em;
+}
+
+.job-checkbox:checked + span::after {
+    opacity: 1;
 }
 
 .majorSkill{
@@ -68,13 +106,13 @@
 .rank-base{
 
     .rank-base-title{
-        font-size: 20px;
+        font-size: 1.1em;
         color: $black-color;
         img{
             width: 20px;
             height: 20px;
             margin-right: 1%;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
     }
     table{
@@ -146,19 +184,315 @@
         }
     }
 }
-.info-submit{
-    margin-top: 100px;
-    display: flex;
-    gap: 20px;
-    width: 100%;
-    button{
-        width: 50%;
-        border-radius: 20px;
-        background-color: $border-color;
-        height: 80px;
+
+// tablet settings
+
+@include mq(tab){
+    .user-specialities-title{
+        margin-left: 10%;
+        margin-top: 20px;
+        color: $black-color;
+        font-size: 20px;
     }
-    button:hover{
-        color: $white-color;
-        background-color: $fourth-color;
+    
+    .user-specialities-whitebox{
+        background-color: $white-color;
+        border-radius: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 10px; 
+        margin-bottom: 30px;
+        padding: 10px;
+    }
+                                            
+    .user-specialities-contents{
+        margin: 0 5%;
+    }
+    .job-categories1-title{
+        color: $primary-color;
+        margin-bottom: 30px;
+        font-size: 1.1em;
+    }
+    .job-categories1{
+        .work-skill__items{
+            border: solid;
+            border-radius: 2px;
+        }
+    }
+
+    .job-categories1-checkbox{
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    .job-categories1-input{
+        margin-bottom: 50px;
+        input{
+            width: 10px;
+            height: 10px;
+            border: 3px solid $border-color;
+            border-radius: 2px;
+            margin-right: 2%;
+            cursor: pointer;
+            
+        }
+        label{
+            font-size: 1em;
+            margin-right: 3%;
+            color: $black-color;
+        }
+    }
+    
+    .majorSkill{
+        color: $black-color;
+        margin-bottom: 50px;
+        &__title{
+            font-size: 20px;
+            margin-bottom: 50px;
+            img{
+                width: 20px;
+                height: 20px;
+                margin-right: 1%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    
+    .rank-base{  
+        .rank-base-title{
+            font-size: 1.1em;
+            color: $black-color;
+            img{
+                width: 20px;
+                height: 20px;
+                margin-right: 1%;
+                margin-bottom: 5px;
+            }
+        }
+        table{
+            font-size: 1em;
+            .rankBase{
+                &__top{
+                    border-top: none;
+                    border-color: $border-color;
+                    color: $black-color;
+                    padding: 5px 5px;
+                    &_left{
+                        border-color: $border-color;
+                        border-left: none;
+                        border-top: none;
+                    }
+                    &_right{
+                        color: $fourth-color;
+                        border-color: $border-color;
+                        border-right: none;
+                        border-top: none;
+                        
+                    }
+                }
+    
+                &__left{
+                    border-left: none;
+                    border-color: $border-color;
+                    color: $black-color;
+                    padding: 5px 5px;
+                    &_A{
+                        color: $primary-color;
+                        border-color: $border-color;
+                        border-left: none;
+                        padding: 5px 5px;
+                    }
+                }
+                &__middle{
+                    color: $black-color;
+                    border-color: $border-color;
+                }
+                &__right{
+                    border-right: none;
+                    border-color: $border-color;
+                    padding: 5px 5px;
+                    color: $fourth-color;
+                }
+                &__bottom{
+                    border-bottom: none;
+                    border-color: $border-color;
+                    color: $black-color;
+                    padding: 5px 5px;
+                    &_left{
+                        border-left: none;
+                        border-bottom: none;
+                        border-color: $border-color;
+                        color: $black-color;
+                    }
+                    &_right{
+                        border-right: none;
+                        border-bottom: none;
+                        border-color: $border-color;
+                        color: $fourth-color;
+                    }
+                }
+            }
+            td{
+                border-style: dashed;          
+                border-width: 1px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+// smartphone settings
+
+@include mq(sp){
+    .user-specialities-title{
+        margin-left: 5%;
+        margin-top: 20px;
+        color: $black-color;
+        font-size: 20px;
+    }
+    
+    .user-specialities-whitebox{
+        background-color: $white-color;
+        border-radius: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 20px; 
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+    
+    .job-categories1-title{
+        color: $primary-color;
+        margin-bottom: 30px;
+        font-size: 1.1em;
+    }
+    .job-categories1{
+        .work-skill__items{
+            border: solid;
+            border-radius: 2px;
+        }
+        .works__section-title.tgl-switch::after{
+            display: none;
+        }
+    }
+
+    .job-categories1-checkbox{
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    .job-categories1-input{
+        margin-bottom: 50px;
+        input{
+            width: 10px;
+            height: 10px;
+            border: 3px solid $border-color;
+            border-radius: 2px;
+            margin-right: 2%;
+            cursor: pointer;
+            
+        }
+        label{
+            font-size: 1em;
+            margin-right: 3%;
+            color: $black-color;
+        }
+    }
+    
+    .majorSkill{
+        color: $black-color;
+        margin-bottom: 50px;
+        &__title{
+            font-size: 20px;
+            margin-bottom: 50px;
+            img{
+                width: 20px;
+                height: 20px;
+                margin-right: 1%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    
+    .rank-base{  
+        .rank-base-title{
+            font-size: 1.1em;
+            color: $black-color;
+            img{
+                width: 20px;
+                height: 20px;
+                margin-right: 1%;
+                margin-bottom: 5px;
+            }
+        }
+        table{
+            font-size: 0.9em;
+            .rankBase{
+                &__top{
+                    border-top: none;
+                    border-color: $border-color;
+                    color: $black-color;
+                    padding: 5px 5px;
+                    &_left{
+                        border-color: $border-color;
+                        border-left: none;
+                        border-top: none;
+                    }
+                    &_right{
+                        color: $fourth-color;
+                        border-color: $border-color;
+                        border-right: none;
+                        border-top: none;
+                        
+                    }
+                }
+    
+                &__left{
+                    border-left: none;
+                    border-color: $border-color;
+                    color: $black-color;
+                    padding: 5px 5px;
+                    &_A{
+                        color: $primary-color;
+                        border-color: $border-color;
+                        border-left: none;
+                        padding: 5px 5px;
+                    }
+                }
+                &__middle{
+                    color: $black-color;
+                    border-color: $border-color;
+                }
+                &__right{
+                    border-right: none;
+                    border-color: $border-color;
+                    padding: 5px 5px;
+                    color: $fourth-color;
+                }
+                &__bottom{
+                    border-bottom: none;
+                    border-color: $border-color;
+                    color: $black-color;
+                    padding: 5px 5px;
+                    &_left{
+                        border-left: none;
+                        border-bottom: none;
+                        border-color: $border-color;
+                        color: $black-color;
+                    }
+                    &_right{
+                        border-right: none;
+                        border-bottom: none;
+                        border-color: $border-color;
+                        color: $fourth-color;
+                    }
+                }
+            }
+            td{
+                border-style: dashed;          
+                border-width: 1px;
+                text-align: center;
+            }
+        }
     }
 }

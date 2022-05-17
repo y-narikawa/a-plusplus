@@ -4,21 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A++</title>
+    <title>A++_step2</title>
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
-  <body>
+  <body id="pagetop">
     <header class="header">
         <!-- Middle -->
         <div class="header__middle">
           <div class="header__inner">
             <h1 class="h-logo">
               <a href="/">
-                <img src="./img/logo.svg" alt="A++" />
+                <img src="../img/logo.svg" alt="A++" />
               </a>
             </h1>
             <div class="c-spacer"></div>
@@ -39,67 +39,85 @@
         填寫個人履歷
       </div>
       <div class="user-resume-whitebox">
-        <form class="user-resume-contents">
+        <form class="user-resume-contents" action="action.php" method="post" enctype="multipart/form-data">
+          <!-- personal-information -->
           <div class="personal-info">
-            <div class="personal-info-top">陳小喬</div>
-            <input type="file" name="" required accept="image/*">
-            <div class="preview" id="preview"></div>
+            <div class="personal-info-title">陳小喬</div>
+            <div class="personal-info-contents">
+              <!-- <div id="dragDropArea">
+                <div class="drag-drop-inside">
+                    <p class="drag-drop-info">drop the file here</p>
+                    <p>or</p>
+                    <p class="drag-drop-buttons">
+                        <input id="fileInput" type="file" accept="image/*" value="ファイルを選択" name="photo" onChange="photoPreview(event)">
+                    </p>
+                    <div id="previewArea"></div>
+                </div>
+              </div> -->
+              <div class="personal-info-contents__image">
+                <div class="image-area">
+                  <img class="preview" id="preview">
+                  <input type="file" name="profile_img" required accept="image/*" onchange="previewImage(this)">
+                </div>
+                
+                <p>(請上傳本人2吋證件照或正式照片)</p>
+              </div>
+              <div class="personal-info-contents__bottom">
+                <p><label for="address">地址：</label><br><textarea name="address" placeholder="台北市大安區敦化南路一段100號" id="address"></textarea></p>
+                <p><label for="phone1">聯絡電話：</label><br><input type="tel" name="phone1" placeholder="0910-000-000" id="phone1"></p>
+              </div>
+            </div>
           </div>
+          <!-- // personal-information -->
+
           <div class="profile">
             <div class="profile-top">自傳 Profile</div>
             <div class="profile-bottom">
-              <textarea name="" placeholder="請撰寫100~200字的個人自傳"></textarea>
+              <textarea name="profile" placeholder="請撰寫100~200字的個人自傳"></textarea>
             </div>
           </div>
           <div class="experience">
             <div class="experience-top">工作經歷 Experience</div>
-            <table class="experience-table">
-              <tr class="experience-banner">
-                <td>開始年月</td>
-                <td>結束年月</td>
-                <td>共計年月</td>
-                <td>職稱</td>
-                <td>就職公司</td>
-              </tr>
-              <tr class="experience-input">
-                <td><input type="date" name="" placeholder="2022/1" required></td>
-                <td><input type="date" name="" placeholder="現在" required></td>
-                <td><input type="month" name="" placeholder="0年3個月" required></td>
-                <td><input type="text" name="" placeholder="請填寫職稱 EX:建築設計師" class="experience-job" required></td>
-                <td><input type="text" name="" placeholder="請填寫公司名稱 EX:某建築師事務所" class="experience-job" required></td>
-              </tr>
-            </table>
-            <div class="experience-note"><input type="text" placeholder="簡述, 工作重點, 負責專案, 備註"></div>
+            <ul class="experience-contents">
+              <li><label for="">開始年月</label><br><input type="date" name="start_month[0]" placeholder="2022/1" required></li>
+              <li>~<p></p></li>
+              <li><label for="">結束年月</label><br><input type="date" name="end_month[0]" placeholder="現在" required></li>
+              <li><label for="">共計年月</label><br><input type="text" name="total_month[0]" placeholder="0年3個月" required></li>
+              <li><label for="">職稱</label><br><input type="text" name="job_title[0]" placeholder="請填寫職稱 EX:建築設計師" required></li>
+              <li><label for="">就職公司</label><br><input type="text" name="employment[0]" placeholder="請填寫公司名稱 EX:某建築師事務所" required></li>
+            </ul>
+              
+            <div class="experience-note"><textarea placeholder="簡述, 工作重點, 負責專案, 備註"></textarea></div>
           </div>
           <div class="education">
             <div class="education-top">學歷 Education</div>
-            <table class="education-table">
-              <tr class="education-banner">
-                <td>開始年月</td>
-                <td>結束年月</td>
-                <td>畢業</td>
-                <td>肄業</td>
-                <td>學校</td>
-                <td>科系</td>
-                <td>學位</td>
-              </tr>
-              <tr class="education-input">
-                <td><input type="date" name="" placeholder="2020/9" required></td>
-                <td><input type="date" name="" placeholder="現在" required></td>
-                <td><input type="checkbox" name="" required class="education-checkbox"></td>
-                <td><input type="checkbox" name="" required class="education-checkbox"></td>
-                <td><input type="text" id="schoolName-0" name="school_name[0]" required></td>
-                <td><input type="text" name="" required></td>
-                <td><input type="text" name="" required></td>
-              </tr>
-            </table>
+            <ul class="education-contents">
+              <li><label>開始年月</label><br><input type="date" name="begin_month[0]" placeholder="2020/9" required></li>
+              <li>~<p></p></li>
+              <li><label>結束年月</label><br><input type="date" name="last_month[0]"></li>
+              <li>
+                <input type="radio" name="graduate[0]" id="graduate">
+                <label for="graduate"  class="education-radio-button">畢業</label>
+              </li>
+              <li>
+                <input type="radio" name="graduate[0]" id="n-graduate">
+                <label for="n-graduate"  class="education-radio-button">肄業</label>
+              </li>
+              <li><label>學校</label><br><input type="text" name="school[0]" placeholder="台湾大学"></li>
+              <li><label>科系</label><br><input type="text" name="subject[0]" placeholder="土木工程系"></li>
+              <li><label>學位</label><br><input type="text" name="degree[0]" placeholder="博⼠候選⼈" ></li>
+            </ul>
           </div>
           <div class="lisence">
-            <div class="lisence-top">專業證照｜獲獎紀錄｜相關社團參與</div>
-            <div class="lisence-bottom">
-              <input type="text" name="" required placeholder="台灣台北註冊建築師">
-              <input type="text" name="" required placeholder="2020年 德國IF最佳新人獎">
-              <input type="text" name="" required placeholder="2020年 德國IF最佳新人獎">
+            <div class="lisence-top">
+              專業證照｜獲獎紀錄｜相關社團參與
+              <button type="button" value="フォーム追加" onclick="addForm()">
+                <img src="../img/icon/addformDark.png" alt="">+
+              </button>
+            </div>           
+            <div class="lisence-contents" id="form_area">
+              <input type="text" name="lisence[0]" placeholder="台灣台北註冊建築師" required>
+              <button type="button" id="0" onclick="deleteBtn(this)"></button>
             </div>
           </div>
           <div class="hobby">
@@ -107,15 +125,21 @@
             <div class="hobby-bottom"><textarea name="" placeholder="素描, 建築素描, 測繪, 旅行" required></textarea></div>
           </div>
           <div class="info-submit">
-            <button type="submit" name="">送出</button>
-            <button>清空</button>
+            <button type="button" class="backtoprevious"><a href="./step1.html">上一頁</a></button>
+            <button type="submit" name=""><a href="./step3.html">送出</a></button>
           </div>
         </form>
       </div>
-      <div class="backtoindex">
-        <a href="">上一頁</a>
-      </div>
     </div>
+
+    <!-- Pagetop -->
+    <div class="c-pagetop">
+      <a href="#pagetop" id="js-pagetop">
+        <img src="../img/arrow_down_red.svg" alt="Pagetop" />
+      </a>
+    </div>
+    <!-- // Pagetop -->
+
     <!-- footer -->
     <footer class="footer">
       <div class="footer__navigate">
@@ -142,7 +166,11 @@
 
         <!-- Scripts -->
     <!-- ↓Home only -->
-    <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/script.js"></script>
+    <!-- <script src="../js/jQuery3.6.0.min.js"></script> -->
+
     <!-- ↑Home only -->
   </body>
 </html>

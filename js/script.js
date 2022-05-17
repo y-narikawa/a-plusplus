@@ -77,6 +77,26 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    const anchorLinksArr = Array.prototype.slice.call(anchorLinks);
+  
+    anchorLinksArr.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const targetId = link.hash;
+        const targetElement = document.querySelector(targetId);
+        const targetOffsetTop =
+          window.pageYOffset + targetElement.getBoundingClientRect().top;
+        window.scrollTo({
+          top: targetOffsetTop,
+          behavior: "smooth",
+        });
+      });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   const targets = document
     .querySelector(".occupation")
     .querySelectorAll(".tgl-wrap");
@@ -122,23 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
     headerModal.classList.toggle("-active");
   });
 
-  //  smooth scroll
-  const anchorLinks = document.querySelectorAll('a[href^="#"]');
-  const anchorLinksArr = Array.prototype.slice.call(anchorLinks);
 
-  anchorLinksArr.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const targetId = link.hash;
-      const targetElement = document.querySelector(targetId);
-      const targetOffsetTop =
-        window.pageYOffset + targetElement.getBoundingClientRect().top;
-      window.scrollTo({
-        top: targetOffsetTop,
-        behavior: "smooth",
-      });
-    });
-  });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -229,12 +233,13 @@ const slideToggle = (el, duration = 300) => {
 };
 
 //userinfo
+
 document.getElementById("submit").onclick = function() {
-  const user_id = document.getElementById("user_id").value;
+  const user_id = document.getElementById("user-id").value;
   const password = document.getElementById("password").value;
   const password2 = document.getElementById("password2").value;
-  const famliy_name = document.getElementById("famliy_name").value;
-  const givin_name = document.getElementById("givin_name").value;
+  const famliy_name = document.getElementById("famliy-name").value;
+  const givin_name = document.getElementById("givin-name").value;
   const birthday = document.getElementById("birthday").value;
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
@@ -251,38 +256,143 @@ document.getElementById("submit").onclick = function() {
     if(flag == 1){ alert('必須項目が未記入の箇所があります'); }
 };
 
-//checkbox
-// const consent_chk = document.querySelector(`#consent-chk`);
-// const submit_btn = document.querySelector(`input[type=submit]`);
 
-// consent_chk.addEventListener('change', () => { 
-//   if (consent_chk.checked === true) {
-//     submit_btn.disabled = false;
-//   } else {
-//     submit_btn.disabled = true;
-//   }
+function previewImage(obj)
+{
+    let fileReader = new FileReader()
+    
+    fileReader.onload = (function() {
+        document.getElementById('preview').src = fileReader.result
+    })
+    fileReader.readAsDataURL(obj.files[0])
+}
+
+//drag and drop image
+
+// var fileArea = document.getElementById('dragDropArea');
+// var fileInput = document.getElementById('fileInput');
+// fileArea.addEventListener('dragover', function(evt){
+//   evt.preventDefault();
+//   fileArea.classList.add('dragover');
 // });
+// fileArea.addEventListener('dragleave', function(evt){
+//     evt.preventDefault();
+//     fileArea.classList.remove('dragover');
+// });
+// fileArea.addEventListener('drop', function(evt){
+//     evt.preventDefault();
+//     fileArea.classList.remove('dragenter');
+//     var files = evt.dataTransfer.files;
+//     console.log("DRAG & DROP");
+//     console.table(files);
+//     fileInput.files = files;
+//     photoPreview('onChenge',files[0]);
+// });
+// function photoPreview(event, f = null) {
+//   var file = f;
+//   if(file === null){
+//       file = event.target.files[0];
+//   }
+//   var reader = new FileReader();
+//   var preview = document.getElementById("previewArea");
+//   var previewImage = document.getElementById("previewImage");
 
-//image preview
+//   if(previewImage != null) {
+//     preview.removeChild(previewImage);
+//   }
+//   reader.onload = function(event) {
+//     var img = document.createElement("img");
+//     img.setAttribute("src", reader.result);
+//     img.setAttribute("id", "previewImage");
+//     preview.appendChild(img);
+//   };
 
-function previewFile(file) {
-  const preview = document.getElementById('preview');
-  const reader = new FileReader();
+//   reader.readAsDataURL(file);
+// }
 
-  reader.onload = function (e) {
-    const imageUrl = e.target.result; 
-    const img = document.createElement("img"); 
-    img.src = imageUrl; 
-    preview.appendChild(img); 
-  }
 
-  reader.readAsDataURL(file);
+
+ //add more input
+
+function addForm() {
+  let i = 1 
+  let input_data = document.createElement('input')
+  input_data.type = 'text'
+  input_data.id = 'inputform_' + i
+  let parent = document.getElementById('form_area')
+  parent.appendChild(input_data)
+
+  let button_data = document.createElement('button')
+  button_data.id = i
+  button_data.onclick = function(){deleteBtn(this)}
+  button_data.innerHTML = '<div class="delete-icon">削除</div> '
+  parent.appendChild(button_data)
+  i++ 
 }
-const fileInput = document.getElementById('example');
-const handleFileSelect = () => {
-  const files = fileInput.files;
-  for (let i = 0; i < files.length; i++) {
-    previewFile(files[i]);
-  }
+
+function deleteBtn(target) {
+  let target_id = target.id
+  let parent = document.getElementById('form_area')
+  let ipt_id = document.getElementById('inputform_' + target_id)
+  let tgt_id = document.getElementById(target_id)
+  parent.removeChild(ipt_id)
+  parent.removeChild(tgt_id)
+  console.log('m12')
 }
-fileInput.addEventListener('change', handleFileSelect);
+
+// using jquery
+
+// $(function() {
+// 	//追加
+// 	$('.addformbox').click(function() {
+// 		//クローンを変数に格納
+// 		var clonecode = $('lisence_bottom:last').clone(true);
+// 		console.log(1)
+// 		//数字を＋１し変数に格納
+// 		var cloneno = clonecode.attr('data-formno');
+// 		var cloneno2 = parseInt(cloneno) + 1;
+// 		var cloneno3 = parseInt(cloneno) + 2;
+//     console.log(2)
+// 		//data属性の数字を＋１
+// 		clonecode.attr('data-formno',cloneno2);
+//     console.log(3)
+// 		//数値
+// 		clonecode.find('.li_no').html(cloneno3);
+//     console.log(4)
+// 		//name属性の数字を+1
+// 		var namecode = clonecode.find('input.li_text').attr('name');
+// 		namecode = namecode.replace(/input\[[0-9]{1,2}/g,'input[' + cloneno2);
+// 		clonecode.find('input.li_text').attr('name',namecode);
+
+		
+// 		//HTMLに追加
+// 		clonecode.insertAfter($('lisence_bottom:last'));
+// 	});
+	
+
+// 	//削除
+// 	$('.deletformbox').click(function() {
+// 		//クリックされた削除ボタンの親要素を削除
+// 		$(this).parents("lisence_bottom").remove();
+
+// 		var scount = 0;
+// 		//番号振り直し
+// 		$('lisence_bottom').each(function(){
+// 			var scount2 = scount + 1;
+		
+// 			//data属性の数字
+// 			$(this).attr('data-formno',scount);
+			
+// 			$('.li_no',this).html(scount2);
+			
+			
+// 			//input質問タイトル番号振り直し
+// 			var name = $('input.li_text',this).attr('name');
+// 			name = name.replace(/input\[[0-9]{1,2}/g,'input[' + scount);
+// 			$('input.li_text',this).attr('name',name);
+
+// 			scount += 1;
+// 		});
+// 	});	
+	
+// });
