@@ -197,11 +197,11 @@
     margin-bottom: 30px;
 }
 
-.check-test {
+.agree-checkbox {
     display: none;
 }
 
-.check-test + span {
+.agree-checkbox + span {
     cursor: pointer;
     display: inline-block;
     margin: 0 0.2em 0;
@@ -210,7 +210,7 @@
     color: $border-color;
 }
 
-.check-test + span::before {
+.agree-checkbox + span::before {
     -webkit-transform: translateY(-50%);
     background: #fff;
     border: 1px solid $border-color;
@@ -226,7 +226,7 @@
     font-size: 0.5em;
 }
 
-.check-test + span::after {
+.agree-checkbox + span::after {
     -webkit-transform: translateY(-50%) rotate(-45deg);
     border-bottom: 3px solid $primary-color;
     border-left: 3px solid $primary-color;
@@ -243,7 +243,7 @@
     width: 1em;
 }
 
-.check-test:checked + span::after {
+.agree-checkbox:checked + span::after {
     opacity: 1;
 }
 
