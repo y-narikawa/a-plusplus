@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+.account-info-edit{
+    background-color: $white-color;
+    color: $black-color;
+    margin-bottom: 50px;
+    margin-top: -200px;
+    width: 800px;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-family: $secondary-family-ie;
+    .form-account-info{
+        margin-left: 5%;
+        margin-right: 10%;
+        a{
+            text-decoration: underline 1px ;
+        }
+        table{
+            width: 100%;
+        }
+        .account-info-input{
+            label{
+                font-size: 1em;
+            }
+            .icon-required::after {
+                content: "必須";
+                border: solid 2px $primary-color;
+                color: $primary-color;
+                font-size: 0.7em;
+                min-width: 10px;
+                padding-left:7px;
+                padding-right:7px;
+                padding-bottom: 1px;
+                margin: 0px 5px;
+                line-height: 1;
+                vertical-align: middle;
+                white-space: nowrap;
+                text-align: center;
+                border-radius: 10px;
+                display: inline-block;
+            }   
+            input{
+                padding: 1em;
+                border: solid 0.1px $border-color;
+                border-radius: 5px;
+                margin-left: 20%;
+                margin-right: 20%;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }      
+        }
+    }
+    .submit-button{
+        color: $white-color;
+        text-align: center;
+        button{
+            font-size: 30px;
+            background-color: $primary-color;
+            margin-left: 0;
+            margin-bottom: 20px;
+            padding: 20px 20%;
+            border-radius: 20px;
+        }
+        button:hover{
+            background-color: $primary-h-color;
+        }
+    }
+    .backtologin{
+        color: $border-color;
+        font-size: 0.8em;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
