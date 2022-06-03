@@ -63,27 +63,6 @@ textarea{
         //personal-info
 
         .personal-info{
-            // #dragDropArea{
-            //     margin: 10px;
-            //     padding: 10px;
-            //     border: dashed 2px $border-color;
-            //     max-height:450px;
-            //     max-width: 350px;
-            //     object-fit: cover;
-            //     text-align: center;
-            //   }
-            //   #dragDropArea p{
-            //       color: $border-color;
-            //       font-weight: bold;
-            //       font-size: 1em;
-            //   }
-            //   #dragDropArea .drag-drop-buttons{
-            //       margin-top: 20px;
-            //       font-size: 1em;
-            //   }
-            //   .drag-drop-buttons input{
-            //       margin: auto;
-            //   }
             .personal-info-title{
                 border-bottom: solid $border-color;
                 margin-bottom: 20px;
@@ -318,11 +297,11 @@ textarea{
         }
 
 
-        //lisence
+        //license
 
-        .lisence{
+        .license{
             width: auto;
-            .lisence-top{
+            .license-top{
                 display: flex;
                 border-bottom: solid $border-color;
                 justify-content: space-between;
@@ -333,7 +312,7 @@ textarea{
                     }
                 }
             }
-            .lisence-contents{
+            .license-contents{
                 margin-top: 20px;
                 margin-bottom: 50px;
                 input{
@@ -381,6 +360,7 @@ textarea{
 .info-submit{
     margin-top: 100px;
     display: flex;
+    flex-direction: row-reverse;
     gap: 20px;
     width: 100%;
     button{
@@ -406,6 +386,7 @@ textarea{
         margin-top: 10px;
         margin-bottom: 20px;
         display: block;
+        flex-direction: column;
         width: 100%;
         button{
             margin-bottom: 1rem;
@@ -529,10 +510,10 @@ textarea{
                     width: 100%;
                 }
             }
-            .lisence-top{
+            .license-top{
                 border-bottom: solid $border-color;
             }
-            .lisence-bottom{
+            .license-bottom{
                 margin-top: 20px;
                 margin-bottom: 40px;
                 input{
@@ -656,10 +637,10 @@ textarea{
                     width: 100%;
                 }
             }
-            .lisence-top{
+            .license-top{
                 border-bottom: solid $border-color;
             }
-            .lisence-bottom{
+            .license-bottom{
                 margin-top: 20px;
                 margin-bottom: 40px;
                 input{

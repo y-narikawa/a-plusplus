@@ -1,24 +1,24 @@
 @charset 'utf-8';
-.user-specialities-body{
+.user-skill-body{
     width: 100%;
     font-family: $secondary-family-ie;
 }
 
-.user-specialities-title{
+.user-skill-title{
     margin: auto;
     max-width: 1333px;
     color: $black-color;
     font-size: 35px;
 }
 
-.user-specialities-whitebox{
+.user-skill-whitebox{
     background-color: $white-color;
     border-radius: 20px;
     margin: 20px auto 100px auto;
     max-width: 1333px;
     padding: 50px;
 }
-.user-specialities-contents{
+.user-skill-contents{
     margin: 0 5%;
 }
 .job-categories1-title{
@@ -188,14 +188,14 @@
 // tablet settings
 
 @include mq(tab){
-    .user-specialities-title{
+    .user-skill-title{
         margin-left: 10%;
         margin-top: 20px;
         color: $black-color;
         font-size: 20px;
     }
     
-    .user-specialities-whitebox{
+    .user-skill-whitebox{
         background-color: $white-color;
         border-radius: 20px;
         margin-left: 10%;
@@ -205,7 +205,7 @@
         padding: 10px;
     }
                                             
-    .user-specialities-contents{
+    .user-skill-contents{
         margin: 0 5%;
     }
     .job-categories1-title{
@@ -344,14 +344,14 @@
 // smartphone settings
 
 @include mq(sp){
-    .user-specialities-title{
+    .user-skill-title{
         margin-left: 5%;
         margin-top: 20px;
         color: $black-color;
         font-size: 20px;
     }
     
-    .user-specialities-whitebox{
+    .user-skill-whitebox{
         background-color: $white-color;
         border-radius: 20px;
         margin-left: 5%;
