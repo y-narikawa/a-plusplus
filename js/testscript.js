@@ -1,3 +1,4 @@
+// TODO: このファイルを削除 @shin
 function addForm() {
     let i = 1 
     let input_data = document.createElement('input')
