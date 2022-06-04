@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../css/style.css"/>
   </head>
   <body id="pagetop">
+    <!-- TODO:コードエラーがある @shin -->
     <header class="header">
         <!-- Middle -->
         <div class="header__middle">
@@ -42,10 +43,12 @@
 
       <!-- white-box Account-information -->
       <div class="account-info-edit">
-        <form class="form-account-info" action="action.php" method="post" enctype="multipart/form-data">
+        <!-- TODO: actionは空でおいておこう @shin　-->
+        <form class="form-account-info" action="" method="post" enctype="multipart/form-data">
           <table class="account-info-input">
             <tr>
               <td class="icon-required"><label for="user-id">ID帳號</label></td>
+              <!-- TODO: このtypeはサポートされているの？ @shin -->
               <td><input type="id" name="user_id" id="user-id" required></td>
             </tr>
             <tr>
@@ -61,6 +64,7 @@
               <td><input type="text" name="family_name" id="family-name" required></td>
             </tr>
             <tr>
+              <!-- TODO:スペルミス -->
               <td class="icon-required"><label for="givin-name">名字</label></td>
               <td><input type="text" name="givin_name" id="givin-name" required></td>
             </tr>
@@ -78,6 +82,7 @@
             </tr>
           </table>
           <div class="submit-button">
+            <!-- TODO: リンクが切れてる -->
             <button type="submit"><a href="./step2.html"></a>修改</button>
           </div>
           <div class="backtologin">
