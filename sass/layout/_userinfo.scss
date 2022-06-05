@@ -97,6 +97,7 @@
             width: 100%;
         }
         .account-info-input{
+            // TODO: 重複コードあり mypageinfo.scss @shin
             label{
                 font-size: 1em;
             }
@@ -109,6 +110,7 @@
                 padding-left:7px;
                 padding-right:7px;
                 padding-bottom: 1px;
+                // TODO: 0pxは冗長な記述 @shin
                 margin: 0px 5px;
                 line-height: 1;
                 vertical-align: middle;
@@ -121,6 +123,7 @@
                 padding: 1em;
                 border: solid 0.1px $border-color;
                 border-radius: 5px;
+                // TODO 省略可能 @shin
                 margin-left: 20%;
                 margin-right: 20%;
                 margin-top: 30px;
@@ -128,6 +131,8 @@
             }      
         }
     }
+
+    // TODO: 重複コードあり mypageinfo.scss @shin
     .submit-button{
         color: $white-color;
         text-align: center;
@@ -207,6 +212,7 @@
     color: $border-color;
 }
 
+// TODO: 重複コードあり userspecialities.scss @shin
 .agree-checkbox + span::before {
     -webkit-transform: translateY(-50%);
     background: #fff;
@@ -223,6 +229,7 @@
     font-size: 0.5em;
 }
 
+// TODO: 重複コードあり userspecialities.scss @shin
 .agree-checkbox + span::after {
     -webkit-transform: translateY(-50%) rotate(-45deg);
     border-bottom: 3px solid $primary-color;
@@ -257,6 +264,7 @@
         margin-top: 10px;
         margin-left: 10%;
         margin-right: 10%;
+        // TODO: 重複コードあり userinfo.scss @shin
         .yellow-box{
             background-color: rgba(244,173,37,0.2);
             color: $black-color;
@@ -278,6 +286,7 @@
     //white-box steps
     .steps{
         display: block;
+        // TODO 省略可能 @shin
         margin-top: 20px;
         margin-bottom: 40px;
         margin-left: 10%;
@@ -290,6 +299,7 @@
             .white-box-contents{
                 margin: 15px auto;
                 padding: 15px 20%;
+                // TODO: 重複コードあり userinfo.scss @shin
                 p{
                     font-size: 20px;
                     color: $black-color;
@@ -311,7 +321,8 @@
     }
 
     // whitebox info
-    .account-info{        
+    .account-info{
+        // TODO 省略可能 @shin
         margin-top: 10px;
         margin-left: 10%;
         margin-right: 10%;
@@ -336,6 +347,8 @@
                     color: $primary-color;
                     min-width: 5px;
                     padding: 1px 3px 3px 3px;
+                    // TODO: 0pxは冗長な記述 @shin
+                    // TODO: プロパティが重複してる @shin
                     margin: 0px 2px 4px 2px;
                     line-height: 1;
                     vertical-align: middle;
@@ -407,6 +420,7 @@
         margin-top: 10px;
         margin-left: 5%;
         margin-right: 5%;
+        // TODO: 重複コードあり userinfo.scss @shin
         .yellow-box{
             background-color: rgba(244,173,37,0.2);
             color: $black-color;
@@ -427,6 +441,7 @@
     }
     //white-box steps
     .steps{
+        // TODO 省略可能 @shin
         margin-top: 20px;
         margin-bottom: 20px;
         margin-left: 5%;
@@ -460,7 +475,8 @@
     }
 
     // whitebox info
-    .account-info{        
+    .account-info{
+        // TODO 省略可能 @shin
         margin-top: 10px;
         margin-left: 5%;
         margin-right: 5%;
@@ -486,6 +502,7 @@
                     font-size: 0.8em;
                     min-width: 5px;
                     padding: 1px 3px 3px 3px;
+                    // TODO: 0pxは冗長な記述 @shin
                     margin: 0px 2px 4px 2px;
                     line-height: 1;
                     vertical-align: middle;

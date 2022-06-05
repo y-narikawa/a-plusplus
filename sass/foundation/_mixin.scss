@@ -167,6 +167,7 @@ $breakpoints: (
 @mixin fa($code, $weight: 900) {
   content: ($code);
   font-weight: $weight;
+  // TODO: 汎用デフォルトが入ってない 不必要な場合はスルーしてよい
   font-family: "Font Awesome 5 Free";
 }
 
