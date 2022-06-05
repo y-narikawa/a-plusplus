@@ -51,6 +51,7 @@
     color: $black-color;
 }
 
+// TODO: 重複コードあり userinfo.scss @shin
 .job-checkbox + span::before {
     -webkit-transform: translateY(-50%);
     background: #fff;
@@ -198,6 +199,7 @@
     .user-skill-whitebox{
         background-color: $white-color;
         border-radius: 20px;
+        // TODO 省略可能 @shin
         margin-left: 10%;
         margin-right: 10%;
         margin-top: 10px; 
@@ -220,6 +222,7 @@
         }
     }
 
+    // TODO: 重複コードあり userspecialities.scss @shin
     .job-categories1-checkbox{
         font-size: 1em;
         margin-bottom: 30px;
@@ -271,6 +274,7 @@
         }
         table{
             font-size: 1em;
+            // TODO: 重複コードあり userspecialities.scss @shin
             .rankBase{
                 &__top{
                     border-top: none;
@@ -354,6 +358,7 @@
     .user-skill-whitebox{
         background-color: $white-color;
         border-radius: 20px;
+        // TODO 省略可能 @shin
         margin-left: 5%;
         margin-right: 5%;
         margin-top: 20px; 

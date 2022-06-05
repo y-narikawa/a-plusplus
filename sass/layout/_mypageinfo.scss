@@ -32,6 +32,7 @@
                 padding-left:7px;
                 padding-right:7px;
                 padding-bottom: 1px;
+                // TODO: 0px冗長な記述 @shin
                 margin: 0px 5px;
                 line-height: 1;
                 vertical-align: middle;
@@ -44,6 +45,7 @@
                 padding: 1em;
                 border: solid 0.1px $border-color;
                 border-radius: 5px;
+                // TODO: 省略可能 @shin
                 margin-left: 20%;
                 margin-right: 20%;
                 margin-top: 30px;
@@ -51,6 +53,8 @@
             }      
         }
     }
+
+    // TODO userinfo.scss に全く同じ記述がある @shin
     .submit-button{
         color: $white-color;
         text-align: center;

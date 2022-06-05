@@ -122,6 +122,7 @@ textarea{
                             padding: 10px 5px;
                         }
                     }
+                    // TODO: 重複コードあり userresume.scss @shin
                     @include mq(tab){
                         margin-left: auto;
                         p{
@@ -459,6 +460,7 @@ textarea{
     .user-resume-whitebox{
         background-color: $white-color;
         border-radius: 20px;
+        // TODO 省略可能 @shin
         margin-left: 10%;
         margin-right: 10%;
         margin-top: 20px; 
@@ -496,6 +498,7 @@ textarea{
                     }
                 }
             }
+            // TODO: 重複コードあり userresume.scss @shin
             .profile-top{
                 border-bottom: solid $border-color;
             }
@@ -590,6 +593,7 @@ textarea{
     .user-resume-whitebox{
         background-color: $white-color;
         border-radius: 20px;
+        // TODO 省略可能 @shin
         margin-left: 5%;
         margin-right: 5%;
         margin-top: 20px; 
@@ -623,6 +627,8 @@ textarea{
                     }
                 }
             }
+
+            //noinspection ALL
             .profile-top{
                 border-bottom: solid $border-color;
             }
