@@ -71,10 +71,13 @@ textarea{
                 display: flex;
                 &__image{
                     .image-area{
+                        color: $black-color;
                         width: 250px;
                         height: 300px;
+                        line-height: 300px;
+                        background-color: $border-color-300;
                         img{
-                            display: flex;
+                            text-align: center;
                             width: 250px;
                             height: 300px;
                             object-fit: cover;
@@ -86,6 +89,7 @@ textarea{
                             width: 250px;
                             height: 300px;
                             opacity: 0;
+                            z-index: 10;
                         }
                     }
                     p{
