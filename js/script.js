@@ -232,30 +232,6 @@ const slideToggle = (el, duration = 300) => {
   }
 };
 
-//userinfo
-
-document.getElementById("submit").onclick = function() {
-  const user_id = document.getElementById("user-id").value;
-  const password = document.getElementById("password").value;
-  const password2 = document.getElementById("password2").value;
-  const famliy_name = document.getElementById("famliy-name").value;
-  const givin_name = document.getElementById("givin-name").value;
-  const birthday = document.getElementById("birthday").value;
-  const email = document.getElementById("email").value;
-  const phone = document.getElementById("phone").value;
-
-  let flag = 0;
-    if(user_id.length == 0) flag = 1;
-    if(password.length == 0) flag = 1; 
-    if(password2.length == 0) flag = 1;
-    if(famliy_name.length == 0) flag = 1;
-    if(givin_name.length == 0) flag = 1; 
-    if(birthday.length == 0) flag = 1; 
-    if(email.length == 0) flag = 1; 
-    if(phone.length == 0) flag = 1; 
-    if(flag == 1){ alert('必須項目が未記入の箇所があります'); }
-};
-
 
 function previewImage(obj)
 {
@@ -266,51 +242,6 @@ function previewImage(obj)
     })
     fileReader.readAsDataURL(obj.files[0])
 }
-
-//drag and drop image
-
-// var fileArea = document.getElementById('dragDropArea');
-// var fileInput = document.getElementById('fileInput');
-// fileArea.addEventListener('dragover', function(evt){
-//   evt.preventDefault();
-//   fileArea.classList.add('dragover');
-// });
-// fileArea.addEventListener('dragleave', function(evt){
-//     evt.preventDefault();
-//     fileArea.classList.remove('dragover');
-// });
-// fileArea.addEventListener('drop', function(evt){
-//     evt.preventDefault();
-//     fileArea.classList.remove('dragenter');
-//     var files = evt.dataTransfer.files;
-//     console.log("DRAG & DROP");
-//     console.table(files);
-//     fileInput.files = files;
-//     photoPreview('onChenge',files[0]);
-// });
-// function photoPreview(event, f = null) {
-//   var file = f;
-//   if(file === null){
-//       file = event.target.files[0];
-//   }
-//   var reader = new FileReader();
-//   var preview = document.getElementById("previewArea");
-//   var previewImage = document.getElementById("previewImage");
-
-//   if(previewImage != null) {
-//     preview.removeChild(previewImage);
-//   }
-//   reader.onload = function(event) {
-//     var img = document.createElement("img");
-//     img.setAttribute("src", reader.result);
-//     img.setAttribute("id", "previewImage");
-//     preview.appendChild(img);
-//   };
-
-//   reader.readAsDataURL(file);
-// }
-
-
 
  //add more input
 
