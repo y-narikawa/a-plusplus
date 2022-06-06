@@ -1,163 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A++ my resume</title>
     <link rel="stylesheet" href="../css/style.css" />
-  </head>
-  <body id="pagetop">
+</head>
+
+<body id="pagetop">
     <!-- TODO: タグがない @shin -->
     <header class="header">
         <!-- Middle -->
         <div class="header__middle">
-          <div class="header__inner">
-            <h1 class="h-logo">
-              <a href="../index.html">
-                <img src="../img/logo.svg" alt="A++" />
-              </a>
-            </h1>
-            <div class="c-spacer"></div>
-          </div>
+            <div class="header__inner">
+                <h1 class="h-logo">
+                    <a href="../index.html">
+                        <img src="../img/logo.svg" alt="A++" />
+                    </a>
+                </h1>
+                <div class="c-spacer"></div>
+            </div>
         </div>
     </header>
     <div class="user-resume-body">
-      <div class="steps-top-right">
-        <div class="steps-contents">
-          <ul>
-            <li><p>STEP1</p>註冊</li>
-            <li><p class="current-step">STEP2</p><span>填寫履歷</span></li>
-            <li><p>STEP3</p>自我評量</li>
-            <li><p>STEP4</p>完成</li>
-          </ul>
+        <div class="steps-top-right">
+            <div class="steps-contents">
+                <ul>
+                    <li>
+                        <p>STEP1</p>註冊
+                    </li>
+                    <li>
+                        <p class="current-step">STEP2</p><span>填寫履歷</span>
+                    </li>
+                    <li>
+                        <p>STEP3</p>自我評量
+                    </li>
+                    <li>
+                        <p>STEP4</p>完成
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
-      <div class="user-resume-title">
-        填寫個人履歷
-      </div>
-      <div class="user-resume-whitebox">
-        <form class="user-resume-contents" action="" method="post" enctype="multipart/form-data">
-          <!-- personal-information -->
-          <div class="personal-info">
-            <div class="personal-info-title">陳小喬</div>
-            <div class="personal-info-contents">
-              <div class="personal-info-contents__image">
-                <div class="image-area">
-                  <img src="" class="preview" id="preview" alt="preview">
-                  <input type="file" name="profile_img" required accept="image/*" onchange="previewImage(this)">
-                </div>
-                
-                <p>(請上傳本人2吋證件照或正式照片)</p>
-              </div>
-              <div class="personal-info-contents__bottom">
-                <p><label for="address">地址：</label><br><textarea name="address" placeholder="台北市大安區敦化南路一段100號" id="address"></textarea></p>
-                <p><label for="phone1">聯絡電話：</label><br><input type="tel" name="phone1" placeholder="0910-000-000" id="phone1"></p>
-              </div>
-            </div>
-          </div>
-          <!-- // personal-information -->
+        <div class="user-resume-title">
+            填寫個人履歷
+        </div>
+        <div class="user-resume-whitebox">
+            <form class="user-resume-contents" action="" method="post" enctype="multipart/form-data">
+                <!-- personal-information -->
+                <div class="personal-info">
+                    <div class="personal-info-title">陳小喬</div>
+                    <div class="personal-info-contents">
+                        <div class="personal-info-contents__image">
+                            <div class="image-area">
+                                <img src="" class="preview" id="preview" alt="preview">
+                                <input type="file" name="profile_img" required accept="image/*"
+                                    onchange="previewImage(this)">
+                            </div>
 
-          <div class="profile">
-            <div class="profile-top">自傳 Profile</div>
-            <div class="profile-bottom">
-              <textarea name="profile" placeholder="請撰寫100~200字的個人自傳"></textarea>
-            </div>
-          </div>
-          <div class="experience">
-            <div class="experience-top">工作經歷 Experience</div>
-            <ul class="experience-contents">
-              <li>開始年月<br><p></p></li>
-              <li>~<p></p></li>
-              <li>結束年月<br><p></p></li>
-              <li>共計年月<br><p></p></li>
-              <li>職稱<br><p></p></li>
-              <li>就職公司<br><p></p></li>
-            </ul>
-              
-            <div class="experience-note"><textarea placeholder="簡述, 工作重點, 負責專案, 備註"></textarea></div>
-          </div>
-          <div class="education">
-            <div class="education-top">學歷 Education</div>
-            <ul class="education-contents">
-              <li>開始年月<br><p></p></li>
-              <li>~<p></p></li>
-              <li>結束年月<br><p></p></li>
-              <li>
-                <p></p>
-                <!-- TODO: 無効なlabel動作を確認すること @shin -->
-                <label for="graduate-[0]"  class="education-radio-button">畢業</label>
-              </li>
-              <li>
-                <p></p>
-                <!-- TODO: 無効なlabel動作を確認すること @shin -->
-                <label for="n-graduate-[0]"  class="education-radio-button">肄業</label>
-              </li>
-              <!-- TODO: 無効なlabel動作を確認すること @shin -->
-              <li><label for="school-[0]">學校</label><br><p></p></li>
-              <li><label for="subject-[0]">科系</label><br><input type="text" name="subject[0]" id="subject-[0]" placeholder="土木工程系"></li>
-              <li><label for="degree-[0]">學位</label><br><input type="text" name="degree[0]" id="degree-[0]" placeholder="博⼠候選⼈" ></li>
-            </ul>
-          </div>
-          <div class="license">
-            <div class="license-top">
-              專業證照｜獲獎紀錄｜相關社團參與
-              <button type="button" onclick="addForm()">
-                <img src="../img/add_form_dark.png" alt="pen">+
-              </button>
-            </div>           
-            <div class="license-contents" id="form_area">
-              <input type="text" name="license[0]" placeholder="台灣台北註冊建築師" required>
-              <button type="button" id="0" onclick="deleteBtn(this)"></button>
-            </div>
-          </div>
-          <div class="hobby">
-            <div class="hobby-top">興趣 Habits</div>
-            <div class="hobby-bottom"><textarea name="" placeholder="素描, 建築素描, 測繪, 旅行" required></textarea></div>
-          </div>
-          <div class="info-submit">
-            <button type="submit" name=""><a href="../step3.html">送出</a></button>
-            <button type="button" class="backtoprevious"><a href="../step1.html" >上一頁</a></button>
-          </div>
-        </form>
-      </div>
+                            <p>(請上傳本人2吋證件照或正式照片)</p>
+                        </div>
+                        <div class="personal-info-contents__bottom">
+                            <p><label for="address">地址：</label><br><textarea name="address"
+                                    placeholder="台北市大安區敦化南路一段100號" id="address"></textarea></p>
+                            <p><label for="phone1">聯絡電話：</label><br><input type="tel" name="phone1"
+                                    placeholder="0910-000-000" id="phone1"></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- // personal-information -->
+
+                <div class="profile">
+                    <div class="profile-top">自傳 Profile</div>
+                    <div class="profile-bottom">
+                        <textarea name="profile" placeholder="請撰寫100~200字的個人自傳"></textarea>
+                    </div>
+                </div>
+                <div class="experience">
+                    <div class="experience-top">工作經歷 Experience</div>
+                    <ul class="experience-contents">
+                        <li>開始年月<br>
+                            <p></p>
+                        </li>
+                        <li>~<p></p>
+                        </li>
+                        <li>結束年月<br>
+                            <p></p>
+                        </li>
+                        <li>共計年月<br>
+                            <p></p>
+                        </li>
+                        <li>職稱<br>
+                            <p></p>
+                        </li>
+                        <li>就職公司<br>
+                            <p></p>
+                        </li>
+                    </ul>
+
+                    <div class="experience-note"><textarea placeholder="簡述, 工作重點, 負責專案, 備註"></textarea></div>
+                </div>
+                <div class="education">
+                    <div class="education-top">學歷 Education</div>
+                    <ul class="education-contents">
+                        <li>開始年月<br>
+                            <p></p>
+                        </li>
+                        <li>~<p></p>
+                        </li>
+                        <li>結束年月<br>
+                            <p></p>
+                        </li>
+                        <li>
+                            <p></p>
+                            <!-- TODO: 無効なlabel動作を確認すること @shin -->
+                            <label for="graduate-[0]" class="education-radio-button">畢業</label>
+                        </li>
+                        <li>
+                            <p></p>
+                            <!-- TODO: 無効なlabel動作を確認すること @shin -->
+                            <label for="n-graduate-[0]" class="education-radio-button">肄業</label>
+                        </li>
+                        <!-- TODO: 無効なlabel動作を確認すること @shin -->
+                        <li><label for="school-[0]">學校</label><br>
+                            <p></p>
+                        </li>
+                        <li><label for="subject-[0]">科系</label><br><input type="text" name="subject[0]" id="subject-[0]"
+                                placeholder="土木工程系"></li>
+                        <li><label for="degree-[0]">學位</label><br><input type="text" name="degree[0]" id="degree-[0]"
+                                placeholder="博⼠候選⼈"></li>
+                    </ul>
+                </div>
+                <div class="license">
+                    <div class="license-top">
+                        專業證照｜獲獎紀錄｜相關社團參與
+                        <button type="button" onclick="addForm()">
+                            <img src="../img/add_form_dark.png" alt="pen">+
+                        </button>
+                    </div>
+                    <div class="license-contents" id="form_area">
+                        <input type="text" name="license[0]" placeholder="台灣台北註冊建築師" required>
+                        <button type="button" id="0" onclick="deleteBtn(this)"></button>
+                    </div>
+                </div>
+                <div class="hobby">
+                    <div class="hobby-top">興趣 Habits</div>
+                    <div class="hobby-bottom"><textarea name="" placeholder="素描, 建築素描, 測繪, 旅行" required></textarea>
+                    </div>
+                </div>
+                <div class="info-submit">
+                    <button type="submit" name=""><a href="../step3.html">送出</a></button>
+                    <button type="button" class="backtoprevious"><a href="../step1.html">上一頁</a></button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <!-- Pagetop -->
     <div class="c-pagetop">
-      <a href="#pagetop" id="js-pagetop">
-        <img src="../img/arrow_down_red.svg" alt="Pagetop" />
-      </a>
+        <a href="#pagetop" id="js-pagetop">
+            <img src="../img/arrow_down_red.svg" alt="Pagetop" />
+        </a>
     </div>
     <!-- // Pagetop -->
 
     <!-- footer -->
     <footer class="footer">
-      <div class="footer__navigate">
-        <ul class="footer__list">
-          <li class="footer__list-item">
-            <a href="">Ａ＋＋的理念與願景</a>
-          </li>
-          <li class="footer__list-item">
-            <a href="">網站使用規約及服務條款</a>
-          </li>
-          <li class="footer__list-item">
-            <a href="">隱私權政策</a>
-          </li>
-          <li class="footer__list-item">
-            <a href="">職場安全諮詢</a>
-          </li>
-          <li class="footer__list-item">
-            <a href="">廣告合作</a>
-          </li>
-        </ul>
-        <p class="footer__copyright">© 2022 寅辰有限公司 版權所有</p>
-      </div>
+        <div class="footer__navigate">
+            <ul class="footer__list">
+                <li class="footer__list-item">
+                    <a href="">Ａ＋＋的理念與願景</a>
+                </li>
+                <li class="footer__list-item">
+                    <a href="">網站使用規約及服務條款</a>
+                </li>
+                <li class="footer__list-item">
+                    <a href="">隱私權政策</a>
+                </li>
+                <li class="footer__list-item">
+                    <a href="">職場安全諮詢</a>
+                </li>
+                <li class="footer__list-item">
+                    <a href="">廣告合作</a>
+                </li>
+            </ul>
+            <p class="footer__copyright">© 2022 寅辰有限公司 版權所有</p>
+        </div>
     </footer>
 
     <!-- Scripts -->
     <!-- ↓Home only -->
     <script src="../js/script.js"></script>
     <!-- ↑Home only -->
-  </body>
+</body>
+
 </html>

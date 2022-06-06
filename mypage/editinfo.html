@@ -4,123 +4,126 @@
 <!-- TODO:swiperのcssを読み込む必要性はあるのか？(全ページ) @shin -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A++ my info</title>
-    <link rel="stylesheet" href="../css/style.css"/>
-  </head>
-  <body id="pagetop">
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body id="pagetop">
     <header class="header">
         <!-- Middle -->
         <div class="header__middle">
-          <div class="header__inner">
-            <h1 class="h-logo">
-              <a href="../index.html">
-                <img src="../img/logo.svg" alt="A++" />
-              </a>
-            </h1>
-            <div class="c-spacer"></div>
-          </div>
+            <div class="header__inner">
+                <h1 class="h-logo">
+                    <a href="../index.html">
+                        <img src="../img/logo.svg" alt="A++" />
+                    </a>
+                </h1>
+                <div class="c-spacer"></div>
+            </div>
         </div>
     </header>
     <div class="account-info-body">
-      <div class="account-info-title">免費成為A++會員</div>
+        <div class="account-info-title">免費成為A++會員</div>
 
-      <!-- yellow-box -->
-      <div class="attention">
-        <div class="yellow-box">
-          <img src="../img/attention_yellow.png" alt="attention">
-          免費註冊成為會員僅需在網站上填寫相關資料, Ａ＋＋不會主動以電話面試或聯繫。
+        <!-- yellow-box -->
+        <div class="attention">
+            <div class="yellow-box">
+                <img src="../img/attention_yellow.png" alt="attention">
+                免費註冊成為會員僅需在網站上填寫相關資料, Ａ＋＋不會主動以電話面試或聯繫。
+            </div>
         </div>
-      </div>
-      <!-- // yellow-box -->
+        <!-- // yellow-box -->
 
-      <!-- white-box Account-information -->
-      <div class="account-info-edit">
-        <form class="form-account-info" action="" method="post" enctype="multipart/form-data">
-          <table class="account-info-input">
-            <tr>
-              <td class="icon-required"><label for="user-id">ID帳號</label></td>
-              <td><input type="text" name="user_id" id="user-id" required></td>
-            </tr>
-            <tr>
-              <td class="icon-required"><label for="password">密碼</label></td>
-              <td><input type="password" name="password" id="password" required></td>
-            </tr>
-            <tr>
-              <td class="icon-required"><label for="password2">再次輸入密碼</label></td>
-              <td><input type="password" name="password2" id="password2" required></td>
-            </tr>
-            <tr>
-              <td class="icon-required"><label for="family-name">姓氏</label></td>
-              <td><input type="text" name="family_name" id="family-name" required></td>
-            </tr>
-            <tr>
-              <td class="icon-required"><label for="given-name">名字</label></td>
-              <td><input type="text" name="given_name" id="given-name" required></td>
-            </tr>
-            <tr>
-              <td class="icon-required"><label for="birthday">出生日期</label></td>
-              <td><input type="date" name="birthday" id="birthday" required></td>
-            </tr>
-            <tr>
-              <td class="icon-required"><label for="email">電子郵件信箱</label></td>
-              <td><input type="email" name="email" id="email" required></td>
-            </tr>
-            <tr>
-              <td class="icon-required"><label for="phone">手機號碼</label></td>
-              <td><input type="tel" name="phone" id="phone" required></td>
-            </tr>
-          </table>
-          <div class="submit-button">
-            <button type="submit">修改</button>
-          </div>
-          <div class="backtologin">
-            如果您已是A++會員請<a href="../user/login.html">登⼊</a>
-          </div>
-        </form>
-      </div>
-      <!-- // white-box Account-information -->
+        <!-- white-box Account-information -->
+        <div class="account-info-edit">
+            <form class="form-account-info" action="" method="post" enctype="multipart/form-data">
+                <table class="account-info-input">
+                    <tr>
+                        <td class="icon-required"><label for="user-id">ID帳號</label></td>
+                        <td><input type="text" name="user_id" id="user-id" required></td>
+                    </tr>
+                    <tr>
+                        <td class="icon-required"><label for="password">密碼</label></td>
+                        <td><input type="password" name="password" id="password" required></td>
+                    </tr>
+                    <tr>
+                        <td class="icon-required"><label for="password2">再次輸入密碼</label></td>
+                        <td><input type="password" name="password2" id="password2" required></td>
+                    </tr>
+                    <tr>
+                        <td class="icon-required"><label for="family-name">姓氏</label></td>
+                        <td><input type="text" name="family_name" id="family-name" required></td>
+                    </tr>
+                    <tr>
+                        <td class="icon-required"><label for="given-name">名字</label></td>
+                        <td><input type="text" name="given_name" id="given-name" required></td>
+                    </tr>
+                    <tr>
+                        <td class="icon-required"><label for="birthday">出生日期</label></td>
+                        <td><input type="date" name="birthday" id="birthday" required></td>
+                    </tr>
+                    <tr>
+                        <td class="icon-required"><label for="email">電子郵件信箱</label></td>
+                        <td><input type="email" name="email" id="email" required></td>
+                    </tr>
+                    <tr>
+                        <td class="icon-required"><label for="phone">手機號碼</label></td>
+                        <td><input type="tel" name="phone" id="phone" required></td>
+                    </tr>
+                </table>
+                <div class="submit-button">
+                    <button type="submit">修改</button>
+                </div>
+                <div class="backtologin">
+                    如果您已是A++會員請<a href="../user/login.html">登⼊</a>
+                </div>
+            </form>
+        </div>
+        <!-- // white-box Account-information -->
 
     </div>
 
     <!-- Pagetop -->
     <div class="c-pagetop">
-      <a href="#pagetop" id="js-pagetop">
-        <img src="../img/arrow_down_red.svg" alt="Pagetop" />
-      </a>
+        <a href="#pagetop" id="js-pagetop">
+            <img src="../img/arrow_down_red.svg" alt="Pagetop" />
+        </a>
     </div>
     <!-- // Pagetop -->
 
     <!-- footer -->
     <footer class="footer">
-      <div class="footer__navigate">
-        <ul class="footer__list">
-          <li class="footer__list-item">
-            <a href="">Ａ＋＋的理念與願景</a>
-          </li>
-          <li class="footer__list-item">
-            <a href="">網站使用規約及服務條款</a>
-          </li>
-          <li class="footer__list-item">
-            <a href="">隱私權政策</a>
-          </li>
-          <li class="footer__list-item">
-            <a href="">職場安全諮詢</a>
-          </li>
-          <li class="footer__list-item">
-            <a href="">廣告合作</a>
-          </li>
-        </ul>
-        <p class="footer__copyright">© 2022 寅辰有限公司 版權所有</p>
-      </div>
+        <div class="footer__navigate">
+            <ul class="footer__list">
+                <li class="footer__list-item">
+                    <a href="">Ａ＋＋的理念與願景</a>
+                </li>
+                <li class="footer__list-item">
+                    <a href="">網站使用規約及服務條款</a>
+                </li>
+                <li class="footer__list-item">
+                    <a href="">隱私權政策</a>
+                </li>
+                <li class="footer__list-item">
+                    <a href="">職場安全諮詢</a>
+                </li>
+                <li class="footer__list-item">
+                    <a href="">廣告合作</a>
+                </li>
+            </ul>
+            <p class="footer__copyright">© 2022 寅辰有限公司 版權所有</p>
+        </div>
     </footer>
 
     <!-- Scripts -->
     <!-- ↓Home only -->
     <script src="../js/script.js"></script>
     <!-- ↑Home only -->
-  </body>
+</body>
+
 </html>
