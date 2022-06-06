@@ -70,12 +70,12 @@
           <div class="experience">
             <div class="experience-top">工作經歷 Experience</div>
             <ul class="experience-contents">
-              <li><label for="start-month-[0]">開始年月</label><br><input type="date" name="start_month[0]" id="start-month-[0]" placeholder="2022/1" required></li>
+              <li><label for="start-month[0]">開始年月</label><br><input type="date" name="start_month[0]" id="start-month[0]" placeholder="2022/1" required></li>
               <li>~<p></p></li>
-              <li><label for="end-month-[0]">結束年月</label><br><input type="date" name="end_month[0]" id="end-month-[0]" placeholder="現在" required></li>
-              <li><label for="total-month-[0]">共計年月</label><br><input type="text" name="total_month[0]" id="total-month-[0]" placeholder="0年3個月" required></li>
-              <li><label for="job-title-[0]">職稱</label><br><input type="text" name="job_title[0]" id="job-title-[0]" placeholder="請填寫職稱 EX:建築設計師" required></li>
-              <li><label for="employment-[0]">就職公司</label><br><input type="text" name="employment[0]" id="employment-[0]" placeholder="請填寫公司名稱 EX:某建築師事務所" required></li>
+              <li><label for="end-month[0]">結束年月</label><br><input type="date" name="end_month[0]" id="end-month[0]" placeholder="現在" required></li>
+              <li><label for="total-month[0]">共計年月</label><br><input type="text" name="total_month[0]" id="total-month[0]" placeholder="0年3個月" required></li>
+              <li><label for="job-title[0]">職稱</label><br><input type="text" name="job_title[0]" id="job-title[0]" placeholder="請填寫職稱 EX:建築設計師" required></li>
+              <li><label for="employment[0]">就職公司</label><br><input type="text" name="employment[0]" id="employment[0]" placeholder="請填寫公司名稱 EX:某建築師事務所" required></li>
             </ul>
               
             <div class="experience-note"><textarea placeholder="簡述, 工作重點, 負責專案, 備註"></textarea></div>
@@ -83,27 +83,27 @@
           <div class="education">
             <div class="education-top">學歷 Education</div>
             <ul class="education-contents">
-              <li><label for="begin-month-[0]">開始年月</label><br><input type="date" name="begin_month[0]" id="begin-month-[0]" placeholder="2020/9" required></li>
+              <li><label for="begin-month[0]">開始年月</label><br><input type="date" name="begin_month[0]" id="begin-month[0]" placeholder="2020/9" required></li>
               <li>~<p></p></li>
-              <li><label for="last-month-[0]">結束年月</label><br><input type="date" id="last-month-[0]" name="last_month[0]" required></li>
+              <li><label for="last-month[0]">結束年月</label><br><input type="date" name="last_month[0]" id="last-month[0]"  required></li>
               <li>
-                <input type="radio" name="graduate[0]" id="graduate-[0]" required>
-                <label for="graduate-[0]"  class="education-radio-button">畢業</label>
+                <input type="radio" name="graduate[0]" id="graduate[0]" required>
+                <label for="graduate[0]"  class="education-radio-button">畢業</label>
               </li>
               <li>
-                <input type="radio" name="graduate[0]" id="n-graduate-[0]" required>
-                <label for="n-graduate-[0]"  class="education-radio-button">肄業</label>
+                <input type="radio" name="graduate[0]" id="n-graduate[0]" required>
+                <label for="n-graduate[0]"  class="education-radio-button">肄業</label>
               </li>
-              <li><label for="school-[0]">學校</label><br><input type="text" name="school[0]" id="school-[0]" placeholder="台湾大学" required></li>
-              <li><label for="subject-[0]">科系</label><br><input type="text" name="subject[0]" id="subject-[0]" placeholder="土木工程系" required></li>
-              <li><label for="degree-[0]">學位</label><br><input type="text" name="degree[0]" id="degree-[0]" placeholder="博⼠候選⼈" required></li>
+              <li><label for="school[0]">學校</label><br><input type="text" name="school[0]" id="school[0]" placeholder="台湾大学" required></li>
+              <li><label for="subject[0]">科系</label><br><input type="text" name="subject[0]" id="subject[0]" placeholder="土木工程系" required></li>
+              <li><label for="degree[0]">學位</label><br><input type="text" name="degree[0]" id="degree[0]" placeholder="博⼠候選⼈" required></li>
             </ul>
           </div>
           <div class="license">
             <div class="license-top">
               專業證照｜獲獎紀錄｜相關社團參與
-              <button type="button" value="フォーム追加" onclick="addForm()">
-                <img src="../img/icon/addformDark.png" alt="">+
+              <button type="button" onclick="addForm()">
+                <img src="../img/icon/addFormDark.png" alt="addForm_icon">+
               </button>
             </div>           
             <div class="license-contents" id="form_area">
@@ -116,8 +116,8 @@
             <div class="hobby-bottom"><textarea name="" placeholder="素描, 建築素描, 測繪, 旅行" required></textarea></div>
           </div>
           <div class="info-submit">
-            <button type="submit" name=""><a href="./step3.html">送出</a></button>
-            <button type="button" class="backtoprevious"><a href="./step1.html" >上一頁</a></button>
+            <button type="submit"><a href="./step3.html">送出</a></button>
+            <button type="button" class="backtoprevious"><a href="./step1.html">上一頁</a></button>
           </div>
         </form>
       </div>
@@ -160,7 +160,6 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="../js/home.js"></script>
     <script src="../js/script.js"></script>
-    <!-- <script src="../js/jQuery3.6.0.min.js"></script> -->
 
     <!-- ↑Home only -->
   </body>
