@@ -47,6 +47,7 @@
             <div class="personal-info-contents">
               <div class="personal-info-contents__image">
                 <div class="image-area">
+                  <!-- TODO: 空でもsrc属性が必要 @shin -->
                   <img class="preview" id="preview" alt="+">
                   <input type="file" name="profile_img" required accept="image/*" onchange="previewImage(this)">
                 </div>
@@ -103,6 +104,7 @@
             <div class="license-top">
               專業證照｜獲獎紀錄｜相關社團參與
               <button type="button" onclick="addForm()">
+                <!-- TODO: 画像の名前が変わってない 全体検索で全ての名前を変更すること、変更されてないページあり @shin -->
                 <img src="../img/icon/addFormDark.png" alt="addForm_icon">+
               </button>
             </div>           
@@ -157,6 +159,7 @@
 
         <!-- Scripts -->
     <!-- ↓Home only -->
+    <!--　TODO: ライブラリーをローカルにインストールして貼り替える　-->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="../js/home.js"></script>
     <script src="../js/script.js"></script>
