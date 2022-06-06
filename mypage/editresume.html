@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body id="pagetop">
+    <!-- TODO: タグがない @shin -->
     <header class="header">
         <!-- Middle -->
         <div class="header__middle">
@@ -47,6 +48,7 @@
             <div class="personal-info-contents">
               <div class="personal-info-contents__image">
                 <div class="image-area">
+                  <!-- TODO: src属性がない -->
                   <img class="preview" id="preview" alt="preview">
                   <input type="file" name="profile_img" required accept="image/*" onchange="previewImage(this)">
                 </div>
@@ -88,12 +90,15 @@
               <li>結束年月<br><p></p></li>
               <li>
                 <p></p>
+                <!-- TODO: 無効なlabel動作を確認すること @shin -->
                 <label for="graduate-[0]"  class="education-radio-button">畢業</label>
               </li>
               <li>
                 <p></p>
+                <!-- TODO: 無効なlabel動作を確認すること @shin -->
                 <label for="n-graduate-[0]"  class="education-radio-button">肄業</label>
               </li>
+              <!-- TODO: 無効なlabel動作を確認すること @shin -->
               <li><label for="school-[0]">學校</label><br><p></p></li>
               <li><label for="subject-[0]">科系</label><br><input type="text" name="subject[0]" id="subject-[0]" placeholder="土木工程系"></li>
               <li><label for="degree-[0]">學位</label><br><input type="text" name="degree[0]" id="degree-[0]" placeholder="博⼠候選⼈" ></li>
@@ -116,7 +121,9 @@
             <div class="hobby-bottom"><textarea name="" placeholder="素描, 建築素描, 測繪, 旅行" required></textarea></div>
           </div>
           <div class="info-submit">
+            <!-- TODO: 無効なリンク @shin -->
             <button type="submit" name=""><a href="./step3.html">送出</a></button>
+            <!-- TODO: 無効なリンク @shin -->
             <button type="button" class="backtoprevious"><a href="./step1.html" >上一頁</a></button>
           </div>
         </form>
@@ -155,7 +162,7 @@
       </div>
     </footer>
 
-        <!-- Scripts -->
+    <!-- Scripts -->
     <!-- ↓Home only -->
     <script src="../js/script.js"></script>
     <!-- ↑Home only -->
