@@ -1,4 +1,3 @@
-<!-- TODO:１つ１つの要素について理解する必要がある。このページに不要なものが他にもいくつかあるように思う。また、パスワードは必須である必要性はあるのか？ @shin -->
 <!DOCTYPE html>
 <html lang="zh-TW">
 
@@ -27,17 +26,6 @@
         </div>
     </header>
     <div class="account-info-body">
-        <div class="account-info-title">免費成為A++會員</div>
-
-        <!-- yellow-box -->
-        <div class="attention">
-            <div class="yellow-box">
-                <img src="../../img/attention_yellow.png" alt="attention">
-                免費註冊成為會員僅需在網站上填寫相關資料, Ａ＋＋不會主動以電話面試或聯繫。
-            </div>
-        </div>
-        <!-- // yellow-box -->
-
         <!-- white-box Account-information -->
         <div class="account-info-edit">
             <form class="form-account-info" action="" method="post" enctype="multipart/form-data">
@@ -47,12 +35,12 @@
                         <td><input type="text" name="original_id" id="original-id" required></td>
                     </tr>
                     <tr>
-                        <td class="icon-required"><label for="password">密碼</label></td>
-                        <td><input type="password" name="password" id="password" required></td>
+                        <td><label for="password">密碼</label></td>
+                        <td><input type="password" name="password" id="password"></td>
                     </tr>
                     <tr>
-                        <td class="icon-required"><label for="password2">再次輸入密碼</label></td>
-                        <td><input type="password" name="password2" id="password2" required></td>
+                        <td><label for="password2">再次輸入密碼</label></td>
+                        <td><input type="password" name="password2" id="password2"></td>
                     </tr>
                     <tr>
                         <td class="icon-required"><label for="family-name">姓氏</label></td>
@@ -76,9 +64,7 @@
                     </tr>
                 </table>
                 <div class="submit-button">
-                    <!-- TODO: 変更の中国語記述に修正 @shin -->
-                    <!-- TODO: 修改はプレビューページのボタンとしておく @shin -->
-                    <button type="submit"><a href="../preview/info.html">采用</a></button>
+                    <button type="submit">采用</button>
                 </div>
             </form>
         </div>
