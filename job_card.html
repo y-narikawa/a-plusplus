@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A++</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Shippori+Antique+B1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body class="lower-index" id="pagetop">
+    <!-- HEADER -->
+    <header class="header">
+        <!-- TOP -->
+        <div class="header__top">
+            <div class="header__inner">
+                <nav class="h-top-nav">
+                    <ul class="h-top-nav__list">
+                        <li class="h-top-nav__item -active">
+                            <a href="" class="h-top-nav__link">全 職</a>
+                        </li>
+                        <li class="h-top-nav__item">
+                            <a href="" class="h-top-nav__link">兼 職</a>
+                        </li>
+                        <li class="h-top-nav__item">
+                            <a href="" class="h-top-nav__link">自由工作者</a>
+                        </li>
+                        <li class="h-top-nav__item">
+                            <a href="" class="h-top-nav__link">企業用戶</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="c-spacer"></div>
+                <div class="h-top-btn">
+                    <a href="" class="h-top-btn__link">未來匠師</a>
+                </div>
+                <div class="h-top-search">
+                    <form class="h-top-search__form">
+                        <div class="h-top-search__icon">
+                            <img src="./img/search_icon.svg" alt="" />
+                        </div>
+                        <input type="search" name="search" class="h-top-search__input" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Middle -->
+        <div class="header__middle">
+            <div class="header__inner">
+                <h1 class="h-logo">
+                    <a href="index.html">
+                        <img src="./img/logo.svg" alt="A++" />
+                    </a>
+                </h1>
+                <div class="c-spacer"></div>
+                <div class="h-middle-buttons">
+                    <!-- Register -->
+                    <div class="c-button -orange">
+                        <a href="reg/step1.html" class="c-button__link">
+                            <span class="c-button__icon">
+                                <img src="./img/register_icon.svg" alt="" />
+                            </span>
+                            會員註冊
+                        </a>
+                    </div>
+                    <!-- Login -->
+                    <div class="c-button -white">
+                        <a href="user/login.html" class="c-button__link">
+                            <span class="c-button__icon">
+                                <img src="./img/login_icon.svg" alt="" />
+                            </span>
+                            登入
+                        </a>
+                    </div>
+                    <!-- // Login -->
+                    <div class="c-button -orange">
+                        <a href="mypage/preview/info.html" class="c-button__link">
+                            <span class="c-button__icon">
+                                <img src="./img/my_page_icon.png" alt="">
+                            </span>
+                            我的頁面
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom -->
+        <div class="header-bottom">
+            <div class="header__inner">
+                <nav class="h-bottom-nav">
+                    <ul class="h-bottom-nav__list">
+                        <li class="h-bottom-nav__item">
+                            <a href="" class="h-bottom-nav__link">熱門職缺++</a>
+                        </li>
+                        <li class="h-bottom-nav__item">
+                            <a href="" class="h-bottom-nav__link">福利++</a>
+                        </li>
+                        <li class="h-bottom-nav__item">
+                            <a href="" class="h-bottom-nav__link">履歷++</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- // HEADER -->
+
+    <!-- SP HEADER -->
+    <div class="header-sp">
+        <div class="header-sp__logo">
+            <img src="./img/logo.svg" alt="A++" />
+        </div>
+        <nav class="header-sp__navigation">
+            <ul class="header-sp__list">
+                <li class="header-sp__item">
+                    <a href="reg/step1.html">
+                        <img src="./img/register_icon.svg" alt="" />
+                        <span>註冊</span>
+                    </a>
+                </li>
+                <li class="header-sp__item">
+                    <a href="user/login.html">
+                        <img src="./img/login_icon_white.png" alt="" />
+                        <span>登入</span>
+                    </a>
+                </li>
+                <li class="header-sp__item">
+                    <div class="openbtn"><span></span><span></span><span></span></div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="sp-header-space"></div>
+    <!-- // SP HEADER -->
+
+    <!-- Header Modal -->
+    <div class="header-modal c-modal">
+        <div class="c-modal__background"></div>
+        <div class="c-modal__body">
+            <div class="c-modal__content">
+                <ul class="header-modal__list">
+                    <li class="header-modal__item">
+                        <a href="" class="header-modal__link">全 職</a>
+                    </li>
+                    <li class="header-modal__item">
+                        <a href="" class="header-modal__link">兼 職</a>
+                    </li>
+                    <li class="header-modal__item">
+                        <a href="" class="header-modal__link">自由工作者</a>
+                    </li>
+                    <li class="header-modal__item">
+                        <a href="" class="header-modal__link">企業用戶</a>
+                    </li>
+                    <li class="header-modal__item">
+                        <a href="" class="header-modal__link">未來匠師</a>
+                    </li>
+                    <li class="header-modal__item">
+                        <a href="" class="header-modal__link">熱門職缺++</a>
+                    </li>
+                    <li class="header-modal__item">
+                        <a href="" class="header-modal__link">履歷++</a>
+                    </li>
+                    <li class="header-modal__item">
+                        <a href="" class="header-modal__link">福利++</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- // Header Modal -->
+
+    <!-- Works -->
+    <div class="works c-layout-col2">
+        <div class="c-layout-col2__main">
+            <!-- For -->
+            <div class="works__item">
+                <div class="works__header">
+                    <!-- No -->
+                    <p class="works__no -new">NO.AR5001</p>
+                    <!-- // No -->
+                    <!-- Heart Button -->
+                    <div class="works__like-button">
+                        <button>
+                            <img src="./img/like_icon.svg" alt="like" />
+                        </button>
+                    </div>
+                    <!-- // Heart Button -->
+                    <!-- Title -->
+                    <h2 class="works__title">
+                        <a href="">[北部地區/台北市]建築師事務所資深設計師</a>
+                    </h2>
+                    <!-- //Title -->
+                    <!-- Tags -->
+                    <ul class="works__tags">
+                        <!-- For -->
+                        <li class="works__tag-item -active">
+                            <a href="">全職員工</a>
+                        </li>
+                        <!-- End for -->
+                        <li class="works__tag-item">
+                            <a href="">週休二日</a>
+                        </li>
+                        <li class="works__tag-item">
+                            <a href="">外商公司</a>
+                        </li>
+                        <li class="works__tag-item">
+                            <a href="">工作經驗3年以上</a>
+                        </li>
+                        <li class="works__tag-item">
+                            <a href="">工作經驗5年</a>
+                        </li>
+                        <li class="works__tag-item">
+                            <a href="">英語能力</a>
+                        </li>
+                        <li class="works__tag-item">
+                            <a href="">施工圖</a>
+                        </li>
+                        <li class="works__tag-item">
+                            <a href="">BIM</a>
+                        </li>
+                        <li class="works__tag-item">
+                            <a href="">AutoCad</a>
+                        </li>
+                        <li class="works__tag-item">
+                            <a href="">需加班（每月10小時或更多）</a>
+                        </li>
+                        <li class="works__tag-item">
+                            <a href="">年假25天</a>
+                        </li>
+                        <li class="works__tag-item">
+                            <a href="">員工旅遊</a>
+                        </li>
+                    </ul>
+                    <!-- // Tags -->
+                    <!-- Description -->
+                    <div class="works__description">
+                        <p>
+                            您將負責與國外建築師團隊合作,為台灣地區專案窗口;
+                            需要基礎的英文能力,並協助團隊完成ＢＩＭ施工圖,
+                            並審查顧問及技師圖說......
+                        </p>
+                    </div>
+                    <!-- // Description -->
+                </div>
+                <div class="works__body">
+                    <!-- WorkContent -->
+                    <div class="work-content">
+                        <!-- Company -->
+                        <div class="work-content__item">
+                            <div class="work-content__title">
+                                <div class="work-content__icon">
+                                    <img src="./img/home/work_content_icon1.svg" alt="" />
+                                </div>
+                                <h3>公司</h3>
+                            </div>
+                            <div class="work-content__body">
+                                <p class="work-content__answer">HASS 好事聯合</p>
+                            </div>
+                        </div>
+                        <!-- // Company -->
+                        <!-- Salary -->
+                        <div class="work-content__item">
+                            <div class="work-content__title">
+                                <div class="work-content__icon">
+                                    <img src="./img/home/work_content_icon2.svg" alt="" />
+                                </div>
+                                <h3>薪資</h3>
+                            </div>
+                            <div class="work-content__body">
+                                <p class="work-content__answer">面議</p>
+                            </div>
+                        </div>
+                        <!-- // Salary -->
+                        <!-- Occupation -->
+                        <div class="work-content__item">
+                            <div class="work-content__title">
+                                <div class="work-content__icon">
+                                    <img src="./img/home/work_content_icon3.svg" alt="" />
+                                </div>
+                                <h3>職業</h3>
+                            </div>
+                            <div class="work-content__body">
+                                <p class="work-content__answer">建築設計師</p>
+                            </div>
+                        </div>
+                        <!-- // Occupation -->
+                        <!-- Arrival Date -->
+                        <div class="work-content__item">
+                            <div class="work-content__title">
+                                <div class="work-content__icon">
+                                    <img src="./img/home/work_content_icon4.svg" alt="" />
+                                </div>
+                                <h3>到職日期</h3>
+                            </div>
+                            <div class="work-content__body">
+                                <p class="work-content__answer">2022年4月</p>
+                            </div>
+                        </div>
+                        <!-- // Arrival Date -->
+                        <!-- Workplace -->
+                        <div class="work-content__item">
+                            <div class="work-content__title">
+                                <div class="work-content__icon">
+                                    <img src="./img/home/work_content_icon5.svg" alt="" />
+                                </div>
+                                <h3>工作地點</h3>
+                            </div>
+                            <div class="work-content__body">
+                                <p class="work-content__answer -small">
+                                    台北市南港區中山路432號
+                                </p>
+                                <p class="work-content__supplement">離南港捷運站步行5分鐘</p>
+                            </div>
+                        </div>
+                        <!-- // Workplace -->
+                        <!-- Working hours -->
+                        <div class="work-content__item">
+                            <div class="work-content__title">
+                                <div class="work-content__icon">
+                                    <img src="./img/home/work_content_icon6.svg" alt="" />
+                                </div>
+                                <h3>工作時間</h3>
+                            </div>
+                            <div class="work-content__body">
+                                <p class="work-content__answer -small">09:00~18:00</p>
+                                <p class="work-content__supplement">
+                                    實際工作8小時, 週休二日
+                                </p>
+                            </div>
+                        </div>
+                        <!-- // Working hours -->
+                        <!-- Experience and Expertise -->
+                        <div class="work-content__item -long">
+                            <div class="work-content__title">
+                                <div class="work-content__icon">
+                                    <img src="./img/home/work_content_icon7.svg" alt="" />
+                                </div>
+                                <h3>工作經驗及專長</h3>
+                            </div>
+                            <div class="work-content__body">
+                                <p class="work-content__supplement">
+                                    歡迎有三年以上工作經驗, 五年尤佳, 有施工圖經驗者！
+                                    能以英文溝通, 有專案經驗
+                                </p>
+                            </div>
+                        </div>
+                        <!-- // Experience and Expertise -->
+                    </div>
+                    <!-- // WorkContent -->
+                    <!-- Skill -->
+                    <div class="work-skill sp-tgl-wrap">
+                        <h3 class="works__section-title tgl-switch">
+                            <div class="works__section-icon">
+                                <img src="./img/home/work_section_title_icon1.svg" alt="" />
+                            </div>
+                            主要技能需求
+                        </h3>
+                        <div class="work-skill__wrap tgl-content">
+                            <div class="work-skill__list">
+                                <!-- For -->
+                                <!-- Item -->
+                                <div class="work-skill__item">
+                                    <div class="work-skill__title">Autocad<br />軟體使用</div>
+                                    <div class="work-skill__evaluation">
+                                        <ol class="c-evaluation">
+                                            <li class="c-evaluation__item">
+                                                <p class="c-evaluation__rank">C</p>
+                                            </li>
+                                            <li class="c-evaluation__item">
+                                                <p class="c-evaluation__rank">B</p>
+                                            </li>
+                                            <li class="c-evaluation__item">
+                                                <p class="c-evaluation__rank">B+</p>
+                                            </li>
+                                            <li class="c-evaluation__item -active">
+                                                <p class="c-evaluation__rank">A</p>
+                                            </li>
+                                            <li class="c-evaluation__item">
+                                                <p class="c-evaluation__rank">A+</p>
+                                            </li>
+                                            <li class="c-evaluation__item">
+                                                <p class="c-evaluation__rank">A++</p>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <!-- // Item -->
+                                <div class="work-skill__item">
+                                    <div class="work-skill__title">施工圖繪製</div>
+                                    <div class="work-skill__evaluation">
+                                        <ol class="c-evaluation">
+                                            <li class="c-evaluation__item">
+                                                <p class="c-evaluation__rank">C</p>
+                                            </li>
+                                            <li class="c-evaluation__item">
+                                                <p class="c-evaluation__rank">B</p>
+                                            </li>
+                                            <li class="c-evaluation__item">
+                                                <p class="c-evaluation__rank">B+</p>
+                                            </li>
+                                            <li class="c-evaluation__item -active">
+                                                <p class="c-evaluation__rank">A</p>
+                                            </li>
+                                            <li class="c-evaluation__item">
+                                                <p class="c-evaluation__rank">A+</p>
+                                            </li>
+                                            <li class="c-evaluation__item">
+                                                <p class="c-evaluation__rank">A++</p>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div class="work-skill__item">
+                                    <div class="work-skill__title">專案管理<br />經驗</div>
+                                    <div class="work-skill__evaluation">
+                                        <ol class="c-evaluation">
+                                            <li class="c-evaluation__item">
+                                                <p class="c-evaluation__rank">C</p>
+                                            </li>
+                                            <li class="c-evaluation__item">
+                                                <p class="c-evaluation__rank">B</p>
+                                            </li>
+                                            <li class="c-evaluation__item">
+                                                <p class="c-evaluation__rank">B+</p>
+                                            </li>
+                                            <li class="c-evaluation__item -active">
+                                                <p class="c-evaluation__rank">A</p>
+                                            </li>
+                                            <li class="c-evaluation__item">
+                                                <p class="c-evaluation__rank">A+</p>
+                                            </li>
+                                            <li class="c-evaluation__item">
+                                                <p class="c-evaluation__rank">A++</p>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <!-- End For -->
+                            </div>
+                            <div class="work-skill__tags c-tags">
+                                <div class="c-tags__item">
+                                    <a href="#" class="c-tags__link"><span class="-underline">評分標準</span></a>
+                                </div>
+                                <div class="c-tags__item">
+                                    <a href="#" class="c-tags__link -red">
+                                        <span class="c-tags__icon">
+                                            <img src="./img/home/skill_tags_icon.svg" alt="" />
+                                        </span>
+                                        <span class="-underline">如何得到Ａ＋＋</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // Skill -->
+                    <!-- Computer Software -->
+                    <div class="computer-software sp-tgl-wrap">
+                        <h3 class="works__section-title tgl-switch">
+                            <div class="works__section-icon">
+                                <img src="./img/home/work_section_title_icon2.svg" alt="" />
+                            </div>
+                            電腦軟體
+                        </h3>
+                        <div class="tgl-content">
+                            <ul class="computer-software__tags c-tags">
+                                <!-- For -->
+                                <li class="c-tags__item">
+                                    <a href="#" class="c-tags__link">Autocad</a>
+                                </li>
+                                <!-- End For -->
+                                <li class="c-tags__item">
+                                    <a href="#" class="c-tags__link">Revit</a>
+                                </li>
+                                <li class="c-tags__item">
+                                    <a href="#" class="c-tags__link">Office</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- // Computer Software -->
+                    <!-- Work Highlights -->
+                    <div class="work-highlights sp-tgl-wrap">
+                        <h3 class="works__section-title tgl-switch">
+                            <div class="works__section-icon">
+                                <img src="./img/home/work_section_title_icon3.svg" alt="" />
+                            </div>
+                            工作重點說明
+                        </h3>
+                        <div class="tgl-content">
+                            <div class="work-highlights__body">
+                                <p class="work-highlights__message">
+                                    『公司介紹』
+                                    好事聯合是一所：以服務顧客為核心價值的建築師事務所及室內設計公司,
+                                    工作氣氛和諧, 注重新人培育, 環境舒適, 員工福利完整
+                                </p>
+                                <div class="work-highlights__author">
+                                    <div>
+                                        <p class="work-highlights__role">專案經理</p>
+                                        <p class="work-highlights__name">范小銘</p>
+                                    </div>
+                                    <div class="work-highlights__icon">
+                                        <img src="./img/home/work_highlight_icon1.svg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // Work Highlights -->
+                </div>
+                <div class="works__footer">
+                    <div class="works__links">
+                        <div class="c-button -blue -center">
+                            <a href="" class="c-button__link">申 請</a>
+                        </div>
+                        <div class="c-button -border -center">
+                            <a href="" class="c-button__link">閱讀詳情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // For -->
+            <!-- More link -->
+            <div class="works__more">
+                <div class="c-button -gray -center -column">
+                    <a href="" class="c-button__link">
+                        <span>展示更多</span>
+                        <span>（每頁20項工作）</span>
+                    </a>
+                </div>
+
+                <div class="works__jump-like-button c-button -center -border">
+                    <a href="" class="c-button__link">
+                        <div class="c-button__icon">
+                            <img src="./img/like_icon_red.jpg" alt="" />
+                        </div>
+                        追蹤清單
+                    </a>
+                </div>
+            </div>
+            <!-- // More link -->
+        </div>
+        <div class="c-layout-col2__sub"></div>
+    </div>
+    <!-- // Works -->
+
+    <!-- Pagetop -->
+    <div class="c-pagetop">
+        <a href="#pagetop" id="js-pagetop">
+            <img src="./img/arrow_down_red.svg" alt="Pagetop" />
+        </a>
+    </div>
+    <!-- // Pagetop -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__menus">
+            <div class="footer__contents">
+                <nav class="footer__menu sp-tgl-wrap">
+                    <p class="footer__menu-heading tgl-switch">分類</p>
+                    <div class="tgl-content">
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">
+                                <a href="">學生</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="">新鮮人</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="">職場菜鳥</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="">職場老鳥</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <nav class="footer__menu sp-tgl-wrap">
+                    <p class="footer__menu-heading tgl-switch">職業種類</p>
+                    <div class="tgl-content">
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">
+                                <a href="">建築文化資產|教育|出版媒體</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="">工程|材料|設備|廠商|運輸 </a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="">景觀｜規劃｜土地開發 </a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="">相關技師｜顧問</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="">室內設計</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="">建築</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="">其他</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <nav class="footer__menu sp-tgl-wrap">
+                    <p class="footer__menu-heading tgl-switch">福利</p>
+                    <div class="tgl-content">
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">
+                                <a href="">勞工保險</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="">健保</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="">職業災害</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="">婦女保障</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <nav class="footer__menu sp-tgl-wrap">
+                    <p class="footer__menu-heading tgl-switch">專業養成</p>
+                    <div class="tgl-content">
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">
+                                <a href="">專題</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="">職能訓練</a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="">數位科技</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <nav class="footer__menu sp-tgl-wrap">
+                    <p class="footer__menu-heading tgl-switch">聯絡我們</p>
+                    <div class="tgl-content">
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">
+                                <a href="">info@aplusplus.com.tw</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <nav class="footer__menu sp-tgl-wrap">
+                    <p class="footer__menu-heading tgl-switch">合作夥伴</p>
+                    <div class="tgl-content">
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">
+                                <div class="footer__menu-logo">
+                                    <a href=""><img src="./img/partner_logo.svg" alt="PARTNER SYSTEM.CO" /></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="footer__navigate">
+            <ul class="footer__list">
+                <li class="footer__list-item">
+                    <a href="">Ａ＋＋的理念與願景</a>
+                </li>
+                <li class="footer__list-item">
+                    <a href="">網站使用規約及服務條款</a>
+                </li>
+                <li class="footer__list-item">
+                    <a href="">隱私權政策</a>
+                </li>
+                <li class="footer__list-item">
+                    <a href="">職場安全諮詢</a>
+                </li>
+                <li class="footer__list-item">
+                    <a href="">廣告合作</a>
+                </li>
+            </ul>
+            <p class="footer__copyright">© 2022 寅辰有限公司 版權所有</p>
+        </div>
+    </footer>
+    <!-- // Footer -->
+
+    <!-- Scripts -->
+    <!-- ↓Home only -->
+    <script src="./js/script.js"></script>
+    <!-- ↑Home only -->
+</body>
+
+</html>
