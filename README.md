@@ -1,6 +1,18 @@
 # A++
 
-# TODO
+## Commit Prefix
+
+| type                  | emoji |
+|-----------------------|-------|
+| 機能追加、更新(update)       | 🔧    |
+| バグ修正（fix)             | 🐛    |
+| リファクタリング(refactoring) | ♻️    |
+| メモ(memo)              | 📝    |
+
+    setting file
+    https://gist.github.com/y-narikawa/e24fefc3ea696d6c3ee8623dccebf959
+
+## TODO
 - PC登録ページのアコーディオンの矢印が正常に動いていない
 - step3のボタンの判定がおかしい（戻るボタンのみ）
 - reg/step1、step2のタブレットのレスポンシブが色々壊れていた レイアウトが崩れている
@@ -12,4 +24,5 @@
     - アコーディオンがおかしい
 - パスワードリセットまわりのレイアウト調整
 - マイページ preview画面 作成
-- 
+
+
