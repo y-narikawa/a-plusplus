@@ -55,17 +55,19 @@
 
         .white-box-contents {
             margin: auto 50px;
+
             p {
                 font-size: 1.3em;
                 color: $black-color;
                 line-height: 5;
             }
-            
-            .triangle-arrow{
+
+            .triangle-arrow {
                 width: 100%;
                 text-align: center;
-                margin-top: 30px; 
-                &__down{
+                margin-top: 30px;
+
+                &__down {
                     display: inline-block;
                     border-style: solid;
                     border-width: 20px 10px 0 10px;
@@ -196,7 +198,7 @@
                 font-size: 1.5em;
                 color: $black-color;
                 cursor: pointer;
-
+                
                 img {
                     width: 30px;
                 }
@@ -215,6 +217,13 @@
                 border-left: solid 2px $border-color;
             }
         }
+        details summary{
+            list-style: none;
+        }
+        details summary::-webkit-details-marker{
+            display: none;
+        }
+
     }
 }
 
@@ -223,7 +232,8 @@
     font-size: 0.8em;
     text-align: center;
     margin-bottom: 30px;
-    @include mq(tab){
+
+    @include mq(tab) {
         margin-top: 30px;
     }
 }
@@ -239,9 +249,11 @@
     padding: 0 0 0 1.2em;
     position: relative;
     color: $border-color;
-    br{
+
+    br {
         display: none;
-        @include mq(sp){
+
+        @include mq(sp) {
             display: inline;
         }
     }
@@ -262,12 +274,14 @@
     transform: translateY(-50%);
     width: 1.5em;
     font-size: 0.5em;
-    @include mq(tab){
+
+    @include mq(tab) {
         width: 2.5em;
         height: 2.5em;
         left: -1em;
     }
-    @include mq(sp){
+
+    @include mq(sp) {
         left: -3em;
     }
 }
@@ -288,11 +302,13 @@
     transform: translateY(-50%) rotate(-45deg);
     transition: all 0.3s ease 0s;
     width: 1em;
-    @include mq(tab){
+
+    @include mq(tab) {
         left: -0.5em;
         width: 1.5em;
     }
-    @include mq(sp){
+
+    @include mq(sp) {
         left: -1.5em;
     }
 }
@@ -526,12 +542,6 @@
             .white-box-contents {
                 margin: 15px auto;
                 padding: 15px 15%;
-
-                p {
-                    font-size: 20px;
-                    color: $black-color;
-                    line-height: 3;
-                }
 
                 .triangle-bottom {
                     margin-left: 45%;
