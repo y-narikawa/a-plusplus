@@ -8,7 +8,7 @@
 | :update:      | 機能追加、更新(update)       |  🔧   |
 | :fix:         | バグ修正（fix)             |  🐛   |
 | :refactoring: | リファクタリング(refactoring) |  ♻️   |
-| :memo:        | メモ(memo)              |  📝   |
+| \:memo:       | メモ(memo)              |  📝   |
 
 ### コミットメッセージの適用
 ```shell
