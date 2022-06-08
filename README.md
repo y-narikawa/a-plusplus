@@ -31,3 +31,4 @@ $ git config commit.template <setting file dir>/.commit_template_a-plusplus
 - マイページ preview画面 作成
 
 
+test
