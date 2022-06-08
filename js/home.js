@@ -51,56 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 });
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    const targets = document
-        .querySelector(".occupation")
-        .querySelectorAll(".tgl-wrap");
-
-    const spTgl = document.querySelectorAll(".sp-tgl-wrap");
-
-    const addTglEvent = (item) => {
-        const active = "-active";
-        const trigger = item.querySelector(".tgl-switch");
-        const thisItem = item.querySelector(".tgl-content");
-
-        trigger.addEventListener("click", (el) => {
-            targets.forEach((t) => {
-                if (t !== item) {
-                    t.querySelector(".tgl-switch").classList.remove(active);
-                    const content = t.querySelector(".tgl-content");
-                    content.classList.remove(active);
-                    slideUp(content);
-                }
-            });
-
-            trigger.classList.toggle(active);
-            thisItem.classList.toggle(active);
-            slideToggle(thisItem);
-        });
-    };
-
-    targets.forEach((item) => {
-        addTglEvent(item);
-    });
-
-    if (matchMedia("(max-width: 768px)").matches) {
-        spTgl.forEach((item) => {
-            addTglEvent(item);
-        });
-    }
-
-    // Modal
-    const openBtn = document.querySelector(".openbtn");
-    const headerModal = document.querySelector(".header-modal");
-    openBtn.addEventListener("click", () => {
-        openBtn.classList.toggle("active");
-        headerModal.classList.toggle("-active");
-    });
-
-
-});
+///////////////////////
 
 document.addEventListener("DOMContentLoaded", () => {
     const target = document.querySelector(".c-search-box-modal");
