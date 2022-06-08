@@ -3,12 +3,12 @@
 ## Commit Prefix
 
 ### ルール
-| prefix        | type                  | emoji |
-|---------------|-----------------------|:-----:|
-| :update:      | 機能追加、更新(update)       |  🔧   |
-| :fix:         | バグ修正（fix)             |  🐛   |
-| :refactoring: | リファクタリング(refactoring) |  ♻️   |
-| :\memo:       | メモ(memo)              |  📝   |
+| type                  | emoji |
+|-----------------------|:-----:|
+| 機能追加、更新(update)       |  🔧   |
+| バグ修正（fix)             |  🐛   |
+| リファクタリング(refactoring) |  ♻️   |
+| メモ(memo)              |  📝   |
 
 ### コミットメッセージの適用
 ```shell
