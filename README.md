@@ -18,7 +18,6 @@ $ git config commit.template .gitmessage.txt
 $ git config --add commit.cleanup strip
 ```
 
-test
 
 ## TODO
 - PC登録ページのアコーディオンの矢印が正常に動いていない
