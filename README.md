@@ -10,11 +10,10 @@
 | :refactoring: | リファクタリング(refactoring) |  ♻️   |
 | :memo:        | メモ(memo)              |  📝   |
 
-### [設定ファイル](https://gist.github.com/y-narikawa/e24fefc3ea696d6c3ee8623dccebf959)
-
 ### コミットメッセージの適用
 ```shell
-$ git config commit.template <setting file dir>/.commit_template_a-plusplus
+$ cd <project>
+$ git config commit.template .gitmessage
 ```
 
 ## TODO
