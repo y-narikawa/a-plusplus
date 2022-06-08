@@ -58,11 +58,11 @@ textarea{
         margin-left: 5%;
         margin-right: 5%;
         color: $black-color;
-        font-size: 25px;
 
         //personal-info
 
         .personal-info{
+            font-size: 25px;
             .personal-info-title{
                 border-bottom: solid $border-color;
                 margin-bottom: 20px;
@@ -176,6 +176,9 @@ textarea{
 
         //profile
 
+        .profile{
+            font-size: 25px;
+        }
         .profile-top{
             border-bottom: solid $border-color;
         }
@@ -193,6 +196,9 @@ textarea{
             }
         }
         //experience
+        .experience{
+            font-size: 25px;
+        }
         .experience-top{
             border-bottom: solid $border-color;
         }
@@ -255,6 +261,9 @@ textarea{
 
         //education
 
+        .education{
+            font-size: 25px;
+        }
         .education-top{
             border-bottom: solid $border-color;
         }
@@ -313,6 +322,7 @@ textarea{
 
         .license{
             width: auto;
+            font-size: 25px;
             .license-top{
                 display: flex;
                 border-bottom: solid $border-color;
@@ -344,6 +354,9 @@ textarea{
 
         //hobby
 
+        .hobby{
+            font-size: 25px;
+        }
         .hobby-top{
             border-bottom: solid $border-color;
         }
@@ -375,23 +388,22 @@ textarea{
     flex-direction: row-reverse;
     gap: 20px;
     width: 100%;
-    button{
+    text-align: center;
+    .button-bottom{
         width: 50%;
         border-radius: 20px;
         color: $white-color;
         background-color: $fourth-color;
         height: 80px;
-        a{
-            color: $white-color;
-        }
+        line-height: 80px;
     }
     button:hover{
         background-color: $fourth-h-color;
     }
-    button.backtoprevious{
+    a.button-bottom{
         background-color: $txt-color;
     }
-    button.backtoprevious:hover{
+    a.button-bottom:hover{
         background-color: $third-color;
     }
     @include mq(tab){
@@ -400,16 +412,11 @@ textarea{
         display: block;
         flex-direction: column;
         width: 100%;
-        button{
+        .button-bottom{
             margin-bottom: 1rem;
             width: 100%;
             border-radius: 10px;
-            background-color: $fourth-color;
             height: 50px;
-        }
-        button:hover{
-            color: $white-color;
-            background-color: $fourth-h-color;
         }
     }
     @include mq(sp){
