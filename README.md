@@ -16,6 +16,8 @@ $ cd <project>
 $ git config commit.template .gitmessage
 ```
 
+sss
+
 ## TODO
 - PC登録ページのアコーディオンの矢印が正常に動いていない
 - step3のボタンの判定がおかしい（戻るボタンのみ）
