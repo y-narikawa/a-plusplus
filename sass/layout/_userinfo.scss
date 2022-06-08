@@ -1,12 +1,12 @@
 @charset "utf-8";
 
-.account-info-body{
+.account-info-body {
     max-width: 1333px;
     margin: auto;
 }
 
 // Title
-.account-info-title{
+.account-info-title {
     margin-top: 80px;
     font-family: $secondary-family-ie;
     font-size: 35px;
@@ -14,19 +14,21 @@
 }
 
 // yellow-box
-.attention{
+.attention {
     display: flex;
     justify-content: flex-end;
     margin-top: 20px;
-    .yellow-box{
-        background-color: rgba(244,173,37,0.2);
+
+    .yellow-box {
+        background-color: rgba(244, 173, 37, 0.2);
         color: $black-color;
         border-radius: 20px;
         width: 400px;
         height: 200px;
         padding: 30px;
         font-family: $secondary-family-ie;
-        img{
+
+        img {
             height: 50px;
             display: flex;
             justify-content: center;
@@ -39,23 +41,27 @@
 
 
 //white-box steps
-.steps{
+.steps {
     display: flex;
     justify-content: flex-end;
     margin-top: 200px;
     font-family: $secondary-family-ie;
-    .white-box{
+
+    .white-box {
         width: 400px;
         height: 800px;
         background-color: $white-color;
         border-radius: 20px;
-        .white-box-contents{
+
+        .white-box-contents {
             margin: auto 50px;
-            p{
-                font-size:1.5em;
+
+            p {
+                font-size: 1.5em;
                 color: $black-color;
                 line-height: 5;
             }
+
             .triangle-bottom {
                 display: inline-block;
                 border-style: solid;
@@ -64,7 +70,8 @@
                 margin-left: 140px;
                 margin-top: 10px;
             }
-            span{
+
+            span {
                 background-color: $primary-color;
                 color: $white-color;
                 border-radius: 30px;
@@ -77,7 +84,7 @@
 }
 
 // whitebox Account-information
-.account-info{
+.account-info {
     background-color: $white-color;
     color: $black-color;
     margin-bottom: 50px;
@@ -87,28 +94,34 @@
     border-radius: 20px;
     font-size: 20px;
     font-family: $secondary-family-ie;
-    .form-account-info{
+
+    .form-account-info {
         margin-left: 5%;
         margin-right: 10%;
-        a{
-            text-decoration: underline 1px ;
+
+        a {
+            text-decoration: underline 1px;
         }
-        table{
+
+        table {
             width: 100%;
         }
-        .account-info-input{
+
+        .account-info-input {
+
             // TODO: 重複コードあり mypageinfo.scss @shin
-            label{
+            label {
                 font-size: 1em;
             }
+
             .icon-required::after {
                 content: "必須";
                 border: solid 2px $primary-color;
                 color: $primary-color;
                 font-size: 0.7em;
                 min-width: 10px;
-                padding-left:7px;
-                padding-right:7px;
+                padding-left: 7px;
+                padding-right: 7px;
                 padding-bottom: 1px;
                 // TODO: 0pxは冗長な記述 @shin
                 margin: 0 5px;
@@ -118,8 +131,9 @@
                 text-align: center;
                 border-radius: 10px;
                 display: inline-block;
-            }   
-            input{
+            }
+
+            input {
                 padding: 1em;
                 border: solid 0.1px $border-color;
                 border-radius: 5px;
@@ -128,15 +142,16 @@
                 margin-right: 20%;
                 margin-top: 30px;
                 margin-bottom: 30px;
-            }      
+            }
         }
     }
 
     // TODO: 重複コードあり mypageinfo.scss @shin
-    .submit-button{
+    .submit-button {
         color: $white-color;
         text-align: center;
-        button{
+
+        button {
             font-size: 30px;
             background-color: $primary-color;
             margin-left: 0;
@@ -144,11 +159,13 @@
             padding: 20px 20%;
             border-radius: 20px;
         }
-        button:hover{
+
+        button:hover {
             background-color: $primary-h-color;
         }
     }
-    .backtologin{
+
+    .backtologin {
         color: $border-color;
         font-size: 0.8em;
         text-align: center;
@@ -157,15 +174,18 @@
 }
 
 // accordion-menu
-.accordion-menu{
+.accordion-menu {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 50px;
     font-family: $secondary-family-ie;
-    &__area{
+
+    &__area {
         display: block;
-        details{
+
+        details {
             width: 400px;
+
             summary {
                 display: flex;
                 justify-content: space-between;
@@ -174,17 +194,21 @@
                 font-size: 1.5em;
                 color: $black-color;
                 cursor: pointer;
-                img{
+
+                img {
                     width: 30px;
                 }
-                img:after{
+
+                img:after {
                     transform: rotate(180deg);
                 }
             }
-            summary.register-base-top{
+
+            summary.register-base-top {
                 border-bottom: none;
             }
-            .resister-base-contents{
+
+            .resister-base-contents {
                 border-right: solid 2px $border-color;
                 border-left: solid 2px $border-color;
             }
@@ -193,7 +217,7 @@
 }
 
 // check-box settings
-.agreement{
+.agreement {
     font-size: 0.8em;
     text-align: center;
     margin-bottom: 30px;
@@ -203,7 +227,7 @@
     display: none;
 }
 
-.agree-checkbox + span {
+.agree-checkbox+span {
     cursor: pointer;
     display: inline-block;
     margin: 0 0.2em 0;
@@ -213,7 +237,7 @@
 }
 
 // TODO: 重複コードあり userspecialities.scss @shin
-.agree-checkbox + span::before {
+.agree-checkbox+span::before {
     -webkit-transform: translateY(-50%);
     background: #fff;
     border: 1px solid $border-color;
@@ -230,7 +254,7 @@
 }
 
 // TODO: 重複コードあり userspecialities.scss @shin
-.agree-checkbox + span::after {
+.agree-checkbox+span::after {
     -webkit-transform: translateY(-50%) rotate(-45deg);
     border-bottom: 3px solid $primary-color;
     border-left: 3px solid $primary-color;
@@ -247,33 +271,35 @@
     width: 1em;
 }
 
-.agree-checkbox:checked + span::after {
+.agree-checkbox:checked+span::after {
     opacity: 1;
 }
 
 // tablet settings
 @include mq(tab) {
-    .account-info-title{
+    .account-info-title {
         margin-left: 10%;
         margin-top: 30px;
         font-size: 30px;
     }
 
     // yellow-box
-    .attention{
+    .attention {
         margin-top: 10px;
         margin-left: 10%;
         margin-right: 10%;
+
         // TODO: 重複コードあり userinfo.scss @shin
-        .yellow-box{
-            background-color: rgba(244,173,37,0.2);
+        .yellow-box {
+            background-color: rgba(244, 173, 37, 0.2);
             color: $black-color;
             border-radius: 20px;
             width: auto;
             height: 150px;
             padding: 20px;
             font-family: $secondary-family-ie;
-            img{
+
+            img {
                 height: 30px;
                 display: flex;
                 justify-content: center;
@@ -283,32 +309,38 @@
             }
         }
     }
+
     //white-box steps
-    .steps{
+    .steps {
         display: block;
         // TODO 省略可能 @shin
         margin-top: 20px;
         margin-bottom: 40px;
         margin-left: 10%;
         margin-right: 10%;
-        .white-box{
+
+        .white-box {
             width: auto;
             height: auto;
             background-color: $white-color;
             border-radius: 20px;
-            .white-box-contents{
+
+            .white-box-contents {
                 margin: 15px auto;
                 padding: 15px 20%;
+
                 // TODO: 重複コードあり userinfo.scss @shin
-                p{
+                p {
                     font-size: 20px;
                     color: $black-color;
                     line-height: 3;
                 }
-                .triangle-bottom{
+
+                .triangle-bottom {
                     margin-left: 45%;
                 }
-                span{
+
+                span {
                     background-color: $primary-color;
                     color: $white-color;
                     border-radius: 30px;
@@ -321,7 +353,7 @@
     }
 
     // whitebox info
-    .account-info{
+    .account-info {
         // TODO 省略可能 @shin
         margin-top: 10px;
         margin-left: 10%;
@@ -331,16 +363,20 @@
         border-radius: 30px;
         font-size: 15px;
         width: auto;
-        .form-account-info{
+
+        .form-account-info {
             margin-left: 5%;
             margin-right: 5%;
-            .account-info-input{
-                label{
+
+            .account-info-input {
+                label {
                     font-size: 1em;
                 }
-                .icon-required{
+
+                .icon-required {
                     width: 100px;
                 }
+
                 .icon-required::after {
                     content: "必須";
                     border: solid 1px $primary-color;
@@ -357,8 +393,9 @@
                     border-radius: 10px;
                     display: inline-block;
                     margin-right: 10px;
-                }  
-                input{
+                }
+
+                input {
                     padding: 0.3em;
                     border: solid 0.1px $border-color;
                     border-radius: 5px;
@@ -367,69 +404,79 @@
                 }
             }
         }
-        .submit-button{
+
+        .submit-button {
             color: $white-color;
             text-align: center;
-            button{
+
+            button {
                 font-size: 20px;
                 margin-left: 0;
                 margin-bottom: 20px;
                 padding: 20px 20%;
             }
         }
-        .backtologin{
+
+        .backtologin {
             color: $border-color;
             text-align: center;
             margin-bottom: 20px;
         }
     }
-    .accordion-menu{
+
+    .accordion-menu {
         display: block;
         justify-content: center;
         margin-bottom: 50px;
-        &__area{
-            details{
+
+        &__area {
+            details {
                 width: auto;
                 margin-right: 10%;
                 margin-left: 10%;
+
                 summary {
                     font-size: 1.2em;
-                    img{
+
+                    img {
                         width: 25px;
                     }
                 }
             }
         }
-    }   
+    }
 }
 
 
 //smartphone settings
 @include mq(sp) {
-    .account-info-body{
+    .account-info-body {
         width: 100%;
     }
-    .account-info-title{
+
+    .account-info-title {
         margin-left: 5%;
         margin-top: 20px;
         font-size: 20px;
     }
 
     // yellow-box
-    .attention{
+    .attention {
         margin-top: 10px;
         margin-left: 5%;
         margin-right: 5%;
+
         // TODO: 重複コードあり userinfo.scss @shin
-        .yellow-box{
-            background-color: rgba(244,173,37,0.2);
+        .yellow-box {
+            background-color: rgba(244, 173, 37, 0.2);
             color: $black-color;
             border-radius: 20px;
             width: auto;
             height: 150px;
             padding: 20px;
             font-family: $secondary-family-ie;
-            img{
+
+            img {
                 height: 30px;
                 display: flex;
                 justify-content: center;
@@ -439,30 +486,36 @@
             }
         }
     }
+
     //white-box steps
-    .steps{
+    .steps {
         // TODO 省略可能 @shin
         margin-top: 20px;
         margin-bottom: 20px;
         margin-left: 5%;
         margin-right: 5%;
-        .white-box{
+
+        .white-box {
             width: auto;
             height: auto;
             background-color: $white-color;
             border-radius: 20px;
-            .white-box-contents{
+
+            .white-box-contents {
                 margin: 15px auto;
                 padding: 15px 15%;
-                p{
+
+                p {
                     font-size: 20px;
                     color: $black-color;
                     line-height: 3;
                 }
-                .triangle-bottom{
+
+                .triangle-bottom {
                     margin-left: 45%;
                 }
-                span{
+
+                span {
                     background-color: $primary-color;
                     color: $white-color;
                     border-radius: 30px;
@@ -475,7 +528,7 @@
     }
 
     // whitebox info
-    .account-info{
+    .account-info {
         // TODO 省略可能 @shin
         margin-top: 10px;
         margin-left: 5%;
@@ -485,33 +538,37 @@
         border-radius: 10px;
         font-size: 15px;
         width: auto;
-        .form-account-info{
+
+        .form-account-info {
             margin-left: 5%;
             margin-right: 5%;
-            .account-info-input{
-                label{
+
+            .account-info-input {
+                label {
                     font-size: 1em;
                 }
-                .icon-required{
+
+                .icon-required {
                     width: 100%;
                 }
+
                 .icon-required::after {
-                    content: "必須";
-                    border: solid 1px $primary-color;
+                    content: "*";
+                    border: 0;
                     color: $primary-color;
                     font-size: 0.8em;
                     min-width: 5px;
-                    padding: 1px 3px 3px 3px;
+                    padding: 0;
                     // TODO: 0pxは冗長な記述 @shin
-                    margin: 0px 2px 4px 2px;
+                    margin: 0 0 10px 0;
                     line-height: 1;
                     vertical-align: middle;
                     white-space: nowrap;
                     text-align: center;
-                    border-radius: 10px;
                     display: inline-block;
-                }  
-                input{
+                }
+
+                input {
                     padding: 0.3em;
                     border: solid 0.1px $border-color;
                     border-radius: 5px;
@@ -521,54 +578,60 @@
                 }
             }
         }
-        .submit-button{
+
+        .submit-button {
             color: $white-color;
             text-align: center;
-            button{
+
+            button {
                 font-size: 20px;
                 margin-left: 0;
                 margin-bottom: 20px;
                 padding: 20px 20%;
             }
         }
-        .backtologin{
+
+        .backtologin {
             color: $border-color;
             text-align: center;
             margin-bottom: 20px;
         }
     }
 
-    .accordion-menu{
+    .accordion-menu {
         display: block;
         justify-content: center;
         margin-bottom: 40px;
-        &__area{
-            details{
+
+        &__area {
+            details {
                 width: auto;
                 margin-right: 5%;
                 margin-left: 5%;
+
                 summary {
                     font-size: 1.2em;
-                    img{
+
+                    img {
                         width: 25px;
                     }
                 }
             }
         }
-    }  
+    }
 
 
 
-    
-    .accountAgreement{
+
+    .accountAgreement {
         text-align: center;
         color: $border-color;
         margin-bottom: 50px;
         margin-top: 50px;
         font-size: 1em;
     }
-    
-    input.accountAgreement-checkbox{
+
+    input.accountAgreement-checkbox {
         border: solid $border-color;
         border-radius: 2px;
         width: 20px;
@@ -576,4 +639,3 @@
         cursor: pointer;
     }
 }
-
