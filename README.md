@@ -18,6 +18,7 @@ $ git config commit.template .gitmessage.txt
 $ git config --add commit.cleanup strip
 ```
 
+
 ## TODO
 - PC登録ページのアコーディオンの矢印が正常に動いていない
 - reg/step1、step2のタブレットのレスポンシブが色々壊れていた レイアウトが崩れている
