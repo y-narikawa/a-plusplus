@@ -13,8 +13,8 @@
 ### コミットメッセージの適用
 ```shell
 $ cd <project>
-$ cp .gitmessage.example .gitmessage
-$ git config commit.template .gitmessage
+$ cp .gitmessage.txt.example .gitmessage.txt
+$ git config commit.template .gitmessage.txt
 $ git config --add commit.cleanup strip
 ```
 
