@@ -29,3 +29,4 @@ $ git config commit.template <setting file dir>/.commit_template_a-plusplus
     - アコーディオンがおかしい
 - パスワードリセットまわりのレイアウト調整
 - マイページ preview画面 作成
+ss
