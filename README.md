@@ -16,7 +16,7 @@ $ cd <project>
 $ cp .gitmessage.example .gitmessage
 $ git config commit.template .gitmessage
 ```
-
+ss
 ## TODO
 - PC登録ページのアコーディオンの矢印が正常に動いていない
 - step3のボタンの判定がおかしい（戻るボタンのみ）
