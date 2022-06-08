@@ -15,6 +15,7 @@
 $ cd <project>
 $ cp .gitmessage.example .gitmessage
 $ git config commit.template .gitmessage
+$ git config --add commit.cleanup strip
 ```
 
 ## TODO
