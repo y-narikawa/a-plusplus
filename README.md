@@ -2,15 +2,20 @@
 
 ## Commit Prefix
 
-| type                  | emoji |
-|-----------------------|-------|
-| 機能追加、更新(update)       | 🔧    |
-| バグ修正（fix)             | 🐛    |
-| リファクタリング(refactoring) | ♻️    |
-| メモ(memo)              | 📝    |
+### ルール
+| prefix        | type                  | emoji |
+|---------------|-----------------------|:-----:|
+| :update:      | 機能追加、更新(update)       |  🔧   |
+| :fix:         | バグ修正（fix)             |  🐛   |
+| :refactoring: | リファクタリング(refactoring) |  ♻️   |
+| :memo:        | メモ(memo)              |  📝   |
 
-    setting file
-    https://gist.github.com/y-narikawa/e24fefc3ea696d6c3ee8623dccebf959
+### [設定ファイル](https://gist.github.com/y-narikawa/e24fefc3ea696d6c3ee8623dccebf959)
+
+### コミットメッセージの適用
+```shell
+$ git config commit.template <setting file dir>/.commit_template_a-plusplus
+```
 
 ## TODO
 - PC登録ページのアコーディオンの矢印が正常に動いていない
