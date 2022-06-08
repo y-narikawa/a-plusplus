@@ -1,3 +1,6 @@
+//step1
+//step2
+
 function previewImage(obj) {
     let fileReader = new FileReader()
 
