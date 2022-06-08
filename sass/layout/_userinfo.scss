@@ -187,10 +187,10 @@
     &__area {
         display: block;
 
-        .accordion-item{
+        .accordion-item {
             width: 400px;
 
-            dt{
+            dt {
                 display: flex;
                 justify-content: space-between;
                 border: solid 2px $border-color;
@@ -223,9 +223,10 @@
                 }
             }
 
-            .register-base-bottom{
+            .register-base-bottom {
                 border-top: none;
             }
+
             .resister-base-contents {
                 border-right: solid 2px $border-color;
                 border-left: solid 2px $border-color;
@@ -234,14 +235,11 @@
             }
         }
 
-        details summary {
-            list-style: none;
-        }
+    }
 
-        details summary::-webkit-details-marker {
-            display: none;
-        }
-
+    @include mq(tab) {
+        justify-content: center;
+        margin-bottom: 30px;
     }
 }
 
@@ -479,28 +477,6 @@
             margin-bottom: 20px;
         }
     }
-
-    .accordion-menu {
-        display: block;
-        justify-content: center;
-        margin-bottom: 50px;
-
-        &__area {
-            details {
-                width: auto;
-                margin-right: 10%;
-                margin-left: 10%;
-
-                summary {
-                    font-size: 1.2em;
-
-                    img {
-                        width: 25px;
-                    }
-                }
-            }
-        }
-    }
 }
 
 
@@ -647,31 +623,6 @@
             margin-bottom: 20px;
         }
     }
-
-    .accordion-menu {
-        display: block;
-        justify-content: center;
-        margin-bottom: 40px;
-
-        &__area {
-            details {
-                width: auto;
-                margin-right: 5%;
-                margin-left: 5%;
-
-                summary {
-                    font-size: 1.2em;
-
-                    img {
-                        width: 25px;
-                    }
-                }
-            }
-        }
-    }
-
-
-
 
     .accountAgreement {
         text-align: center;
