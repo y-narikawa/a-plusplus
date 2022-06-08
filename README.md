@@ -28,5 +28,3 @@ $ git config commit.template .gitmessage
     - アコーディオンがおかしい
 - パスワードリセットまわりのレイアウト調整
 - マイページ preview画面 作成
-
-test
