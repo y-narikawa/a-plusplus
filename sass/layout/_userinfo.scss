@@ -55,20 +55,22 @@
 
         .white-box-contents {
             margin: auto 50px;
-
             p {
-                font-size: 1.5em;
+                font-size: 1.3em;
                 color: $black-color;
                 line-height: 5;
             }
-
-            .triangle-bottom {
-                display: inline-block;
-                border-style: solid;
-                border-width: 20px 10px 0 10px;
-                border-color: $border-color transparent transparent transparent;
-                margin-left: 140px;
-                margin-top: 10px;
+            
+            .triangle-arrow{
+                width: 100%;
+                text-align: center;
+                margin-top: 30px; 
+                &__down{
+                    display: inline-block;
+                    border-style: solid;
+                    border-width: 20px 10px 0 10px;
+                    border-color: $border-color transparent transparent transparent;
+                }
             }
 
             span {
@@ -221,6 +223,9 @@
     font-size: 0.8em;
     text-align: center;
     margin-bottom: 30px;
+    @include mq(tab){
+        margin-top: 30px;
+    }
 }
 
 .agree-checkbox {
@@ -230,27 +235,41 @@
 .agree-checkbox+span {
     cursor: pointer;
     display: inline-block;
-    margin: 0 0.2em 0;
+    margin: 0 1.2em 0;
     padding: 0 0 0 1.2em;
     position: relative;
     color: $border-color;
+    br{
+        display: none;
+        @include mq(sp){
+            display: inline;
+        }
+    }
 }
 
 // TODO: 重複コードあり userspecialities.scss @shin
 .agree-checkbox+span::before {
     -webkit-transform: translateY(-50%);
-    background: #fff;
+    background: $white-color;
     border: 1px solid $border-color;
     border-radius: 2px;
     content: "";
     display: block;
     height: 1.5em;
     left: 0;
-    position: absolute;
     top: 50%;
+    position: absolute;
     transform: translateY(-50%);
     width: 1.5em;
     font-size: 0.5em;
+    @include mq(tab){
+        width: 2.5em;
+        height: 2.5em;
+        left: -1em;
+    }
+    @include mq(sp){
+        left: -3em;
+    }
 }
 
 // TODO: 重複コードあり userspecialities.scss @shin
@@ -262,13 +281,20 @@
     display: block;
     height: 0.3em;
     left: 0;
+    top: 50%;
     margin-top: -0.2em;
     opacity: 0;
     position: absolute;
-    top: 50%;
     transform: translateY(-50%) rotate(-45deg);
     transition: all 0.3s ease 0s;
     width: 1em;
+    @include mq(tab){
+        left: -0.5em;
+        width: 1.5em;
+    }
+    @include mq(sp){
+        left: -1.5em;
+    }
 }
 
 .agree-checkbox:checked+span::after {
@@ -313,11 +339,7 @@
     //white-box steps
     .steps {
         display: block;
-        // TODO 省略可能 @shin
-        margin-top: 20px;
-        margin-bottom: 40px;
-        margin-left: 10%;
-        margin-right: 10%;
+        margin: 20px 10% 40px 10%;
 
         .white-box {
             width: auto;
@@ -331,7 +353,7 @@
 
                 // TODO: 重複コードあり userinfo.scss @shin
                 p {
-                    font-size: 20px;
+                    font-size: 1em;
                     color: $black-color;
                     line-height: 3;
                 }
