@@ -141,11 +141,8 @@
                 padding: 1em;
                 border: solid 0.1px $border-color;
                 border-radius: 5px;
-                // TODO 省略可能 @shin
-                margin-left: 20%;
-                margin-right: 20%;
-                margin-top: 30px;
-                margin-bottom: 30px;
+                margin: 30px 20%;
+                width: auto;
             }
         }
     }
@@ -186,9 +183,10 @@
 
     &__area {
         display: block;
+        width: 400px;
 
         .accordion-item {
-            width: 400px;
+            width: 100%;
 
             dt {
                 display: flex;
@@ -239,7 +237,11 @@
 
     @include mq(tab) {
         justify-content: center;
-        margin-bottom: 30px;
+        width: 80%;
+        margin: 0 auto 30px auto;
+    }
+    @include mq(sp){
+        width: 90%;
     }
 }
 
@@ -427,9 +429,9 @@
                     font-size: 1em;
                 }
 
-                .icon-required {
-                    width: 100px;
-                }
+                // .icon-required {
+                //     width: 100px;
+                // }
 
                 .icon-required::after {
                     content: "必須";
@@ -563,20 +565,32 @@
         padding: 5px 1%;
         border-radius: 10px;
         font-size: 15px;
-        width: auto;
 
         .form-account-info {
             margin-left: 5%;
             margin-right: 5%;
+            width: auto;
+
+
+            table{
+                table-layout: fixed;
+                width: 100%;
+            }
+            td.label{
+                width: 30%;
+            }
+            td.label-input{
+                width: 70%;
+            }
 
             .account-info-input {
                 label {
                     font-size: 1em;
                 }
 
-                .icon-required {
-                    width: 100%;
-                }
+                // .icon-required {
+
+                // }
 
                 .icon-required::after {
                     content: "*";
@@ -600,7 +614,8 @@
                     border-radius: 5px;
                     margin: 10px 5%;
                     font-size: 1em;
-                    width: 240px;
+                    width: 90%;
+                    height: 100%;
                 }
             }
         }
