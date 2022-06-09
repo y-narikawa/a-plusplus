@@ -26,4 +26,3 @@ $ git config --add commit.cleanup strip
 - パスワードリセットまわりのレイアウト調整
 - マイページ preview画面 作成
 - js分けたやつ実装
-- indexのスペルミス直す　serch

@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const target = document.querySelector(".c-search-box-modal");
     const buttons = document.querySelectorAll(".search-box__open-button");
-    const close = document.querySelectorAll(".serch-box__close-button");
+    const close = document.querySelectorAll(".search-box__close-button");
 
     buttons.forEach((e) => {
         e.addEventListener("click", () => {

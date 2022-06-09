@@ -37,5 +37,4 @@ function deleteBtn(target) {
     let tgt_id = document.getElementById(target_id)
     parent.removeChild(ipt_id)
     parent.removeChild(tgt_id)
-    console.log('m12')
 }
