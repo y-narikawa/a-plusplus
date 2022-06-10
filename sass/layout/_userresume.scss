@@ -4,73 +4,84 @@
 //TODO :日付入力、年月のみに
 //TODO :ドラッグアンドドロップできるように
 
-.user-resume-body{
+.user-resume-body {
     width: 100%;
     font-family: $secondary-family-ie;
 }
 
-textarea{
+textarea {
     resize: none;
 }
 
-.steps-top-right{
+.steps-top-right {
     display: flex;
     justify-content: flex-end;
     margin: auto;
     max-width: 1333px;
-    .steps-contents{
+
+    .steps-contents {
         text-align: center;
         font-size: 25px
     }
-    ul{
+
+    ul {
         display: flex;
         margin-top: 60px;
         column-gap: 25px;
         color: $black-color;
-        span{
+
+        span {
             color: $primary-color;
         }
     }
-    p{
+
+    p {
         background-color: $border-color;
         color: $white-color;
         border-radius: 30px;
         padding: 5px 15px;
         letter-spacing: 0.2em;
     }
-    .current-step{
+
+    .current-step {
         background-color: $primary-color;
     }
 }
-.user-resume-title{
+
+.user-resume-title {
     margin: auto;
     max-width: 1333px;
     color: $black-color;
     font-size: 35px;
 }
-.user-resume-whitebox{
+
+.user-resume-whitebox {
     background-color: $white-color;
     border-radius: 20px;
     margin: 20px auto 100px auto;
     max-width: 1333px;
     padding: 50px;
-    .user-resume-contents{
+
+    .user-resume-contents {
         margin-left: 5%;
         margin-right: 5%;
         color: $black-color;
 
         //personal-info
 
-        .personal-info{
+        .personal-info {
             font-size: 25px;
-            .personal-info-title{
+
+            .personal-info-title {
                 border-bottom: solid $border-color;
                 margin-bottom: 20px;
-            } 
-            .personal-info-contents{
+            }
+
+            .personal-info-contents {
                 display: flex;
-                &__image{
-                    .image-area{
+
+                &__image {
+                    .image-area {
                         color: $black-color;
                         width: 250px;
                         height: 300px;
@@ -79,18 +90,21 @@ textarea{
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        .camera-icon{
+
+                        .camera-icon {
                             width: 50px;
                             height: 50px;
                         }
-                        img{
+
+                        img {
                             text-align: center;
                             width: 250px;
                             height: 300px;
                             object-fit: cover;
                             position: absolute;
                         }
-                        input{
+
+                        input {
                             overflow: hidden;
                             position: absolute;
                             width: 250px;
@@ -99,52 +113,64 @@ textarea{
                             z-index: 10;
                         }
                     }
-                    p{
+
+                    p {
                         color: $border-color;
                         font-size: 0.6em;
                     }
+
                     @include mq {
-                        .image-area{
+                        .image-area {
                             margin: auto;
-                            img{
+
+                            img {
                                 margin: auto;
                             }
-                            input{
+
+                            input {
                                 margin: auto;
                             }
                         }
-                        p{
+
+                        p {
                             text-align: center;
                         }
                     }
                 }
-                &__bottom{
+
+                &__bottom {
                     font-size: 0.9em;
                     margin-left: 10%;
-                    p{
-                        textarea{
+
+                    p {
+                        textarea {
                             border-radius: 5px;
                             font-size: 0.8em;
                             padding: 10px 5px;
                         }
-                        input{
+
+                        input {
                             border-radius: 5px;
                             font-size: 0.8em;
                             padding: 10px 5px;
                         }
                     }
+
                     // TODO: 重複コードあり userresume.scss @shin
-                    @include mq(tab){
+                    @include mq(tab) {
                         margin-left: auto;
-                        p{
+
+                        p {
                             margin-bottom: 15px;
-                            textarea{
+
+                            textarea {
                                 border: solid 2px $border-color;
                                 border-radius: 5px;
                                 padding: 10px 5px;
                                 width: 100%;
                             }
-                            input{
+
+                            input {
                                 border: solid 2px $border-color;
                                 border-radius: 5px;
                                 padding: 10px 5px;
@@ -152,17 +178,21 @@ textarea{
                             }
                         }
                     }
-                    @include mq(sp){
+
+                    @include mq(sp) {
                         margin-left: auto;
-                        p{
+
+                        p {
                             margin-bottom: 15px;
-                            textarea{
+
+                            textarea {
                                 border: solid 2px $border-color;
                                 border-radius: 5px;
                                 padding: 10px 5px;
                                 width: 100%;
                             }
-                            input{
+
+                            input {
                                 border: solid 2px $border-color;
                                 border-radius: 5px;
                                 padding: 10px 5px;
@@ -176,18 +206,20 @@ textarea{
 
         //profile
 
-        .profile{
+        .profile {
             font-size: 25px;
         }
-        .profile-top{
+
+        .profile-top {
             border-bottom: solid $border-color;
         }
-        
-        .profile-bottom{
+
+        .profile-bottom {
             margin-top: 20px;
             margin-bottom: 20px;
             height: 100px;
-            textarea{
+
+            textarea {
                 padding: 10px 5px;
                 border: 2px solid $border-color;
                 border-radius: 5px;
@@ -195,32 +227,48 @@ textarea{
                 width: 100%;
             }
         }
+
         //experience
-        .experience{
+        .experience {
             font-size: 25px;
         }
-        .experience-top{
+
+        .experience-top {
             border-bottom: solid $border-color;
+            display: flex;
+            border-bottom: solid $border-color;
+            justify-content: space-between;
+
+            button {
+                cursor: pointer;
+
+                img {
+                    width: 40px;
+                }
+            }
         }
-        
-        .experience-contents{
+
+        .experience-contents {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
             margin-bottom: 20px;
             width: 100%;
             font-size: 0.8em;
-            li{
+
+            li {
                 text-align: center;
                 display: block;
-                input[type="date"]{
+
+                input[type="date"] {
                     border: solid 2px $border-color;
                     border-radius: 5px;
                     box-sizing: border-box;
                     padding: 10px 5px;
                     font-size: 0.9em;
                 }
-                input[type="text"]{
+
+                input[type="text"] {
                     border: solid 2px $border-color;
                     border-radius: 5px;
                     box-sizing: border-box;
@@ -229,31 +277,37 @@ textarea{
                     font-size: 0.9em;
                 }
             }
+
             @include mq {
                 flex-wrap: wrap;
                 justify-content: space-around;
-                li{
-                    input{
+
+                li {
+                    input {
                         width: 100%;
                     }
                 }
             }
         }
-        .experience-note{
+
+        .experience-note {
             display: flex;
             justify-content: flex-end;
             margin-bottom: 50px;
             font-size: 0.8em;
-            textarea{
+
+            textarea {
                 border: 2px solid $border-color;
                 border-radius: 5px;
                 width: 65%;
                 padding: 10px 5px;
                 font-size: 0.8em;
             }
+
             @include mq {
                 justify-content: center;
-                textarea{
+
+                textarea {
                     width: 100%;
                 }
             }
@@ -261,39 +315,57 @@ textarea{
 
         //education
 
-        .education{
+        .education {
             font-size: 25px;
         }
-        .education-top{
+
+        .education-top {
             border-bottom: solid $border-color;
+            display: flex;
+            border-bottom: solid $border-color;
+            justify-content: space-between;
+
+            button {
+                cursor: pointer;
+
+                img {
+                    width: 40px;
+                }
+            }
         }
-        .education-contents{
+
+        .education-contents {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
             margin-bottom: 50px;
             width: 100%;
             font-size: 0.8em;
-            li{
+
+            li {
                 text-align: center;
                 display: block;
-                input[type="date"]{
+
+                input[type="date"] {
                     border: solid 2px $border-color;
                     border-radius: 5px;
                     box-sizing: border-box;
                     padding: 10px 5px;
                     font-size: 0.9em;
                 }
-                input[type="text"]{
+
+                input[type="text"] {
                     border: solid 2px $border-color;
                     border-radius: 5px;
                     box-sizing: border-box;
-                    padding: 10px 5px;;
+                    padding: 10px 5px;
+                    ;
                     font-size: 0.9em;
                     width: 200px;
                 }
-                input[type="radio"]{
-                    & + label::after{
+
+                input[type="radio"] {
+                    &+label::after {
                         display: block;
                         margin: 0.8rem auto;
                         content: "";
@@ -302,15 +374,17 @@ textarea{
                         width: 1em;
                         height: 1em;
                     }
-                    &:checked + label::after{
+
+                    &:checked+label::after {
                         content: "";
                         background-color: $txt-color;
                         width: 1em;
                         height: 1em;
-                        transition:0.3s;
+                        transition: 0.3s;
                     }
                 }
             }
+
             @include mq {
                 flex-wrap: wrap;
                 justify-content: space-around;
@@ -320,50 +394,58 @@ textarea{
 
         //license
 
-        .license{
+        .license {
             width: auto;
             font-size: 25px;
-            .license-top{
+
+            .license-top {
                 display: flex;
                 border-bottom: solid $border-color;
                 justify-content: space-between;
-                button{
+
+                button {
                     cursor: pointer;
-                    img{
-                        width: 1em;
+
+                    img {
+                        width: 40px;
                     }
                 }
             }
-            .license-contents{
+
+            .license-contents {
                 margin-top: 20px;
-                margin-bottom: 50px;
-                input{
-                    margin-bottom: 10px;
-                    border: 2px solid $border-color;
-                    border-radius: 5px;
-                    padding: 10px 5px;
-                    font-size: 0.8em;
-                    width: 100%;
-                    display: block;
-                }
-                button{
-                    margin-top: -22px;
+                margin-bottom: 20px;
+
+                .license-contents-area {
+                    input {
+                        margin-bottom: 5px;
+                        margin-top: 5px;
+                        border: 2px solid $border-color;
+                        border-radius: 5px;
+                        padding: 10px 5px;
+                        font-size: 0.8em;
+                        width: 100%;
+                        display: block;
+                    }
                 }
             }
         }
 
         //hobby
 
-        .hobby{
+        .hobby {
             font-size: 25px;
         }
-        .hobby-top{
+
+        .hobby-top {
             border-bottom: solid $border-color;
         }
-        .hobby-bottom{
+
+        .hobby-bottom {
             margin-top: 20px;
             margin-bottom: 50px;
-            textarea{
+
+            textarea {
                 padding-left: 10px;
                 padding-right: 10px;
                 height: 100px;
@@ -376,20 +458,30 @@ textarea{
     }
 }
 
-.delete-icon{
+.delete-icon {
+    width: 100%;
     display: flex;
     justify-content: flex-end;
+
+    &.-disabled {
+        display: none;
+    }
+
+    img {
+        width: 40px;
+    }
 }
 
 // submit button
-.info-submit{
+.info-submit {
     margin-top: 100px;
     display: flex;
     flex-direction: row-reverse;
     gap: 20px;
     width: 100%;
     text-align: center;
-    .button-bottom{
+
+    .button-bottom {
         width: 50%;
         border-radius: 20px;
         color: $white-color;
@@ -397,132 +489,159 @@ textarea{
         height: 80px;
         line-height: 80px;
     }
-    button:hover{
+
+    button:hover {
         background-color: $fourth-h-color;
     }
-    a.button-bottom{
+
+    a.button-bottom {
         background-color: $txt-color;
     }
-    a.button-bottom:hover{
+
+    a.button-bottom:hover {
         background-color: $third-color;
     }
-    @include mq(tab){
-        margin-top: 10px;
-        margin-bottom: 20px;
+
+    @include mq(tab) {
+        margin-top: 30px;
+        margin-bottom: 30px;
         display: block;
         flex-direction: column;
-        width: 100%;
-        .button-bottom{
-            margin-bottom: 1rem;
+
+        .button-bottom {
             width: 100%;
             border-radius: 10px;
             height: 50px;
+            line-height: 50px;
+            margin-bottom: 30px;
+        }
+
+        a.button-bottom {
+            display: block;
         }
     }
-    @include mq(sp){
-        margin-top: 10px;
-        display: block;
-        gap: 20px;
-        width: 100%;
-        button{
-            width: 100%;
-            border-radius: 10px;
-            height: 50px;
+
+    @include mq(sp) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        .button-bottom {
+            height: 40px;
+            line-height: 40px;
+            margin-bottom: 20px;
         }
     }
 }
 
 // tablet settings
 
-@include mq(tab){
-    .steps-top-right{
+@include mq(tab) {
+    .steps-top-right {
         display: flex;
         justify-content: center;
         margin-left: 10%;
         margin-right: 10%;
-        .steps-contents{
+
+        .steps-contents {
             justify-content: center;
             text-align: center;
             font-size: 25px
         }
-        ul{
+
+        ul {
             display: flex;
             justify-content: center;
             margin-top: 40px;
             column-gap: 5px;
             color: $black-color;
-            li{
+
+            li {
                 justify-content: center;
             }
-            span{
+
+            span {
                 color: $primary-color;
             }
         }
-        p{
+
+        p {
             background-color: $border-color;
             color: $white-color;
             border-radius: 30px;
             padding: 5px 15px;
             letter-spacing: 0.2em;
         }
-        .current-step{
+
+        .current-step {
             background-color: $primary-color;
         }
     }
-    .user-resume-title{
+
+    .user-resume-title {
         margin-left: 10%;
         margin-top: 20px;
         color: $black-color;
         font-size: 20px;
     }
-    .user-resume-whitebox{
+
+    .user-resume-whitebox {
         background-color: $white-color;
         border-radius: 20px;
         // TODO 省略可能 @shin
         margin-left: 10%;
         margin-right: 10%;
-        margin-top: 20px; 
+        margin-top: 20px;
         margin-bottom: 30px;
         padding: 10px;
-        .user-resume-contents{
+
+        .user-resume-contents {
             margin-left: 5%;
             margin-right: 5%;
             color: $black-color;
             font-size: 15px;
-            .personal-info{
-                .personal-info-title{
+
+            .personal-info {
+                .personal-info-title {
                     border-bottom: solid $border-color;
                     margin-bottom: 20px;
-                } 
-                .personal-info-contents{
+                }
+
+                .personal-info-contents {
                     display: block;
-                    &__image{
+
+                    &__image {
                         margin: auto;
-                        img{
+
+                        img {
                             display: flex;
                             margin: auto;
                             width: 250px;
                             height: 300px;
                             object-fit: cover;
                         }
-                        input{
+
+                        input {
                             margin: auto;
                         }
-                        p{
+
+                        p {
                             margin: auto;
                             font-size: 0.9em;
                         }
                     }
                 }
             }
+
             // TODO: 重複コードあり userresume.scss @shin
-            .profile-top{
+            .profile-top {
                 border-bottom: solid $border-color;
             }
-            .profile-bottom{
+
+            .profile-bottom {
                 margin-top: 10px;
                 margin-bottom: 10px;
-                textarea{
+
+                textarea {
                     padding-left: 10px;
                     padding-right: 10px;
                     border: 2px solid $border-color;
@@ -530,13 +649,16 @@ textarea{
                     width: 100%;
                 }
             }
-            .license-top{
+
+            .license-top {
                 border-bottom: solid $border-color;
             }
-            .license-bottom{
+
+            .license-bottom {
                 margin-top: 20px;
                 margin-bottom: 40px;
-                input{
+
+                input {
                     margin-bottom: 20px;
                     border: 2px solid $border-color;
                     border-radius: 5px;
@@ -544,13 +666,16 @@ textarea{
                     width: 100%;
                 }
             }
-            .hobby-top{
+
+            .hobby-top {
                 border-bottom: solid $border-color;
             }
-            .hobby-bottom{
+
+            .hobby-bottom {
                 margin-top: 20px;
                 margin-bottom: 50px;
-                textarea{
+
+                textarea {
                     padding-left: 10px;
                     padding-right: 10px;
                     height: 100px;
@@ -565,78 +690,93 @@ textarea{
 
 //smartphone settings
 
-@include mq(sp){
-    .steps-top-right{
+@include mq(sp) {
+    .steps-top-right {
         display: flex;
         justify-content: center;
         margin-left: 10%;
         margin-right: 10%;
-        .steps-contents{
+
+        .steps-contents {
             justify-content: center;
             text-align: center;
             font-size: 25px
         }
-        ul{
+
+        ul {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             margin-top: 40px;
             column-gap: 25px;
             color: $black-color;
-            li{
+
+            li {
                 justify-content: center;
             }
-            span{
+
+            span {
                 color: $primary-color;
             }
         }
-        p{
+
+        p {
             background-color: $border-color;
             color: $white-color;
             border-radius: 30px;
             padding: 5px 15px;
             letter-spacing: 0.2em;
         }
-        .current-step{
+
+        .current-step {
             background-color: $primary-color;
         }
     }
-    .user-resume-title{
+
+    .user-resume-title {
         margin-left: 5%;
         margin-top: 20px;
         color: $black-color;
         font-size: 20px;
     }
-    .user-resume-whitebox{
+
+    .user-resume-whitebox {
         background-color: $white-color;
         border-radius: 20px;
         // TODO 省略可能 @shin
         margin-left: 5%;
         margin-right: 5%;
-        margin-top: 20px; 
+        margin-top: 20px;
         margin-bottom: 20px;
         padding: 10px;
-        .user-resume-contents{
+
+        .user-resume-contents {
             margin-left: 5%;
             margin-right: 5%;
             color: $black-color;
             font-size: 15px;
-            .personal-info{
-                .personal-info-title{
+
+            .personal-info {
+                .personal-info-title {
                     border-bottom: solid $border-color;
                     margin-bottom: 20px;
-                } 
-                .personal-info-contents{
+                }
+
+                .personal-info-contents {
                     display: block;
-                    &__bottom{
+
+                    &__bottom {
                         margin-top: 20px;
-                        p{
+
+                        p {
                             margin-bottom: 20px;
-                            textarea{
+
+                            textarea {
                                 border-radius: 3px;
                                 width: 100%;
                             }
-                            input{
+
+                            input {
                                 border-radius: 3px;
                                 width: 100%;
                             }
@@ -646,13 +786,15 @@ textarea{
             }
 
             //noinspection ALL
-            .profile-top{
+            .profile-top {
                 border-bottom: solid $border-color;
             }
-            .profile-bottom{
+
+            .profile-bottom {
                 margin-top: 10px;
                 margin-bottom: 10px;
-                textarea{
+
+                textarea {
                     padding-left: 10px;
                     padding-right: 10px;
                     border: 2px solid $border-color;
@@ -660,13 +802,16 @@ textarea{
                     width: 100%;
                 }
             }
-            .license-top{
+
+            .license-top {
                 border-bottom: solid $border-color;
             }
-            .license-bottom{
+
+            .license-bottom {
                 margin-top: 20px;
                 margin-bottom: 40px;
-                input{
+
+                input {
                     margin-bottom: 20px;
                     border: 2px solid $border-color;
                     border-radius: 5px;
@@ -674,13 +819,16 @@ textarea{
                     width: 100%;
                 }
             }
-            .hobby-top{
+
+            .hobby-top {
                 border-bottom: solid $border-color;
             }
-            .hobby-bottom{
+
+            .hobby-bottom {
                 margin-top: 20px;
                 margin-bottom: 50px;
-                textarea{
+
+                textarea {
                     padding-left: 10px;
                     padding-right: 10px;
                     height: 100px;

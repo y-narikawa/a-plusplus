@@ -77,7 +77,12 @@
                     </div>
                 </div>
                 <div class="experience">
-                    <div class="experience-top">工作經歷 Experience</div>
+                    <div class="experience-top">
+                        工作經歷 Experience
+                        <button type="button" onclick="">
+                            <img src="../img/add_form_dark.svg" alt="addForm_icon">
+                        </button>
+                    </div>
                     <ul class="experience-contents">
                         <li><label for="start-month[0]">開始年月</label><br><input type="date" name="start_month[0]" id="start-month[0]" placeholder="2022/1" required></li>
                         <li>~<p></p>
@@ -91,9 +96,14 @@
                     <div class="experience-note"><textarea placeholder="簡述, 工作重點, 負責專案, 備註"></textarea></div>
                 </div>
                 <div class="education">
-                    <div class="education-top">學歷 Education</div>
+                    <div class="education-top">
+                        學歷 Education
+                        <button type="button" onclick="">
+                            <img src="../img/add_form_dark.svg" alt="addForm_icon">
+                        </button>
+                    </div>
                     <ul class="education-contents">
-                        <li><label for="begin-month[0]">開始年月</label><br><input type="date" name="begin_month[0]" id="begin-month[0]" placeholder="2020/9" required></li>
+                        <li><label for="begin-month[0]">開始年月</label><br><input type="date" name="begin_month[0]" id="begin-month[0]" placeholder="2020/9" class="begin-month" required></li>
                         <li>~<p></p>
                         </li>
                         <li><label for="last-month[0]">結束年月</label><br><input type="date" name="last_month[0]" id="last-month[0]" required></li>
@@ -110,16 +120,20 @@
                         <li><label for="degree[0]">學位</label><br><input type="text" name="degree[0]" id="degree[0]" placeholder="博⼠候選⼈" required></li>
                     </ul>
                 </div>
-                <div class="license">
+                <div class="license ">
                     <div class="license-top">
                         專業證照｜獲獎紀錄｜相關社團參與
-                        <button type="button" onclick="addForm()">
-                            <img src="../img/add_form_dark.png" alt="addForm_icon">+
+                        <button type="button" onclick="addLicenseForm()">
+                            <img src="../img/add_form_dark.svg" alt="addForm_icon">
                         </button>
                     </div>
-                    <div class="license-contents" id="form_area">
-                        <input type="text" name="license[0]" placeholder="台灣台北註冊建築師" required>
-                        <button type="button" id="0" onclick="deleteBtn(this)"></button>
+                    <div class="license-contents" id="license-contents">
+                        <div class="license-contents-area">
+                            <div class="delete-icon -disabled">
+                                <button type="button" class="license_add_btn" onclick="deleteLicenseForm(this)"><img src="../img/delete_form_dark.svg"></button>
+                            </div>
+                            <input type="text" class="license-form" name="license[0]" placeholder="台灣台北註冊建築師" required>
+                        </div>
                     </div>
                 </div>
                 <div class="hobby">
@@ -128,8 +142,8 @@
                     </div>
                 </div>
                 <div class="info-submit">
-                    <button type="submit" name="" class="button-bottom"><a href="./step4.html">送出</a></button>
-                    <a href="./step2.html" class="button-bottom">上一頁</a>               
+                    <button type="submit" name="" class="button-bottom">送出</button>
+                    <a href="./step2.html" class="button-bottom">上一頁</a>
                 </div>
             </form>
         </div>
