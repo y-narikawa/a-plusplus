@@ -236,7 +236,6 @@ textarea {
         .experience-top {
             border-bottom: solid $border-color;
             display: flex;
-            border-bottom: solid $border-color;
             justify-content: space-between;
 
             button {
@@ -248,7 +247,7 @@ textarea {
             }
         }
 
-        .experience-contents {
+        ul {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
@@ -334,7 +333,7 @@ textarea {
             }
         }
 
-        .education-contents {
+        ul {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;

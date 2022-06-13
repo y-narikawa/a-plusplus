@@ -1,39 +1,56 @@
 @charset "utf-8";
-.user-skill-body{
+
+.user-skill-body {
     width: 100%;
     font-family: $secondary-family-ie;
 }
 
-.user-skill-title{
+.user-skill-title {
     margin: auto;
     max-width: 1333px;
     color: $black-color;
     font-size: 35px;
 }
 
-.user-skill-whitebox{
+.user-skill-whitebox {
     background-color: $white-color;
     border-radius: 20px;
     margin: 20px auto 100px auto;
     max-width: 1333px;
     padding: 50px;
 }
-.user-skill-contents{
+
+.user-skill-contents {
     margin: 0 5%;
 }
-.job-categories1-title{
+
+.job-categories1-title {
     color: $primary-color;
     margin-bottom: 30px;
     font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid $border-color;
+
+    button {
+        cursor: pointer;
+
+        img {
+            width: 40px;
+        }
+    }
 }
-.job-categories1{
+
+.job-categories1 {
     margin-bottom: 30px;
-    .work-skill__items{
+
+    .work-skill__items {
         border: solid;
         border-radius: 2px;
     }
 }
-.job-categories1-checkbox{
+
+.job-categories1-checkbox {
     font-size: 1.5em;
     margin-bottom: 30px;
 }
@@ -42,7 +59,7 @@
     display: none;
 }
 
-.job-checkbox + span {
+.job-checkbox+span {
     cursor: pointer;
     display: inline-block;
     margin: 0 0.2em 0;
@@ -52,7 +69,7 @@
 }
 
 // TODO: 重複コードあり userinfo.scss @shin
-.job-checkbox + span::before {
+.job-checkbox+span::before {
     -webkit-transform: translateY(-50%);
     background: #fff;
     border: 1px solid $border-color;
@@ -68,7 +85,7 @@
     font-size: 0.5em;
 }
 
-.job-checkbox + span::after {
+.job-checkbox+span::after {
     -webkit-transform: translateY(-50%) rotate(-45deg);
     border-bottom: 3px solid $primary-color;
     border-left: 3px solid $primary-color;
@@ -85,17 +102,19 @@
     width: 1em;
 }
 
-.job-checkbox:checked + span::after {
+.job-checkbox:checked+span::after {
     opacity: 1;
 }
 
-.majorSkill{
+.majorSkill {
     color: $black-color;
     margin-bottom: 50px;
-    &__title{
+
+    &__title {
         font-size: 20px;
         margin-bottom: 50px;
-        img{
+
+        img {
             width: 20px;
             height: 20px;
             margin-right: 1%;
@@ -104,73 +123,83 @@
     }
 }
 
-.rank-base{
+.rank-base {
 
-    .rank-base-title{
+    .rank-base-title {
         font-size: 1.1em;
         color: $black-color;
-        img{
+
+        img {
             width: 20px;
             height: 20px;
             margin-right: 1%;
             margin-bottom: 5px;
         }
     }
-    table{
-        .rankBase{
-            &__top{
+
+    table {
+        .rankBase {
+            &__top {
                 border-top: none;
                 border-color: $border-color;
                 color: $black-color;
                 padding: 15px 130px;
-                &_left{
+
+                &_left {
                     border-color: $border-color;
                     border-left: none;
                     border-top: none;
                 }
-                &_right{
+
+                &_right {
                     color: $fourth-color;
                     border-color: $border-color;
                     border-right: none;
                     border-top: none;
-                    
+
                 }
             }
 
-            &__left{
+            &__left {
                 border-left: none;
                 border-color: $border-color;
                 color: $black-color;
                 padding: 15px 20px;
-                &_A{
+
+                &_A {
                     color: $primary-color;
                     border-color: $border-color;
                     border-left: none;
                     padding: 15px 20px;
                 }
             }
-            &__middle{
+
+            &__middle {
                 color: $black-color;
                 border-color: $border-color;
             }
-            &__right{
+
+            &__right {
                 border-right: none;
                 border-color: $border-color;
                 padding: 15px 50px;
                 color: $fourth-color;
             }
-            &__bottom{
+
+            &__bottom {
                 border-bottom: none;
                 border-color: $border-color;
                 color: $black-color;
                 padding: 15px 130px;
-                &_left{
+
+                &_left {
                     border-left: none;
                     border-bottom: none;
                     border-color: $border-color;
                     color: $black-color;
                 }
-                &_right{
+
+                &_right {
                     border-right: none;
                     border-bottom: none;
                     border-color: $border-color;
@@ -178,8 +207,9 @@
                 }
             }
         }
-        td{
-            border-style: dashed;          
+
+        td {
+            border-style: dashed;
             border-width: 2px;
             text-align: center;
         }
@@ -188,71 +218,77 @@
 
 // tablet settings
 
-@include mq(tab){
-    .user-skill-title{
+@include mq(tab) {
+    .user-skill-title {
         margin-left: 10%;
         margin-top: 20px;
         color: $black-color;
         font-size: 20px;
     }
-    
-    .user-skill-whitebox{
+
+    .user-skill-whitebox {
         background-color: $white-color;
         border-radius: 20px;
         // TODO 省略可能 @shin
         margin-left: 10%;
         margin-right: 10%;
-        margin-top: 10px; 
+        margin-top: 10px;
         margin-bottom: 30px;
         padding: 10px;
     }
-                                            
-    .user-skill-contents{
+
+    .user-skill-contents {
         margin: 0 5%;
     }
-    .job-categories1-title{
+
+    .job-categories1-title {
         color: $primary-color;
         margin-bottom: 30px;
         font-size: 1.1em;
     }
-    .job-categories1{
-        .work-skill__items{
+
+    .job-categories1 {
+        .work-skill__items {
             border: solid;
             border-radius: 2px;
         }
     }
 
     // TODO: 重複コードあり userspecialities.scss @shin
-    .job-categories1-checkbox{
+    .job-categories1-checkbox {
         font-size: 1em;
         margin-bottom: 30px;
     }
 
-    .job-categories1-input{
+    .job-categories1-input {
         margin-bottom: 50px;
-        input{
+
+        input {
             width: 10px;
             height: 10px;
             border: 3px solid $border-color;
             border-radius: 2px;
             margin-right: 2%;
             cursor: pointer;
-            
+
         }
-        label{
+
+        label {
             font-size: 1em;
             margin-right: 3%;
             color: $black-color;
         }
     }
-    
-    .majorSkill{
+
+    .majorSkill {
         color: $black-color;
         margin-bottom: 50px;
-        &__title{
+
+        &__title {
             font-size: 20px;
             margin-bottom: 50px;
-            img{
+
+            img {
                 width: 20px;
                 height: 20px;
                 margin-right: 1%;
@@ -260,75 +296,86 @@
             }
         }
     }
-    
-    .rank-base{  
-        .rank-base-title{
+
+    .rank-base {
+        .rank-base-title {
             font-size: 1.1em;
             color: $black-color;
-            img{
+
+            img {
                 width: 20px;
                 height: 20px;
                 margin-right: 1%;
                 margin-bottom: 5px;
             }
         }
-        table{
+
+        table {
             font-size: 1em;
+
             // TODO: 重複コードあり userspecialities.scss @shin
-            .rankBase{
-                &__top{
+            .rankBase {
+                &__top {
                     border-top: none;
                     border-color: $border-color;
                     color: $black-color;
                     padding: 5px 5px;
-                    &_left{
+
+                    &_left {
                         border-color: $border-color;
                         border-left: none;
                         border-top: none;
                     }
-                    &_right{
+
+                    &_right {
                         color: $fourth-color;
                         border-color: $border-color;
                         border-right: none;
                         border-top: none;
-                        
+
                     }
                 }
-    
-                &__left{
+
+                &__left {
                     border-left: none;
                     border-color: $border-color;
                     color: $black-color;
                     padding: 5px 5px;
-                    &_A{
+
+                    &_A {
                         color: $primary-color;
                         border-color: $border-color;
                         border-left: none;
                         padding: 5px 5px;
                     }
                 }
-                &__middle{
+
+                &__middle {
                     color: $black-color;
                     border-color: $border-color;
                 }
-                &__right{
+
+                &__right {
                     border-right: none;
                     border-color: $border-color;
                     padding: 5px 5px;
                     color: $fourth-color;
                 }
-                &__bottom{
+
+                &__bottom {
                     border-bottom: none;
                     border-color: $border-color;
                     color: $black-color;
                     padding: 5px 5px;
-                    &_left{
+
+                    &_left {
                         border-left: none;
                         border-bottom: none;
                         border-color: $border-color;
                         color: $black-color;
                     }
-                    &_right{
+
+                    &_right {
                         border-right: none;
                         border-bottom: none;
                         border-color: $border-color;
@@ -336,8 +383,9 @@
                     }
                 }
             }
-            td{
-                border-style: dashed;          
+
+            td {
+                border-style: dashed;
                 border-width: 1px;
                 text-align: center;
             }
@@ -347,70 +395,76 @@
 
 // smartphone settings
 
-@include mq(sp){
-    .user-skill-title{
+@include mq(sp) {
+    .user-skill-title {
         margin-left: 5%;
         margin-top: 20px;
         color: $black-color;
         font-size: 20px;
     }
-    
-    .user-skill-whitebox{
+
+    .user-skill-whitebox {
         background-color: $white-color;
         border-radius: 20px;
         // TODO 省略可能 @shin
         margin-left: 5%;
         margin-right: 5%;
-        margin-top: 20px; 
+        margin-top: 20px;
         margin-bottom: 20px;
         padding: 10px;
     }
-    
-    .job-categories1-title{
+
+    .job-categories1-title {
         color: $primary-color;
         margin-bottom: 30px;
         font-size: 1.1em;
     }
-    .job-categories1{
-        .work-skill__items{
+
+    .job-categories1 {
+        .work-skill__items {
             border: solid;
             border-radius: 2px;
         }
-        .works__section-title.tgl-switch::after{
+
+        .works__section-title.tgl-switch::after {
             display: none;
         }
     }
 
-    .job-categories1-checkbox{
+    .job-categories1-checkbox {
         font-size: 1em;
         margin-bottom: 30px;
     }
 
-    .job-categories1-input{
+    .job-categories1-input {
         margin-bottom: 50px;
-        input{
+
+        input {
             width: 10px;
             height: 10px;
             border: 3px solid $border-color;
             border-radius: 2px;
             margin-right: 2%;
             cursor: pointer;
-            
+
         }
-        label{
+
+        label {
             font-size: 1em;
             margin-right: 3%;
             color: $black-color;
         }
     }
-    
-    .majorSkill{
+
+    .majorSkill {
         color: $black-color;
         margin-bottom: 50px;
-        &__title{
+
+        &__title {
             font-size: 20px;
             margin-bottom: 50px;
-            img{
+
+            img {
                 width: 20px;
                 height: 20px;
                 margin-right: 1%;
@@ -418,74 +472,85 @@
             }
         }
     }
-    
-    .rank-base{  
-        .rank-base-title{
+
+    .rank-base {
+        .rank-base-title {
             font-size: 1.1em;
             color: $black-color;
-            img{
+
+            img {
                 width: 20px;
                 height: 20px;
                 margin-right: 1%;
                 margin-bottom: 5px;
             }
         }
-        table{
+
+        table {
             font-size: 0.9em;
-            .rankBase{
-                &__top{
+
+            .rankBase {
+                &__top {
                     border-top: none;
                     border-color: $border-color;
                     color: $black-color;
                     padding: 5px 5px;
-                    &_left{
+
+                    &_left {
                         border-color: $border-color;
                         border-left: none;
                         border-top: none;
                     }
-                    &_right{
+
+                    &_right {
                         color: $fourth-color;
                         border-color: $border-color;
                         border-right: none;
                         border-top: none;
-                        
+
                     }
                 }
-    
-                &__left{
+
+                &__left {
                     border-left: none;
                     border-color: $border-color;
                     color: $black-color;
                     padding: 5px 5px;
-                    &_A{
+
+                    &_A {
                         color: $primary-color;
                         border-color: $border-color;
                         border-left: none;
                         padding: 5px 5px;
                     }
                 }
-                &__middle{
+
+                &__middle {
                     color: $black-color;
                     border-color: $border-color;
                 }
-                &__right{
+
+                &__right {
                     border-right: none;
                     border-color: $border-color;
                     padding: 5px 5px;
                     color: $fourth-color;
                 }
-                &__bottom{
+
+                &__bottom {
                     border-bottom: none;
                     border-color: $border-color;
                     color: $black-color;
                     padding: 5px 5px;
-                    &_left{
+
+                    &_left {
                         border-left: none;
                         border-bottom: none;
                         border-color: $border-color;
                         color: $black-color;
                     }
-                    &_right{
+
+                    &_right {
                         border-right: none;
                         border-bottom: none;
                         border-color: $border-color;
@@ -493,8 +558,9 @@
                     }
                 }
             }
-            td{
-                border-style: dashed;          
+
+            td {
+                border-style: dashed;
                 border-width: 1px;
                 text-align: center;
             }
