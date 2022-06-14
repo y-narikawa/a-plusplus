@@ -5,13 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A++ my resume</title>
+    <title>A++ Edit Resume</title>
     <link rel="stylesheet" href="../../css/style.css" />
     <!-- Favicon -->
     <link rel="icon" href="../../favicon.ico">
 </head>
 
-<body id="pagetop">
+<body class="lower-index" id="pagetop">
     <header class="header">
         <!-- Middle -->
         <div class="header__middle">
@@ -25,28 +25,7 @@
             </div>
         </div>
     </header>
-    <div class="user-resume-body">
-        <div class="steps-top-right">
-            <div class="steps-contents">
-                <ul>
-                    <li>
-                        <p>STEP1</p>註冊
-                    </li>
-                    <li>
-                        <p class="current-step">STEP2</p><span>填寫履歷</span>
-                    </li>
-                    <li>
-                        <p>STEP3</p>自我評量
-                    </li>
-                    <li>
-                        <p>STEP4</p>完成
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="user-resume-title">
-            填寫個人履歷
-        </div>
+    <div class="user-resume-body-edit">
         <div class="user-resume-whitebox">
             <form class="user-resume-contents" action="" method="post" enctype="multipart/form-data">
                 <!-- personal-information -->
@@ -55,7 +34,8 @@
                     <div class="personal-info-contents">
                         <div class="personal-info-contents__image">
                             <div class="image-area">
-                                <img class="preview" id="preview" alt="preview">
+                                <img src="../../img/cameraa_add_image_gray.svg" alt="camera-icon" class="camera-icon">
+                                <img class="preview" id="preview" alt="">
                                 <input type="file" name="profile_img" required accept="image/*" onchange="previewImage(this)">
                             </div>
 
@@ -76,49 +56,80 @@
                     </div>
                 </div>
                 <div class="experience">
-                    <div class="experience-top">工作經歷 Experience</div>
-                    <ul class="experience-contents">
-                        <li><label for="start-month[0]">開始年月</label><br><input type="date" name="start_month[0]" id="start-month[0]" placeholder="2022/1" required></li>
-                        <li>~<p></p>
-                        </li>
-                        <li><label for="end-month[0]">結束年月</label><br><input type="date" name="end_month[0]" id="end-month[0]" placeholder="現在" required></li>
-                        <li><label for="total-month[0]">共計年月</label><br><input type="text" name="total_month[0]" id="total-month[0]" placeholder="0年3個月" required></li>
-                        <li><label for="job-title[0]">職稱</label><br><input type="text" name="job_title[0]" id="job-title[0]" placeholder="請填寫職稱 EX:建築設計師" required></li>
-                        <li><label for="employment[0]">就職公司</label><br><input type="text" name="employment[0]" id="employment[0]" placeholder="請填寫公司名稱 EX:某建築師事務所" required></li>
-                    </ul>
-
-                    <div class="experience-note"><textarea placeholder="簡述, 工作重點, 負責專案, 備註"></textarea></div>
-                </div>
-                <div class="education">
-                    <div class="education-top">學歷 Education</div>
-                    <ul class="education-contents">
-                        <li><label for="begin-month[0]">開始年月</label><br><input type="date" name="begin_month[0]" id="begin-month[0]" placeholder="2020/9" required></li>
-                        <li>~<p></p>
-                        </li>
-                        <li><label for="last-month[0]">結束年月</label><br><input type="date" name="last_month[0]" id="last-month[0]" required></li>
-                        <li>
-                            <input type="radio" name="graduate[0]" id="graduate[0]" required>
-                            <label for="graduate[0]" class="education-radio-button">畢業</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="graduate[0]" id="n-graduate[0]" required>
-                            <label for="n-graduate[0]" class="education-radio-button">肄業</label>
-                        </li>
-                        <li><label for="school[0]">學校</label><br><input type="text" name="school[0]" id="school[0]" placeholder="台湾大学" required></li>
-                        <li><label for="subject[0]">科系</label><br><input type="text" name="subject[0]" id="subject[0]" placeholder="土木工程系" required></li>
-                        <li><label for="degree[0]">學位</label><br><input type="text" name="degree[0]" id="degree[0]" placeholder="博⼠候選⼈" required></li>
-                    </ul>
-                </div>
-                <div class="license">
-                    <div class="license-top">
-                        專業證照｜獲獎紀錄｜相關社團參與
-                        <button type="button" onclick="addForm()">
-                            <img src="../../img/add_form_dark.png" alt="pen">+
+                    <div class="experience-top">
+                        工作經歷 Experience
+                        <button type="button" onclick="addExperienceForm()">
+                            <img src="../../img/add_form_dark.svg" alt="addForm_icon">
                         </button>
                     </div>
-                    <div class="license-contents" id="form_area">
-                        <input type="text" name="license[0]" placeholder="台灣台北註冊建築師" required>
-                        <button type="button" id="0" onclick="deleteBtn(this)"></button>
+                    <div class="experience-contents" id="experience-contents">
+                        <div class="experience-contents-area">
+                            <div class="delete-icon -disabled">
+                                <button type="button" onclick="deleteExperienceForm(this)"><img src="../../img/delete_form_dark.svg"></button>
+                            </div>
+                            <ul>
+                                <li><label for="start-month-0">開始年月</label><br><input type="date" class="experience-form start-month" name="start_month[0]" id="start-month-0" placeholder="2022/1" required></li>
+                                <li>~<p></p>
+                                </li>
+                                <li><label for="end-month-0">結束年月</label><br><input type="date" class="experience-form end-month" name="end_month[0]" id="end-month-0" placeholder="現在" required></li>
+                                <li><label for="total-month-0">共計年月</label><br><input type="text" class="experience-form total-month" name="total_month[0]" id="total-month-0" placeholder="0年3個月" required></li>
+                                <li><label for="job-title-0">職稱</label><br><input type="text" class="experience-form job-title" name="job_title[0]" id="job-title-0" placeholder="請填寫職稱 EX:建築設計師" required></li>
+                                <li><label for="employment-0">就職公司</label><br><input type="text" class="experience-form employment" name="employment[0]" id="employment-0" placeholder="請填寫公司名稱 EX:某建築師事務所" required></li>
+                            </ul>
+                            <div class="experience-note">
+                                <textarea class="experience-form detail" id="detail[0]" placeholder="簡述, 工作重點, 負責專案, 備註"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="education">
+                    <div class="education-top">
+                        學歷 Education
+                        <button type="button" onclick="addEducationForm()">
+                            <img src="../../img/add_form_dark.svg" alt="addForm_icon">
+                        </button>
+                    </div>
+                    <div class="education-contents" id="education-contents">
+                        <div class="education-contents-area">
+                            <div class="delete-icon -disabled">
+                                <button type="button" onclick="deleteEducationForm(this)"><img src="../../img/delete_form_dark.svg"></button>
+                            </div>
+                            <ul >
+                                <li>
+                                    <label class="education_label">開始年月</label><br><input type="date" class="begin-month education-form education-txt-form" name="begin_month[0]" id="begin-month-0" placeholder="2020/9" required></li>
+                                <li>~<p></p>
+                                </li>
+                                <li><label class="education_label">結束年月</label><br><input type="date" class="last-month education-form education-txt-form" name="last_month[0]" id="last-month-0" required></li>
+                                <li>
+                                    <input type="radio" class="graduate education-form" name="graduate[0]" id="graduate-0" value="1" required checked="checked" >
+                                    <label class="education_label" for="graduate-0">畢業</label>
+                                </li>
+                                <li>
+                                    <input type="radio" class="n-graduate education-form" name="graduate[0]" id="n-graduate-0" value="0" required>
+                                    <label class="education_label" for="n-graduate-0" >肄業</label>
+                                </li>
+                                <li><label class="education_label">學校</label><br><input type="text" class="school education-form education-txt-form" name="school[0]" id="school-0" placeholder="台湾大学" required></li>
+                                <li><label class="education_label">科系</label><br><input type="text" class="subject education-form education-txt-form" name="subject[0]" id="subject-0" placeholder="土木工程系" required></li>
+                                <li><label class="education_label">學位</label><br><input type="text" class="degree education-form education-txt-form" name="degree[0]" id="degree-0" placeholder="博⼠候選⼈" required></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="license ">
+                    <div class="license-top">
+                        專業證照｜獲獎紀錄｜相關社團參與
+                        <button type="button" onclick="addLicenseForm()">
+                            <img src="../../img/add_form_dark.svg" alt="addForm_icon">
+                        </button>
+                    </div>
+                    <div class="license-contents" id="license-contents">
+                        <div class="license-contents-area">
+                            <div class="delete-icon -disabled">
+                                <button type="button" class="license_add_btn" onclick="deleteLicenseForm(this)"><img src="../../img/delete_form_dark.svg"></button>
+                            </div>
+                            <input type="text" class="license-form" name="license[0]" id="license-0" placeholder="台灣台北註冊建築師" required>
+                        </div>
                     </div>
                 </div>
                 <div class="hobby">
@@ -127,7 +138,7 @@
                     </div>
                 </div>
                 <div class="info-submit">
-                    <button type="submit" name=""><a href="../preview/resume.html">采用</a></button>
+                    <button type="submit" name="" class="button-bottom">更新</button>
                 </div>
             </form>
         </div>
@@ -167,6 +178,7 @@
 
     <!-- Scripts -->
     <script src="../../js/script.js"></script>
+    <script src="../../js/register.js"></script>
 </body>
 
 </html>

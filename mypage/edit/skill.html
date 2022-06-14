@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A++ my skills</title>
+    <title>A++ My Skill Edit</title>
     <link rel="stylesheet" href="../../css/style.css" />
     <!-- Favicon -->
     <link rel="icon" href="../../favicon.ico">
@@ -26,151 +26,159 @@
         </div>
     </header>
     <div class="user-skill-body">
-        <div class="user-skill-title">
-            填寫自我評量
-        </div>
 
         <div class="user-skill-whitebox">
             <form class="user-skill-contents" action="" method="post" enctype="multipart/form-data">
                 <div class="job-categories1">
-                    <div class="job-categories1-title">職業類別1</div>
-                    <div class="job-categories1-checkbox">
-                        <label><input class="job-checkbox" type="radio" name="skill[0]"><span>建築</span></label>
-                        <label><input class="job-checkbox" type="radio" name="skill[0]"><span>室内設計</span></label>
-                        <label><input class="job-checkbox" type="radio" name="skill[0]"><span>相關技師｜顧問</span></label>
-                        <label><input class="job-checkbox" type="radio" name="skill[0]"><span>景觀｜規劃｜土地開發</span></label><br>
-                        <label><input class="job-checkbox" type="radio" name="skill[0]"><span>工程｜材料｜設備｜廠商｜運輸</span></label>
-                        <label><input class="job-checkbox" type="radio" name="skill[0]"><span>建築文化資產｜教育｜出版媒體</span></label>
+                    <div class="job-categories1-title">
+                        職業類別
+                        <button type="button" onclick="addJobForm()">
+                            <img src="../../img/add_form_dark.svg" alt="addForm_icon">
+                        </button>
                     </div>
-                    <div class="work-skill sp-tgl-wrap">
-                        <h3 class="works__section-title tgl-switch">
-                            <div class="works__section-icon">
-                                <img src="../../img/home/work_section_title_icon1.svg" alt="work_section_title_icon1" />
+                    <div class="job-contents" id="job-contents">
+                        <div class="job-contents-area">
+                            <div class="delete-icon -disabled">
+                                <button type="button" onclick="deleteJobForm(this)"><img src="../../img/delete_form_dark.svg"></button>
                             </div>
-                            主要技能需求
-                        </h3>
-                        <div class="work-skill__wrap tgl-content">
-                            <div class="work-skill__list">
-                                <!-- For -->
-                                <!-- Item -->
-                                <div class="work-skill__item">
-                                    <div class="work-skill__title">Autocad<br />軟體使用</div>
-                                    <div class="work-skill__evaluation">
-                                        <ol class="c-evaluation">
-                                            <li class="c-evaluation__item">
-                                                <input type="radio" name="autocad_skill[0]" id="evaluation-c" required>
-                                                <label for="evaluation-c" class="c-evaluation__rank">C</label>
-                                            </li>
-                                            <li class="c-evaluation__item">
-                                                <input type="radio" name="autocad_skill[0]" id="evaluation-b">
-                                                <label for="evaluation-b" class="c-evaluation__rank">B</label>
-                                            </li>
-                                            <li class="c-evaluation__item">
-                                                <input type="radio" name="autocad_skill[0]" id="evaluation-bb">
-                                                <label for="evaluation-bb" class="c-evaluation__rank">B+</label>
-                                            </li>
-                                            <li class="c-evaluation__item">
-                                                <input type="radio" name="autocad_skill[0]" id="evaluation-a">
-                                                <label for="evaluation-a" class="c-evaluation__rank">A</label>
-
-                                            </li>
-                                            <li class="c-evaluation__item">
-                                                <input type="radio" name="autocad_skill[0]" id="evaluation-aa">
-                                                <label for="evaluation-aa" class="c-evaluation__rank">A+</label>
-                                            </li>
-                                            <li class="c-evaluation__item">
-                                                <input type="radio" name="autocad_skill[0]" id="evaluation-aaa">
-                                                <label for="evaluation-aaa" class="c-evaluation__rank">A++</label>
-                                            </li>
-                                        </ol>
+                            <div class="job-categories1-checkbox">
+                                <label><input class="job-checkbox job-form-1" type="radio" name="skill[0]"><span>建築</span></label>
+                                <label><input class="job-checkbox job-form-2" type="radio" name="skill[0]"><span>室内設計</span></label>
+                                <label><input class="job-checkbox job-form-3" type="radio" name="skill[0]"><span>相關技師｜顧問</span></label>
+                                <label><input class="job-checkbox job-form-4" type="radio" name="skill[0]"><span>景觀｜規劃｜土地開發</span></label><br>
+                                <label><input class="job-checkbox job-form-5" type="radio" name="skill[0]"><span>工程｜材料｜設備｜廠商｜運輸</span></label>
+                                <label><input class="job-checkbox job-form-6" type="radio" name="skill[0]"><span>建築文化資產｜教育｜出版媒體</span></label>
+                            </div>
+                            <div class="work-skill sp-tgl-wrap">
+                                <h3 class="works__section-title tgl-switch">
+                                    <div class="works__section-icon">
+                                        <img src="../../img/home/work_section_title_icon1.svg" alt="" />
+                                    </div>
+                                    主要技能需求
+                                </h3>
+                                <div class="work-skill__wrap tgl-content">
+                                    <div class="work-skill__list">
+                                        <!-- For -->
+                                        <!-- Item -->
+                                        <div class="work-skill__item">
+                                            <div class="work-skill__title">Autocad<br />軟體使用</div>
+                                            <div class="work-skill__evaluation">
+                                                <ol class="c-evaluation">
+                                                    <li class="c-evaluation__item">
+                                                        <input type="radio" class="job-form-7" name="autocad_skill[0]" id="evaluation-c-0" required>
+                                                        <label for="evaluation-c-0" class="c-evaluation__rank">C</label>
+                                                    </li>
+                                                    <li class="c-evaluation__item">
+                                                        <input type="radio" class="job-form-8" name="autocad_skill[0]" id="evaluation-b-0">
+                                                        <label for="evaluation-b-0" class="c-evaluation__rank">B</label>
+                                                    </li>
+                                                    <li class="c-evaluation__item">
+                                                        <input type="radio" class="job-form-9" name="autocad_skill[0]" id="evaluation-bb-0">
+                                                        <label for="evaluation-bb-0" class="c-evaluation__rank">B+</label>
+                                                    </li>
+                                                    <li class="c-evaluation__item">
+                                                        <input type="radio" class="job-form-10" name="autocad_skill[0]" id="evaluation-a-0">
+                                                        <label for="evaluation-a-0" class="c-evaluation__rank">A</label>
+    
+                                                    </li>
+                                                    <li class="c-evaluation__item">
+                                                        <input type="radio" class="job-form-11" name="autocad_skill[0]" id="evaluation-aa-0">
+                                                        <label for="evaluation-aa-0" class="c-evaluation__rank">A+</label>
+                                                    </li>
+                                                    <li class="c-evaluation__item">
+                                                        <input type="radio" class="job-form-12" name="autocad_skill[0]" id="evaluation-aaa-0">
+                                                        <label for="evaluation-aaa-0" class="c-evaluation__rank">A++</label>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <!-- // Item -->
+                                        <div class="work-skill__item">
+                                            <div class="work-skill__title">施工圖繪製</div>
+                                            <div class="work-skill__evaluation">
+                                                <ol class="c-evaluation">
+                                                    <li class="c-evaluation__item">
+                                                        <input type="radio" class="job-form-13" name="drawing_skill[0]" id="evaluation-c2-0" required>
+                                                        <label for="evaluation-c2-0" class="c-evaluation__rank">C</label>
+                                                    </li>
+                                                    <li class="c-evaluation__item">
+                                                        <input type="radio" class="job-form-14" name="drawing_skill[0]" id="evaluation-b2-0">
+                                                        <label for="evaluation-b2-0" class="c-evaluation__rank">B</label>
+                                                    </li>
+                                                    <li class="c-evaluation__item">
+                                                        <input type="radio" class="job-form-15" name="drawing_skill[0]" id="evaluation-bb2-0">
+                                                        <label for="evaluation-bb2-0" class="c-evaluation__rank">B+</label>
+                                                    </li>
+                                                    <li class="c-evaluation__item">
+                                                        <input type="radio" class="job-form-16" name="drawing_skill[0]" id="evaluation-a2-0">
+                                                        <label for="evaluation-a2-0" class="c-evaluation__rank">A</label>
+    
+                                                    </li>
+                                                    <li class="c-evaluation__item">
+                                                        <input type="radio" class="job-form-17" name="drawing_skill[0]" id="evaluation-aa2-0">
+                                                        <label for="evaluation-aa2-0" class="c-evaluation__rank">A+</label>
+                                                    </li>
+                                                    <li class="c-evaluation__item">
+                                                        <input type="radio" class="job-form-18" name="drawing_skill[0]" id="evaluation-aaa2-0">
+                                                        <label for="evaluation-aaa2-0" class="c-evaluation__rank">A++</label>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="work-skill__item">
+                                            <div class="work-skill__title">專案管理<br />經驗</div>
+                                            <div class="work-skill__evaluation">
+                                                <ol class="c-evaluation">
+                                                    <li class="c-evaluation__item">
+                                                        <input type="radio" class="job-form-19" name="manege_skill[0]" id="evaluation-c3-0" required>
+                                                        <label for="evaluation-c3-0" class="c-evaluation__rank">C</label>
+                                                    </li>
+                                                    <li class="c-evaluation__item">
+                                                        <input type="radio" class="job-form-20" name="manege_skill[0]" id="evaluation-b3-0">
+                                                        <label for="evaluation-b3-0" class="c-evaluation__rank">B</label>
+                                                    </li>
+                                                    <li class="c-evaluation__item">
+                                                        <input type="radio" class="job-form-21" name="manege_skill[0]" id="evaluation-bb3-0">
+                                                        <label for="evaluation-bb3-0" class="c-evaluation__rank">B+</label>
+                                                    </li>
+                                                    <li class="c-evaluation__item">
+                                                        <input type="radio" class="job-form-22" name="manege_skill[0]" id="evaluation-a3-0">
+                                                        <label for="evaluation-a3-0" class="c-evaluation__rank">A</label>
+    
+                                                    </li>
+                                                    <li class="c-evaluation__item">
+                                                        <input type="radio" class="job-form-23" name="manege_skill[0]" id="evaluation-aa3-0">
+                                                        <label for="evaluation-aa3-0" class="c-evaluation__rank">A+</label>
+                                                    </li>
+                                                    <li class="c-evaluation__item">
+                                                        <input type="radio" class="job-form-24" name="manege_skill[0]" id="evaluation-aaa3-0">
+                                                        <label for="evaluation-aaa3-0" class="c-evaluation__rank">A++</label>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <!-- End For -->
+                                    </div>
+                                    <div class="work-skill__tags c-tags">
+                                        <div class="c-tags__item">
+                                            <a href="#rank-base" class="c-tags__link">
+                                                <span class="-underline">評分標準</span>
+                                            </a>
+                                        </div>
+                                        <div class="c-tags__item">
+                                            <a href="#" class="c-tags__link -red">
+                                                <span class="c-tags__icon">
+                                                    <img src="../../img/home/skill_tags_icon.svg" alt="" />
+                                                </span>
+                                                <span class="-underline">如何得到Ａ＋＋</span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- // Item -->
-                                <div class="work-skill__item">
-                                    <div class="work-skill__title">施工圖繪製</div>
-                                    <div class="work-skill__evaluation">
-                                        <ol class="c-evaluation">
-                                            <li class="c-evaluation__item">
-                                                <input type="radio" name="drawing_skill[0]" id="evaluation-c2" required>
-                                                <label for="evaluation-c2" class="c-evaluation__rank">C</label>
-                                            </li>
-                                            <li class="c-evaluation__item">
-                                                <input type="radio" name="drawing_skill[0]" id="evaluation-b2">
-                                                <label for="evaluation-b2" class="c-evaluation__rank">B</label>
-                                            </li>
-                                            <li class="c-evaluation__item">
-                                                <input type="radio" name="drawing_skill[0]" id="evaluation-bb2">
-                                                <label for="evaluation-bb2" class="c-evaluation__rank">B+</label>
-                                            </li>
-                                            <li class="c-evaluation__item">
-                                                <input type="radio" name="drawing_skill[0]" id="evaluation-a2">
-                                                <label for="evaluation-a2" class="c-evaluation__rank">A</label>
-
-                                            </li>
-                                            <li class="c-evaluation__item">
-                                                <input type="radio" name="drawing_skill[0]" id="evaluation-aa2">
-                                                <label for="evaluation-aa2" class="c-evaluation__rank">A+</label>
-                                            </li>
-                                            <li class="c-evaluation__item">
-                                                <input type="radio" name="drawing_skill[0]" id="evaluation-aaa2">
-                                                <label for="evaluation-aaa2" class="c-evaluation__rank">A++</label>
-                                            </li>
-                                        </ol>
-                                    </div>
-                                </div>
-                                <div class="work-skill__item">
-                                    <div class="work-skill__title">專案管理<br />經驗</div>
-                                    <div class="work-skill__evaluation">
-                                        <ol class="c-evaluation">
-                                            <li class="c-evaluation__item">
-                                                <input type="radio" name="manege_skill[0]" id="evaluation-c3" required>
-                                                <label for="evaluation-c3" class="c-evaluation__rank">C</label>
-                                            </li>
-                                            <li class="c-evaluation__item">
-                                                <input type="radio" name="manege_skill[0]" id="evaluation-b3">
-                                                <label for="evaluation-b3" class="c-evaluation__rank">B</label>
-                                            </li>
-                                            <li class="c-evaluation__item">
-                                                <input type="radio" name="manege_skill[0]" id="evaluation-bb3">
-                                                <label for="evaluation-bb3" class="c-evaluation__rank">B+</label>
-                                            </li>
-                                            <li class="c-evaluation__item">
-                                                <input type="radio" name="manege_skill[0]" id="evaluation-a3">
-                                                <label for="evaluation-a3" class="c-evaluation__rank">A</label>
-
-                                            </li>
-                                            <li class="c-evaluation__item">
-                                                <input type="radio" name="manege_skill[0]" id="evaluation-aa3">
-                                                <label for="evaluation-aa3" class="c-evaluation__rank">A+</label>
-                                            </li>
-                                            <li class="c-evaluation__item">
-                                                <input type="radio" name="manege_skill[0]" id="evaluation-aaa3">
-                                                <label for="evaluation-aaa3" class="c-evaluation__rank">A++</label>
-                                            </li>
-                                        </ol>
-                                    </div>
-                                </div>
-                                <!-- End For -->
                             </div>
-                            <div class="work-skill__tags c-tags">
-                                <div class="c-tags__item">
-                                    <a href="#rank-base" class="c-tags__link">
-                                        <span class="-underline">評分標準</span>
-                                    </a>
-                                </div>
-                                <div class="c-tags__item">
-                                    <a href="#" class="c-tags__link -red">
-                                        <span class="c-tags__icon">
-                                            <img src="../../img/home/skill_tags_icon.svg" alt="skill_tags_icon" />
-                                        </span>
-                                        <span class="-underline">如何得到Ａ＋＋</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        </div>               
                     </div>
                 </div>
-
                 <div class="rank-base" id="rank-base">
                     <div class="rank-base-title">
                         <img src="../../img/sales_analysis_icon.png" alt="">評分標準
@@ -219,7 +227,7 @@
                     </table>
                 </div>
                 <div class="info-submit">
-                    <button type="submit" name=""><a href="../preview/skill.html">采用</a></button>
+                    <button type="submit" name="" class="button-bottom">更新</button>
                 </div>
             </form>
         </div>
@@ -259,6 +267,7 @@
 
     <!-- Scripts -->
     <script src="../../js/script.js"></script>
+    <script src="../../js/register-step3.js"></script>
 </body>
 
 </html>

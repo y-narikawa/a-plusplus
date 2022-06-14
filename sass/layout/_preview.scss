@@ -1,18 +1,86 @@
 @charset "utf-8";
 
+//----  SIDE MENU ---------------//
+
+.preview-side-menu {
+    width: 300px;
+    margin-left: 100px;
+    background-color: $white-color;
+    position: absolute;
+
+    &__area {
+        text-align: center;
+    }
+
+    &__link {
+        color: $primary-color;
+        font-size: 1.3em;
+        border-bottom: solid 1px $border-color;
+
+        a {
+            color: $txt-color;
+        }
+
+        a:hover {
+            color: $black-color;
+        }
+
+        p:hover {
+            color: $black-color;
+            border-left: solid 5px $primary-color;
+            transition: 0.5s;
+        }
+    }
+
+    &__current-link {
+        color: $black-color;
+        border-left: solid 5px $primary-color;
+    }
+
+    @include mq (tab) {
+        margin: 20px 10%;
+        padding: 20px;
+        position: static;
+        width: auto;
+
+        &__area {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        &__link {
+            font-size: 1em;
+            border-bottom: none;
+
+            a {
+                color: $primary-color;
+            }
+        }
+
+        &__current-link {
+            border-left: none;
+            border-bottom: solid 2px $black-color;
+        }
+    }
+
+    @include mq(sp) {
+        margin: 20px 5%;
+    }
+
+}
+
 .account-info-body {
     max-width: 1333px;
     margin: auto;
 }
 
-// whitebox Account-information
-.account-info-edit {
+// whitebox-preview Account-information
+.account-info-preview {
     background-color: $white-color;
     color: $black-color;
     width: 800px;
-    margin: 50px auto 80px auto;
+    margin: 50px auto 80px 450px;
     padding: 20px;
-    border-radius: 20px;
     font-size: 20px;
     font-family: $secondary-family-ie;
 
@@ -35,31 +103,13 @@
                 font-size: 1em;
             }
 
-            .icon-required::after {
-                content: "必須";
-                border: solid 2px $primary-color;
-                color: $primary-color;
-                font-size: 0.7em;
-                min-width: 10px;
-                padding-left: 7px;
-                padding-right: 7px;
-                padding-bottom: 1px;
-                // TODO: 0pxは冗長な記述 @shin
-                margin: 0 5px;
-                line-height: 1;
-                vertical-align: middle;
-                white-space: nowrap;
-                text-align: center;
-                border-radius: 10px;
-                display: inline-block;
-            }
-
-            input {
+            p {
                 padding: 1em;
                 border: solid 0.1px $border-color;
                 border-radius: 5px;
                 margin: 30px 20%;
-                width: auto;
+                width: 25rem;
+                height: 20px;
             }
 
         }
@@ -69,194 +119,29 @@
     .submit-button {
         color: $white-color;
         text-align: center;
+        padding: 20px 0 30px 0;
 
-        button {
+        a {
             font-size: 30px;
             background-color: $primary-color;
+            color: $white-color;
             margin-left: 0;
             margin-bottom: 20px;
             padding: 20px 20%;
             border-radius: 20px;
         }
 
-        button:hover {
+        a:hover {
             background-color: $primary-h-color;
         }
     }
-
-    .backtologin {
-        color: $border-color;
-        font-size: 0.8em;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-}
-
-// accordion-menu
-.accordion-menu {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 50px;
-    font-family: $secondary-family-ie;
-
-    &__area {
-        display: block;
-        width: 400px;
-
-        .accordion-item {
-            width: 100%;
-
-            dt {
-                display: flex;
-                justify-content: space-between;
-                border: solid 2px $border-color;
-                padding: 10px;
-                font-size: 1.5em;
-                color: $black-color;
-                cursor: pointer;
-
-                img {
-                    width: 30px;
-                }
-
-                &::after {
-                    content: "";
-                    display: block;
-                    width: 2rem;
-                    height: 1rem;
-                    margin-top: 0.8rem;
-                    margin-left: auto;
-                    background: url(../img/arrow_down_red.svg) no-repeat center center / contain;
-                    transition: 0.2s;
-                }
-
-                &.-active {
-                    color: $primary-color;
-
-                    &::after {
-                        transform: rotate(180deg);
-                    }
-                }
-            }
-
-            .register-base-bottom {
-                border-top: none;
-            }
-
-            .resister-base-contents {
-                border-right: solid 2px $border-color;
-                border-left: solid 2px $border-color;
-                border-top: none;
-                border-bottom: solid 2px $border-color;
-            }
-        }
-
-    }
-
-    @include mq(tab) {
-        justify-content: center;
-        width: 80%;
-        margin: 0 auto 30px auto;
-    }
-    @include mq(sp){
-        width: 90%;
-    }
-}
-
-// check-box settings
-.agreement {
-    font-size: 0.8em;
-    text-align: center;
-    margin-bottom: 30px;
-
-    @include mq(tab) {
-        margin-top: 30px;
-    }
-}
-
-.agree-checkbox {
-    display: none;
-}
-
-.agree-checkbox+span {
-    cursor: pointer;
-    display: inline-block;
-    margin: 0 1.2em 0;
-    padding: 0 0 0 1.2em;
-    position: relative;
-    color: $border-color;
-
-    br {
-        display: none;
-
-        @include mq(sp) {
-            display: inline;
-        }
-    }
-}
-
-// TODO: 重複コードあり userspecialities.scss @shin
-.agree-checkbox+span::before {
-    -webkit-transform: translateY(-50%);
-    background: $white-color;
-    border: 1px solid $border-color;
-    border-radius: 2px;
-    content: "";
-    display: block;
-    height: 1.5em;
-    left: 0;
-    top: 50%;
-    position: absolute;
-    transform: translateY(-50%);
-    width: 1.5em;
-    font-size: 0.5em;
-
-    @include mq(tab) {
-        width: 2.5em;
-        height: 2.5em;
-        left: -1em;
-    }
-
-    @include mq(sp) {
-        left: -3em;
-    }
-}
-
-// TODO: 重複コードあり userspecialities.scss @shin
-.agree-checkbox+span::after {
-    -webkit-transform: translateY(-50%) rotate(-45deg);
-    border-bottom: 3px solid $primary-color;
-    border-left: 3px solid $primary-color;
-    content: "";
-    display: block;
-    height: 0.3em;
-    left: 0;
-    top: 50%;
-    margin-top: -0.2em;
-    opacity: 0;
-    position: absolute;
-    transform: translateY(-50%) rotate(-45deg);
-    transition: all 0.3s ease 0s;
-    width: 1em;
-
-    @include mq(tab) {
-        left: -0.5em;
-        width: 1.5em;
-    }
-
-    @include mq(sp) {
-        left: -1.5em;
-    }
-}
-
-.agree-checkbox:checked+span::after {
-    opacity: 1;
 }
 
 // tablet settings
 @include mq(tab) {
-    // whitebox info
-    .account-info-edit {
+
+    // whitebox-preview info
+    .account-info-preview {
         // TODO 省略可能 @shin
         margin-top: 10px;
         margin-left: 10%;
@@ -280,30 +165,12 @@
                 //     width: 100px;
                 // }
 
-                .icon-required::after {
-                    content: "必須";
-                    border: solid 1px $primary-color;
-                    color: $primary-color;
-                    min-width: 5px;
-                    padding: 1px 3px 3px 3px;
-                    // TODO: 0pxは冗長な記述 @shin
-                    // TODO: プロパティが重複してる @shin
-                    margin: 0px 2px 4px 2px;
-                    line-height: 1;
-                    vertical-align: middle;
-                    white-space: nowrap;
-                    text-align: center;
-                    border-radius: 10px;
-                    display: inline-block;
-                    margin-right: 10px;
-                }
-
-                input {
+                p {
                     padding: 0.3em;
                     border: solid 1px $border-color;
                     border-radius: 5px;
-                    margin: 10px 5%;
-                    width: 300px;
+                    margin: 20px 5%;
+                    height: 30px;
                 }
             }
         }
@@ -312,7 +179,7 @@
             color: $white-color;
             text-align: center;
 
-            button {
+            a {
                 font-size: 20px;
                 margin-left: 0;
                 margin-bottom: 20px;
@@ -327,8 +194,8 @@
 //smartphone settings
 @include mq(sp) {
 
-    // whitebox info
-    .account-info-edit {
+    // whitebox-preview info
+    .account-info-preview {
         // TODO 省略可能 @shin
         margin-top: 10px;
         margin-left: 5%;
@@ -344,14 +211,16 @@
             width: auto;
 
 
-            table{
+            table {
                 table-layout: fixed;
                 width: 100%;
             }
-            td.label{
+
+            td.label {
                 width: 30%;
             }
-            td.label-input{
+
+            td.label-input {
                 width: 70%;
             }
 
@@ -364,23 +233,7 @@
 
                 // }
 
-                .icon-required::after {
-                    content: "*";
-                    border: 0;
-                    color: $primary-color;
-                    font-size: 0.8em;
-                    min-width: 5px;
-                    padding: 0;
-                    // TODO: 0pxは冗長な記述 @shin
-                    margin: 0 0 10px 0;
-                    line-height: 1;
-                    vertical-align: middle;
-                    white-space: nowrap;
-                    text-align: center;
-                    display: inline-block;
-                }
-
-                input {
+                p {
                     padding: 0.3em;
                     border: solid 1px $border-color;
                     border-radius: 5px;
@@ -396,7 +249,7 @@
             color: $white-color;
             text-align: center;
 
-            button {
+            a {
                 font-size: 20px;
                 margin-left: 0;
                 margin-bottom: 20px;
@@ -406,85 +259,23 @@
 
     }
 
-    .accountAgreement {
-        text-align: center;
-        color: $border-color;
-        margin-bottom: 50px;
-        margin-top: 50px;
-        font-size: 1em;
-    }
-
-    input.accountAgreement-checkbox {
-        border: solid $border-color;
-        border-radius: 2px;
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
-    }
 }
 
-//  step 2 edit//
-
-
-.user-resume-body-edit{
-    width: 100%;
+.user-resume-body-preview {
     font-family: $secondary-family-ie;
-}
-
-textarea {
-    resize: none;
-}
-
-.steps-top-right {
-    display: flex;
-    justify-content: flex-end;
-    margin: auto;
     max-width: 1333px;
-
-    .steps-contents {
-        text-align: center;
-        font-size: 25px
-    }
-
-    ul {
-        display: flex;
-        margin-top: 60px;
-        column-gap: 25px;
-        color: $black-color;
-
-        span {
-            color: $primary-color;
-        }
-    }
-
-    p {
-        background-color: $border-color;
-        color: $white-color;
-        border-radius: 30px;
-        padding: 5px 15px;
-        letter-spacing: 0.2em;
-    }
-
-    .current-step {
-        background-color: $primary-color;
-    }
-}
-
-.user-resume-title {
     margin: auto;
-    max-width: 1333px;
-    color: $black-color;
-    font-size: 35px;
 }
 
-.user-resume-whitebox {
+.user-resume-whitebox-preview {
     background-color: $white-color;
     border-radius: 20px;
     margin: 20px auto 100px auto;
-    max-width: 1333px;
+    width: 800px;
     padding: 50px;
 
     .user-resume-contents {
+        width: 100%;
         margin-left: 5%;
         margin-right: 5%;
         color: $black-color;
@@ -1005,7 +796,7 @@ textarea {
         font-size: 20px;
     }
 
-    .user-resume-whitebox {
+    .user-resume-whitebox-preview {
         background-color: $white-color;
         border-radius: 20px;
         // TODO 省略可能 @shin
@@ -1161,9 +952,10 @@ textarea {
         font-size: 20px;
     }
 
-    .user-resume-whitebox {
+    .user-resume-whitebox-preview {
         background-color: $white-color;
         border-radius: 20px;
+        // TODO 省略可能 @shin
         margin-left: 5%;
         margin-right: 5%;
         margin-top: 20px;
