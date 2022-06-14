@@ -22,11 +22,9 @@ function addExperienceForm() {
     const clone = experience.cloneNode(true)
 
     const input_data = clone.querySelectorAll('.experience-form')
-    console.log(input_data)
 
     input_data.forEach((select) => {
         select.value = ''
-        console.log(select)
     })
 
     const icon = clone.querySelector('.delete-icon')
@@ -41,11 +39,10 @@ function addExperienceForm() {
 
         clone_inputs_data.forEach((input, i) => {
             input.setAttribute('id', `${form}-${i}`)
-            console.log(input)
             re_form = form.replace('-', '_')
-            input.setAttribute('for', `${re_form}[${i}]`)
             input.setAttribute('name', `${re_form}[${i}]`)
 
+            input.parentElement.getElementsByTagName('label')[0].setAttribute('for', `${form}-${i}`)
 
         })
     })
@@ -69,6 +66,7 @@ function deleteExperienceForm(p) {
             input.setAttribute('id', `${form}-${i}`)
 
             re_form = form.replace('-', '_')
+            input.setAttribute('for', `${re_form}[${i}]`)
             input.setAttribute('name', `${re_form}[${i}]`)
         })
     })
@@ -86,33 +84,31 @@ function addEducationForm() {
     icon.setAttribute('class', `delete-icon`)
 
     const input_data = clone.querySelectorAll('.education-form')
-    console.log(input_data)
 
     input_data.forEach((select) => {
         select.value = ''
-        console.log(select)
     })
     // appendchild
     const parent = document.getElementById('education-contents')
     parent.appendChild(clone)
 
-    if (document.getElementById('graduate-0').checked) {
-        document.getElementById('graduate-0').checked = true
-    } else {
-        document.getElementById('n-graduate-0').checked
-    }
+    // if (document.getElementById('graduate-0').checked) {
+    //     document.getElementById('graduate-0').checked = true
+    // } else {
+    //     document.getElementById('n-graduate-0').checked
+    // }
 
     let clone_input_data = null
     education_forms.forEach((form) => {
         clone_input_data = document.querySelectorAll(`.${form}`)
 
-        // console.log(clone.querySelector(`.${form}`))
-        if (form !== 'graduate' && form !== 'n-graduate') {
-            clone.querySelector(`.${form}`).value = ''
-        } else {
-            clone.querySelector(`.${form}`).checked = false
+        // // console.log(clone.querySelector(`.${form}`))
+        // if (form !== 'graduate' && form !== 'n-graduate') {
+        //     clone.querySelector(`.${form}`).value = ''
+        // } else {
+        //     clone.querySelector(`.${form}`).checked = false
 
-        }
+        // }
 
         clone_input_data.forEach((input, i) => {
             input.setAttribute('id', `${form}-${i}`)
@@ -122,7 +118,6 @@ function addEducationForm() {
             input.setAttribute('name', `${replace_form}[${i}]`)
 
             input.parentElement.getElementsByTagName('label')[0].setAttribute('for', `${form}-${i}`)
-
 
         })
     })
@@ -139,13 +134,17 @@ function deleteEducationForm(p) {
 
     let clone_input_data = null
     education_forms.forEach((form) => {
-        clone_inputs_data = document.querySelectorAll(`.${form}`)
+        clone_input_data = document.querySelectorAll(`.${form}`)
 
-        clone_inputs_data.forEach((input, i) => {
+        clone_input_data.forEach((input, i) => {
             input.setAttribute('id', `${form}-${i}`)
 
             re_form = form.replace('-', '_')
-            input.setAttribute('name', `${re_form}[${i}]`)
+            replace_form = form.replace('n-graduate', 'graduate')
+            input.setAttribute('name', `${replace_form}[${i}]`)
+
+            input.parentElement.getElementsByTagName('label')[0].setAttribute('for', `${form}-${i}`)
+
         })
     })
 
