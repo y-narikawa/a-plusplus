@@ -22,6 +22,99 @@
 
 .user-skill-contents {
     margin: 0 5%;
+    .rank-base {
+
+        .rank-base-title {
+            font-size: 1em;
+            color: $black-color;
+    
+            img {
+                width: 20px;
+                height: 20px;
+                margin-right: 1%;
+                margin-bottom: 5px;
+            }
+        }
+    
+        table {
+            .rankBase {
+                &__top {
+                    border-top: none;
+                    border-color: $border-color;
+                    color: $black-color;
+                    padding: 15px 90px;
+    
+                    &_left {
+                        border-color: $border-color;
+                        border-left: none;
+                        border-top: none;
+                    }
+    
+                    &_right {
+                        color: $fourth-color;
+                        border-color: $border-color;
+                        border-right: none;
+                        border-top: none;
+    
+                    }
+                }
+    
+                &__left {
+                    border-left: none;
+                    border-color: $border-color;
+                    color: $black-color;
+                    padding: 15px 20px;
+    
+                    &_A {
+                        color: $primary-color;
+                        border-color: $border-color;
+                        border-left: none;
+                        padding: 15px 20px;
+                    }
+                }
+    
+                &__middle {
+                    color: $black-color;
+                    border-color: $border-color;
+                }
+    
+                &__right {
+                    border-right: none;
+                    border-color: $border-color;
+                    padding: 15px 50px;
+                    color: $fourth-color;
+                }
+    
+                &__bottom {
+                    border-bottom: none;
+                    border-color: $border-color;
+                    color: $black-color;
+                    padding: 15px 130px;
+    
+                    &_left {
+                        border-left: none;
+                        border-bottom: none;
+                        border-color: $border-color;
+                        color: $black-color;
+                    }
+    
+                    &_right {
+                        border-right: none;
+                        border-bottom: none;
+                        border-color: $border-color;
+                        color: $fourth-color;
+                    }
+                }
+            }
+    
+            td {
+                border-style: dashed;
+                border-width: 2px;
+                text-align: center;
+            }
+        }
+    }
+    
 }
 
 .job-categories1-title {
@@ -127,98 +220,6 @@
     }
 }
 
-.rank-base {
-
-    .rank-base-title {
-        font-size: 1.1em;
-        color: $black-color;
-
-        img {
-            width: 20px;
-            height: 20px;
-            margin-right: 1%;
-            margin-bottom: 5px;
-        }
-    }
-
-    table {
-        .rankBase {
-            &__top {
-                border-top: none;
-                border-color: $border-color;
-                color: $black-color;
-                padding: 15px 130px;
-
-                &_left {
-                    border-color: $border-color;
-                    border-left: none;
-                    border-top: none;
-                }
-
-                &_right {
-                    color: $fourth-color;
-                    border-color: $border-color;
-                    border-right: none;
-                    border-top: none;
-
-                }
-            }
-
-            &__left {
-                border-left: none;
-                border-color: $border-color;
-                color: $black-color;
-                padding: 15px 20px;
-
-                &_A {
-                    color: $primary-color;
-                    border-color: $border-color;
-                    border-left: none;
-                    padding: 15px 20px;
-                }
-            }
-
-            &__middle {
-                color: $black-color;
-                border-color: $border-color;
-            }
-
-            &__right {
-                border-right: none;
-                border-color: $border-color;
-                padding: 15px 50px;
-                color: $fourth-color;
-            }
-
-            &__bottom {
-                border-bottom: none;
-                border-color: $border-color;
-                color: $black-color;
-                padding: 15px 130px;
-
-                &_left {
-                    border-left: none;
-                    border-bottom: none;
-                    border-color: $border-color;
-                    color: $black-color;
-                }
-
-                &_right {
-                    border-right: none;
-                    border-bottom: none;
-                    border-color: $border-color;
-                    color: $fourth-color;
-                }
-            }
-        }
-
-        td {
-            border-style: dashed;
-            border-width: 2px;
-            text-align: center;
-        }
-    }
-}
 
 // tablet settings
 
