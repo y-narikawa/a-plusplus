@@ -90,16 +90,16 @@
                                 <button type="button" onclick="deleteExperienceForm(this)"><img src="../img/delete_form_dark.svg"></button>
                             </div>
                             <ul>
-                                <li><label for="start-month-0">開始年月</label><br><input type="date" class="experience-form start-month" name="start_month[0]" id="start-month-0" placeholder="2022/1" required></li>
+                                <li><label class="experience-label" for="start-month-0">開始年月</label><br><input type="date" class="experience-form start-month" name="start_month[0]" id="start-month-0" placeholder="2022/1" required></li>
                                 <li>~<p></p>
                                 </li>
-                                <li><label for="end-month-0">結束年月</label><br><input type="date" class="experience-form end-month" name="end_month[0]" id="end-month-0" placeholder="現在" required></li>
-                                <li><label for="total-month-0">共計年月</label><br><input type="text" class="experience-form total-month" name="total_month[0]" id="total-month-0" placeholder="0年3個月" required></li>
-                                <li><label for="job-title-0">職稱</label><br><input type="text" class="experience-form job-title" name="job_title[0]" id="job-title-0" placeholder="請填寫職稱 EX:建築設計師" required></li>
-                                <li><label for="employment-0">就職公司</label><br><input type="text" class="experience-form employment" name="employment[0]" id="employment-0" placeholder="請填寫公司名稱 EX:某建築師事務所" required></li>
+                                <li><label class="experience-label" for="end-month-0">結束年月</label><br><input type="date" class="experience-form end-month" name="end_month[0]" id="end-month-0" placeholder="現在" required></li>
+                                <li><label class="experience-label" for="total-month-0">共計年月</label><br><input type="text" class="experience-form total-month" name="total_month[0]" id="total-month-0" placeholder="0年3個月" required></li>
+                                <li><label class="experience-label" for="job-title-0">職稱</label><br><input type="text" class="experience-form job-title" name="job_title[0]" id="job-title-0" placeholder="請填寫職稱 EX:建築設計師" required></li>
+                                <li><label class="experience-label" for="employment-0">就職公司</label><br><input type="text" class="experience-form employment" name="employment[0]" id="employment-0" placeholder="請填寫公司名稱 EX:某建築師事務所" required></li>
                             </ul>
                             <div class="experience-note">
-                                <textarea class="experience-form detail" id="detail[0]" placeholder="簡述, 工作重點, 負責專案, 備註"></textarea>
+                                <textarea class="experience-form detail" name="detail[0]" id="detail-0" placeholder="簡述, 工作重點, 負責專案, 備註"></textarea>
                             </div>
                         </div>
                     </div>
@@ -119,21 +119,21 @@
                             </div>
                             <ul >
                                 <li>
-                                    <label class="education_label">開始年月</label><br><input type="date" class="begin-month education-form education-txt-form" name="begin_month[0]" id="begin-month-0" placeholder="2020/9" required></li>
+                                    <label for="begin-month-0">開始年月</label><br><input type="date" class="begin-month education-form education-txt-form" name="begin_month[0]" id="begin-month-0" placeholder="2020/9" required></li>
                                 <li>~<p></p>
                                 </li>
-                                <li><label class="education_label">結束年月</label><br><input type="date" class="last-month education-form education-txt-form" name="last_month[0]" id="last-month-0" required></li>
+                                <li><label for="last-month-0">結束年月</label><br><input type="date" class="last-month education-form education-txt-form" name="last_month[0]" id="last-month-0" required></li>
                                 <li>
-                                    <input type="radio" class="graduate education-form" name="graduate[0]" id="graduate-0" value="1" required checked="checked" >
-                                    <label class="education_label" for="graduate-0">畢業</label>
+                                    <input type="radio" class="graduate education-form" name="graduate[0]" id="graduate-0" value="1" required>
+                                    <label for="graduate-0">畢業</label>
                                 </li>
                                 <li>
                                     <input type="radio" class="n-graduate education-form" name="graduate[0]" id="n-graduate-0" value="0" required>
-                                    <label class="education_label" for="n-graduate-0" >肄業</label>
+                                    <label for="n-graduate-0" >肄業</label>
                                 </li>
-                                <li><label class="education_label">學校</label><br><input type="text" class="school education-form education-txt-form" name="school[0]" id="school-0" placeholder="台湾大学" required></li>
-                                <li><label class="education_label">科系</label><br><input type="text" class="subject education-form education-txt-form" name="subject[0]" id="subject-0" placeholder="土木工程系" required></li>
-                                <li><label class="education_label">學位</label><br><input type="text" class="degree education-form education-txt-form" name="degree[0]" id="degree-0" placeholder="博⼠候選⼈" required></li>
+                                <li><label for="school-0">學校</label><br><input type="text" class="school education-form education-txt-form" name="school[0]" id="school-0" placeholder="台湾大学" required></li>
+                                <li><label for="subject-0">科系</label><br><input type="text" class="subject education-form education-txt-form" name="subject[0]" id="subject-0" placeholder="土木工程系" required></li>
+                                <li><label for="degree-0">學位</label><br><input type="text" class="degree education-form education-txt-form" name="degree[0]" id="degree-0" placeholder="博⼠候選⼈" required></li>
                             </ul>
                         </div>
                     </div>

@@ -98,10 +98,10 @@
                             </div>
                             <ul >
                                 <li>
-                                    <label class="education_label">開始年月</label><br><input type="date" class="begin-month education-form education-txt-form" name="begin_month[0]" id="begin-month-0" placeholder="2020/9" required></li>
+                                    <label for="begin-month-0" class="education_label">開始年月</label><br><input type="date" class="begin-month education-form education-txt-form" name="begin_month[0]" id="begin-month-0" placeholder="2020/9" required></li>
                                 <li>~<p></p>
                                 </li>
-                                <li><label class="education_label">結束年月</label><br><input type="date" class="last-month education-form education-txt-form" name="last_month[0]" id="last-month-0" required></li>
+                                <li><label for="last-month-0" class="education_label">結束年月</label><br><input type="date" class="last-month education-form education-txt-form" name="last_month[0]" id="last-month-0" required></li>
                                 <li>
                                     <input type="radio" class="graduate education-form" name="graduate[0]" id="graduate-0" value="1" required checked="checked" >
                                     <label class="education_label" for="graduate-0">畢業</label>
@@ -110,9 +110,9 @@
                                     <input type="radio" class="n-graduate education-form" name="graduate[0]" id="n-graduate-0" value="0" required>
                                     <label class="education_label" for="n-graduate-0" >肄業</label>
                                 </li>
-                                <li><label class="education_label">學校</label><br><input type="text" class="school education-form education-txt-form" name="school[0]" id="school-0" placeholder="台湾大学" required></li>
-                                <li><label class="education_label">科系</label><br><input type="text" class="subject education-form education-txt-form" name="subject[0]" id="subject-0" placeholder="土木工程系" required></li>
-                                <li><label class="education_label">學位</label><br><input type="text" class="degree education-form education-txt-form" name="degree[0]" id="degree-0" placeholder="博⼠候選⼈" required></li>
+                                <li><label for="school-0" class="education_label">學校</label><br><input type="text" class="school education-form education-txt-form" name="school[0]" id="school-0" placeholder="台湾大学" required></li>
+                                <li><label for="subject-0" class="education_label">科系</label><br><input type="text" class="subject education-form education-txt-form" name="subject[0]" id="subject-0" placeholder="土木工程系" required></li>
+                                <li><label for="degree-0" class="education_label">學位</label><br><input type="text" class="degree education-form education-txt-form" name="degree[0]" id="degree-0" placeholder="博⼠候選⼈" required></li>
                             </ul>
                         </div>
                     </div>
@@ -140,6 +140,7 @@
                 </div>
                 <div class="info-submit">
                     <button type="submit" name="" class="button-bottom">更新</button>
+                    <a href="../preview/resume.html" class="button-bottom">上一頁(Back to Preview Resume)</a>
                 </div>
             </form>
         </div>

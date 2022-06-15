@@ -26,8 +26,8 @@
 
         a:hover {
             color: $black-color;
-            border-bottom: solid 3px $primary-color;
-            transition: 0.5s;
+            border-bottom: solid 2px $primary-color;
+            transition: 0.3s;
         }
 
     }
@@ -109,29 +109,28 @@
             }
 
         }
-    }
-
-    // TODO: 重複コードあり mypageinfo.scss @shin
-    .submit-button {
-        color: $white-color;
-        text-align: center;
-        padding: 20px 0 30px 0;
-
-        a {
-            font-size: 30px;
-            background-color: $primary-color;
+        .submit-button {
             color: $white-color;
-            margin-left: 0;
-            margin-bottom: 20px;
-            padding: 20px 20%;
-            border-radius: 20px;
-            border-bottom: none;
-        }
-
-        a:hover {
-            background-color: $primary-h-color;
+            text-align: center;
+            padding: 20px 0 30px 0;
+    
+            a {
+                font-size: 30px;
+                background-color: $primary-color;
+                color: $white-color;
+                margin-left: 0;
+                margin-bottom: 20px;
+                padding: 20px 20%;
+                border-radius: 20px;
+                text-decoration: none;
+            }
+    
+            a:hover {
+                background-color: $primary-h-color;
+            }
         }
     }
+
 }
 
 // tablet settings
@@ -163,19 +162,19 @@
                     height: 30px;
                 }
             }
-        }
-
-        .submit-button {
-            color: $white-color;
-            text-align: center;
-
-            a {
-                font-size: 20px;
-                margin-left: 0;
-                margin-bottom: 20px;
-                padding: 20px 20%;
+            .submit-button {
+                color: $white-color;
+                text-align: center;
+    
+                a {
+                    font-size: 20px;
+                    margin-left: 0;
+                    margin-bottom: 20px;
+                    padding: 20px 20%;
+                }
             }
         }
+
 
     }
 }
@@ -450,7 +449,6 @@
             table {
                 font-size: 1em;
     
-                // TODO: 重複コードあり userspecialities.scss @shin
                 .rankBase {
                     &__top {
                         border-top: none;
